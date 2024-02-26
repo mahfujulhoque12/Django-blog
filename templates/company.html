@@ -1,0 +1,114 @@
+{% extends 'base.html' %}
+{% load static i18n %}
+
+{% block meta %}
+    <title>Company</title>
+    <link rel="canonical" href="{{request.get_full_path}}">
+    <meta name="description" content="We are an independent specialist for materials data systems and associated services." />
+    <meta property="og:title" content="Company" />
+    <meta property="og:description" content="We are an independent specialist for materials data systems and associated services." />
+    <meta property="og:image" content="http://EN/media/images/company-2.original.jpg" />
+    <meta property="og:url" content="https://matplus.eu/en-us/company/partner/" />
+    <meta name="twitter:title" content="Company">
+    <meta name="twitter:image" content="http://EN/media/images/company-2.original.jpg">
+{% endblock meta %}
+
+{% block body %}
+<!-- company hero start -->
+   <section>
+        <div class="container-fluid" style="background-image: url({%static 'images/company-banner.png'%});">
+            <div class="container">
+                <h1 class="company-hero-h1">{% trans 'Company' %}</h1>
+            </div>
+        </div>
+   </section>
+<!-- company hero end -->
+
+<!-- about us start -->
+<section class="company-about-us-bg">
+    <div class="container company-about-us">
+        <div class="row">
+            <h1 class="company-about-us-h1 ">{% trans 'About Us' %}</h1>
+            <p  class="company-about-us-p1">{% trans 'We are an independent specialist for materials data systems and associated services. We combine practical material competences with software know-how. Our services range from materials consultancy to industrial research projects for development of new materials and technologies. Our software solutions help you to develop and optimize innovative materials solutions and efficient manufacturing processes. This includes systems for capturing materials data from different sources and the implementation company-wide knowledge bases for materials information.' %}</p>
+
+            <p class="company-about-us-p1">{% trans 'We are materials engineers having many years of industrial experience in the development and optimization of metallic structural materials. We support clients by practical consulting and development projects in this field. For analysis and experimental design we make use of our own systems (JMatPro and EDA). By working together with efficient laboratories and manufacturing partners, we can offer complete packages including delivery of materials for prototypes. The technological chain can range from melting to processing, metallography, materials characterization & testing, production of semifinished products. We are fast, goal-oriented and practice-oriented.' %}</p>
+
+            <p class="company-about-us-p1">{% trans 'We have a strong CAE / PLM background and can design processes, workflows and interfaces. We help customers in the selection and introduction of the right systems for their specific demands. Our systems cover data and knowledge management, material simulation and modeling. We accelerate the value-adding processes related to development and application of materials.' %}</p>
+        </div>
+        <div class="row ">
+            <h1 class="contact"><b> {% trans 'Contact' %}</b></h1>
+       
+          <div class="mt-5 row company">
+            <div class="card mb-3 border-0 bg-transparent text-center team-card col-lg-4 me-3">
+                <img class="rounded-circle w-30 mx-auto m-3" src="{% static 'images/company-ceo.png' %}" alt="">
+                <h5 class="company-card-title">{% trans 'Dr. Uwe Diekmann' %}</h5>
+                <h6 class="company-card-subtitle mb-2 text-muted">{% trans 'Founder & CEO' %}</h6>
+                <p class="company-hr"></p>
+                <h5 class="education">{% trans 'Education and Qualification:' %}</h5>
+                <p class="company-card-p2">{% trans 'PhD Mechanical Engineering/Materials Technology, <br>University Hanover 1994' %}</p>
+                <p><b>{% trans 'Working areas:' %}</b></p>
+                <ul>
+                    <li>{% trans 'Design and Implementation of materials information & IT architectures' %}</li>
+                    <li>{% trans 'Practical materials development structural metals' %}</li>
+                    <li>{% trans 'Calculation of materials properties using JMatPro®' %}</li>
+                </ul>
+            </div>
+            <div class="card mb-3 border-0 bg-transparent text-center team-card col-lg-4 me-3">
+                <img class="rounded-circle w-30 mx-auto m-3" src="{% static 'images/company-eo.png' %}" alt="">
+                <h5 class="company-card-title">{% trans 'Eva Dombrowa' %}</h5>
+                <h6 class="company-card-subtitle mb-2 text-muted">{% trans 'Executive officer' %}</h6>
+                <p class="company-hr"></p>
+                <h5 class="education">{% trans 'Education and Qualification:' %}</h5>
+                <p class="company-card-p2">{% trans 'Master of Business Administration Amsterdam/Dortmund 1992' %}</p>
+                <p><b>{% trans 'Working areas:' %}</b></p>
+                <ul>
+                    <li>{% trans 'Accounting & controlling' %}</li>
+                    <li>{% trans 'Human resource management' %}</li>
+                    <li>{% trans 'Customer care' %}</li>
+                </ul>
+            </div>
+          </div>
+         
+        </div>
+   
+        
+    </div>
+    <!-- our coustomers start-->
+    <div class="container our-customers">
+        <div class="row">
+            <div class="col-lg-8 col-md-12">
+              <h2 class="customer-h2">{% trans 'Our customers' %}</h2>
+              <p class="company-about-us-p1 padding-custom">{% trans 'Our customer-base currently has a regional focus in Germany, Austria and Switzerland.' %}</p>
+              <p class="company-about-us-p1 padding-custom">{% trans 'Our solutions are successful in the following industries:' %}</p>
+              <ul>
+                <li>{% trans 'Producers of steel, aluminum and nickel alloys' %}</li>
+                <li>{% trans 'Automotive and aerospace industry with their suppliers' %}</li>
+                <li>{% trans 'Foundries, blacksmith shops, metalworking, plant construction' %}</li>
+              </ul>
+              <a href="/customers/" title="More Information" class="btn btn-danger company-btn" id="mar-button-top">{% trans 'More Information' %}</a>
+            </div>
+            <div class="col-lg-4 col-md-12">
+                <img src="{% static 'images/company-customer.png' %}" class="w-100 h-100 ms-2 img-customize" alt="">
+            </div>
+        </div>
+    </div>
+    <!-- our coustomers end-->
+
+    <!-- our mission start -->
+    <div class="our-mission">
+        <div id="company-ci-element-container"></div>
+        <div class="container">
+            <div class="row">
+                <h2 class="customer-h2 our-mission-h2">{% trans 'Our mission' %}</h2>
+                <p class="our-mission-p"><b>{% trans 'We aim to be the best solution provider for materials data systems.' %}</b></p>
+                <p class="company-about-us-p1 padding-custom our-mission-p">{% trans 'We focus on structural metals like Steels and alloys made from Aluminum-, Magnesium Nickel-, and Copper.Our core area is Germany, Austria and Switzerland.' %}</p>
+
+                <p class="company-about-us-p1 padding-custom our-mission-p">{% trans 'Customer satisfaction and increasing customer competitiveness are our top priorities.We offer the leading solutions for industrial practice and also support research and teaching with our systems.We actively participate in materials engineering research and development projects in order to be able to discuss with the most demanding users on an equal footing and to always improve the practical relevance of our solutions.' %}</p>
+                 
+                <p  class="company-about-us-p1 padding-custom our-mission-p"> {% trans 'We strive for moderate organic growth from our own resources in order to be able to act independently and sustainably. We maintain an open and fair dealings with customers, partners and employees. Our team combines competences from practical material technology with advanced know-how on the software side. In interdisciplinary projects, we promote the skills, personal development and exchange of experience.' %}</p>   
+            </div>
+        </div>
+    </div>
+</section>
+<!-- about us end -->
+{% endblock body %}

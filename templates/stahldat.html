@@ -1,0 +1,911 @@
+{% extends 'base.html' %}
+{% load static i18n%}
+
+
+{% block meta %}
+<title>StahlDat SX | Register of European Steels — Matplus GmbH</title>
+<link rel="canonical" href="{{research.title}}">
+<meta name="description" content="" />
+<meta property="og:title" content="StahlDat SX | Register of European Steels — Matplus GmbH" />
+<meta property="og:description" content="" />
+<meta property="og:image" content="http://EN/media/images/stahldat-sx-header-image.original.jpg" />
+<meta property="og:site_name" content="Matplus GmbH" />
+<meta property="og:url" content="http://EN/en-us/products/databases/stahldat-sx/" />
+<meta name="twitter:title" content="StahlDat SX | Register of European Steels — Matplus GmbH">
+<meta name="twitter:image" content="http://EN/media/images/stahldat-sx-header-image.original.jpg">
+{% endblock meta %}
+  
+
+{% block body %}
+
+        <section class="stahldat">
+            <div class="container-fluid">
+                <div class="row"> 
+                    <div class="col-lg-6 col-sm-12">
+                        <div class="stah-left">
+                            <img class="stah-logo" src="{% static 'images/sathdat-logo.png' %}" alt="">
+                            <h1>{% trans 'StahlDat SX | Register of European Steels' %}</h1>
+                            <a href="https://sso.matplus.eu/realms/matplus/protocol/openid-connect/auth?response_type=code&scope=openid+email&client_id=eda.prod.stahldaten.de&redirect_uri=https%3A%2F%2Fapp.stahldaten.de%2Foidc%2Fcallback%2F&state=If1RIPMvbx2cxHB996J0gqy9rNINt611&nonce=9NCaLPl2ZPrI5nn71Y4Ju80RKPmpgiJC" class="btn btn-outline-danger stah-btn">{% trans 'Login' %}</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-12">
+                        <img class="stah-right" src="{% static 'images/sathdat.png' %}" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-center align-items-center">
+                <div class="p-3">
+                    <nav class="custom-nav">
+                        <div class="nav nav-tabs nav-tab-res mb-3 nav-tab-bg" id="nav-tab" role="tablist">
+                            <button class="nav-link nav-link-custom active tab-dropdown-cus mt-1"  id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">
+                              {% trans 'StahlDat SX' %}
+                                <ul class="dropdown-nav-tab">
+                                    <li><a class="nav-link" id="steels" data-bs-toggle="tab" data-bs-target="#nav-steels" type="button" role="tab" aria-controls="nav-steels" href="#" aria-selected="false">{% trans 'Register of European Steels' %}</a></li>
+                                    <li><a class="nav-link" id="database" data-bs-toggle="tab" data-bs-target="#nav-database" type="button" role="tab" aria-controls="nav-database" href="#" aria-selected="false" href="#">{% trans 'Sheet steel database' %}</a></li>
+
+                                    <li><a  class="nav-link" id="curves" data-bs-toggle="tab" data-bs-target="#nav-curves" type="button" role="tab" aria-controls="nav-curves" href="#" aria-selected="false"  href="#">{% trans 'Hardenability curves' %}</a></li>
+
+                                    <li><a  class="nav-link" id="ttt" data-bs-toggle="tab" data-bs-target="#nav-ttt" type="button" role="tab" aria-controls="nav-ttt" href="#" aria-selected="false"  href="#">{% trans 'TTT database' %}</a></li>
+
+                                    <li><a href="#" class="nav-link" id="flow" data-bs-toggle="tab" data-bs-target="#nav-flow" type="button" role="tab" aria-controls="nav-flow" href="#" aria-selected="false" >{% trans 'Flow curves database' %}</a></li>
+
+                                    <li><a href="#" class="nav-link" id="thermophysical " data-bs-toggle="tab" data-bs-target="#nav-thermophysical " type="button" role="tab" aria-controls="nav-thermophysical "href="#" aria-selected="false">{% trans 'Thermophysical data' %}</a></li>
+                                </ul>
+                                
+                            </button>
+                            
+                            <button class="nav-link nav-link-custom" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">{% trans 'Library' %}</button>
+                            <button class="nav-link nav-link-custom" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">{% trans 'Producer' %}</button>
+                            <button class="nav-link nav-link-custom" id="nav-four-tab" data-bs-toggle="tab" data-bs-target="#nav-four" type="button" role="tab" aria-controls="nav-four" aria-selected="false">{% trans 'Registration of Steel Grades' %}</button>
+                        </div>
+                    </nav>
+                    <div class="tab-content p-3 " id="nav-tabContent">
+                          <!-- frist nav tab -->
+                        <div class="tab-pane fade active show" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">                     
+                        <div class="frist-nav-tab">
+                          
+                          {% if request.LANGUAGE_CODE == 'de' %}
+                            <h2>Willkommen bei StahlDat SX ...die führende europäische Datenbank für Stahl</h2>
+                            <ul class="litt-de">
+                              <li> Stahldaten - alle europäischen Stahlsorten</li>
+                              <li>Hersteller mit Lieferprogrammen</li>
+                              <li>Technologische Daten (thermophysikalische Daten, ZTU-Diagramme und Fließkurven)</li>
+                              <li>Verweise auf Normen</li>
+                              <li>Regelwerke (Stahl-Eisen-Blätter, SEW, SEP, SEB)</li>
+                              <li>Forschungsberichte, FOSTA</li>
+                              <li>Fachbücher (Wärmebehandlungsatlas, Ausscheidungsatlas)</li>
+                              
+                            </ul>
+                          {% endif %}
+                            
+                              
+                              {% if request.LANGUAGE_CODE == 'en' or request.LANGUAGE_CODE == 'ja' %}
+                                  <h4>{% trans 'StahlDat SX is the only authorized publication of the European Steel Register  and a continuously growing knowledge base for steel on the Internet.' %}</h4>
+                              {% endif %}
+
+                              
+                              {% if request.LANGUAGE_CODE == 'de' %}
+                              <h2>Die Stahl-Eisen-Liste (Register Europäischer Stähle)'</h2>
+                              <p class="nav-tab-p mt-4">Die Stahl-Eisen-Liste (Register Europäischer Stähle) ist die offizielle und aktuelle Zusammenstellung aller registrierten und in europäischen Normen enthaltenen Stahlsorten mit ihren Werkstoffnummern (EN 10027-2).</p>
+
+                                <p  class="nav-tab-p mt-4">Die StahlDat SX ist <b>die einzige autorisierte Veröffentlichung der Europäischen Stahlregistratur</b> und gleichzeitig die kontinuierlich wachsende Wissensbasis für Stahl im Internet mit mehr als 2.500 Stahlsorten. Sie ist die umfangreiche Werkstoffdatenbank und Wissensbasis für Industrie und Forschung.</p>
+                                <p class="nav-tab-p mt-4">
+                                  Darüber hinaus sind <a href="https://vdeh.de/normung-standardisierung/stahl-eisen-blaetter/" class="cae-link">alle technischen Regelwerke (Stahl-Eisen-Blätter)</a> des Stahlinstituts VDEh und alle Berichte aus der <a href="https://www.stahlforschung.de/" class="cae-link">Anwendungsforschung der FOSTA e.V.</a> Bestandteil des Stahldat Professional Abonnements.
+                                </p>
+
+                              {% else %}
+                                <h2>{% trans 'Stahl-Eisen-Liste (Register of European database)' %}</h2>
+                                <p class="nav-tab-p mt-4">{% trans 'The Stahl-Eisen-Liste (Register of European Steels) is the official and current collection of all European steel grades, registred with their European matrial number (EN 10027-2) and referenced in European standards.' %}</p>
+                                <p class="nav-tab-p">
+                                  {% trans ' The Register of Steels also makes available links to European producers, their associated steel grades and product forms and trade names.' %}
+                                </p>
+                                <p class="nav-tab-p">
+                                  {% trans '   Steel Institute VDEh, the German Steel Federation within Stahl-Zentrum Düsseldorf represents the European Steel Registration entity and publishes their data in StahlDat SX exlusively.' %}
+                                </p>
+
+                              {% endif %}
+                                
+                                
+                               
+                                <div class="nav-tab-list">
+                                    <h3>{% trans 'The unique solution for many use cases' %}</h3>
+                                    <p class="nav-tab-p">{% trans 'StahlDat brings current and official materials property data to different target audiences:' %}</p>
+
+                                    <ul>
+                                        <li>{% trans 'Procurement and trading in the field of semifinshed products made of steel' %}</li>
+                                        <li>{% trans 'Quality and standards-departments of producers and users of steel' %}</li>
+                                        <li>{% trans 'Design and technology experts in product development and production' %}</li>
+                                    </ul>
+                                </div>
+
+                                
+                                {% if request.LANGUAGE_CODE == 'de' %}
+                                <div class="nav-tab-list mt-3">
+                                  <h3>Attraktive Module mit abgestimmtem Leistungsumfang</h3>
+                                  <p class="nav-tab-p">StahlDat SX Online liefert Daten-Flatrates in drei Leistungsstufen:</p>
+
+                                  <ul>
+                                      <li>Community: Freier Zugang nach Registrierung</li>
+                                      <li>Standard: Kostengünstiger Zugang für die meisten Anwender</li>
+                                      <li>Professional: Der umfassende Zugang mit vielen Extra-Funktionen und Daten</li>
+                                  </ul>
+                              </div>
+                                {% endif %}
+                                  
+                                {% if request.LANGUAGE_CODE == 'de' %}
+                                <div class="nav-tab-list mt-3">
+                                  <h3>Stahldat als erweiterbare unternehmensweite Wissenbasis</h3>
+                                  <p class="nav-tab-p">Die Stahldat und das <a href="/eda/" class="cae-link">Werkstoffdatensystem EDA</a> sind eine gute Grundlage für den Aufbau einer erweiterbaren Intranet Lösung:</p>
+
+                                  <ul>
+                                      <li>Flexibler Aufbau von firmeninternen Wissensbasen</li>
+                                      <li>Zusammenführen unterschiedlicher Werkstoffdaten, z.B. Stahl, Aluminum, Kunststoffe</li>
+                                      <li>Verwaltung, Auswertung, Verdichtung von Werkstoffprüfungen</li>
+                                  </ul>
+                              </div>
+                                {% endif %}
+                                  
+
+                                <!-- row -->
+                                <div class="row nav-tab-row mt-5" >
+                                        <div class="col-lg-6 mb-3">
+                                            <div class="card card-custom  h-100">
+                                                <div class="card-body">
+                                                    <h2 class="for-margin">{% trans 'StahlDat SX Community' %}</h2>
+                                                    <p class="stah-sx-p">{% trans 'Free access after registration' %}</p>
+                                                </div>
+                                                <div class="card-fotter-styel">
+                                                    <a href="https://shop.stahldaten.de/product/stahldat-sx-community?lang=en" class="btn btn-primay">{% trans 'Order Now' %}</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 mb-3">
+                                            <div class="card card-custom  h-100">
+                                                <div class="card-body">
+                                                    <h2 class="for-margin">{% trans 'StahlDat SX Standard' %}</h2>
+                                                    <p class="text-muted">{% trans 'Cost effective access for many users' %}</p>
+                                                    <h6><b> {% trans '220,00 €' %}</b></h6>
+                                                </div>
+                                                <div class="card-fotter-styel">
+                                                    <a href="https://shop.stahldaten.de/product/stahldat-sx-standardstahldat-sx-standard?lang=en" class="btn btn-primay">{% trans 'Order Now' %}</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 mb-3">
+                                            <div class="card card-custom  h-100">
+                                                <div class="card-body">
+                                                    <h2 class="for-margin">{% trans 'StahlDat SX Communit' %}y</h2>
+                                                    <p class="text-muted">{% trans 'Free access after registration' %}</p>
+                                                </div>
+                                                <div class="card-fotter-styel">
+                                                    <a href="https://shop.stahldaten.de/product/stahldat-sx-institute-licenses?lang=en" class="btn btn-primay">{% trans 'Order Now' %}</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 mb-3">
+                                            <div class="card card-custom  h-100">
+                                                <div class="card-body">
+                                                    <h2 class="for-margin">{% trans 'StahlDat SX Community' %}</h2>
+                                                    <p class="text-muted">{% trans 'Free access after registration' %}</p>
+                                                </div>
+                                                <div class="card-fotter-styel">
+                                                    <a href="https://shop.stahldaten.de/product/stahldat-sx-professional?lang=en" class="btn btn-primay">{% trans 'Order Now' %}</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>                   
+                        </div>
+                         <!-- sec nav tab -->
+                        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                                <div class="library">
+                                    <h1 class="library-h2">{% trans 'Library' %}</h1>
+                                    <h4 class="library-h4">{% trans 'Technical publications and knowledge in full text' %}
+                                        <br>
+                                        <br>
+                                     {% trans 'FOSTA research reports' %}</h4>
+                                    <p class="library-p mt-5">{% trans 'All digitally available FOSTA reports (> 100) are available in full text for StahlDat SX Professional users. The task of FOSTA is the promotion and projecting of application technology research and development on an immediate non-profit basis. Research partners of FOSTA are research institutes, universities, engineering offices and steel processing companies. Research priorities are:' %}</p> 
+                                    
+                                    <ul class="library-list">
+                                        <li>{% trans 'Vehicle construction, forming technology, joining technology' %}</li>
+                                        <li>{% trans 'Steel construction, bridge construction, composite construction, lightweight construction' %}</li>
+                                        <li>{% trans 'environmental protection, composite structures' %}</li>
+                                        <li>{% trans 'apparatus and container construction' %}</li>
+                                    </ul>
+                                    <div class="library-part-2">
+                                        <h4 class="library-h4">{% trans 'Technical Standards' %}</h4>
+                                        <p class="library-p" >{% trans 'The Steel-Iron-Rules consists of more than 240 documents:' %}</p>
+                                        <ul class="library-list">
+                                            <li>{% trans 'Steel Iron Plant Leaves (SEB)' %}</li>
+                                            <li>{% trans 'Steel Iron Service Lists (SEE)' %}</li>
+                                            <li>{% trans 'Steel Iron Delivery Conditions (SEL)' %}</li>
+                                            <li>{% trans 'Steel-iron material sheets (SEW)' %}</li>
+                                            <li>{% trans 'Standards and technical delivery conditions' %}</li>
+                                            {% if request.LANGUAGE_CODE == 'de' %}
+                                             <li>Normen und technische Lieferbedingungen</li>
+                                            {% endif %}
+                                              
+                                            
+                                        </ul>
+                                    </div>
+                                    <div class="library-third">
+                                        <h4  class="library-h4">{% trans 'Steel Information Fact sheets (SIZ)' %}</h4>
+                                        <p class="library-p" >{% trans 'The writings of this series give a concentrated overview of the variety of applications and the range of processing and processing methods of steel. For a better understanding they are extensively illustrated with photos and technical drawings. Some editions have been translated into English.' %}</p>
+                                    </div>
+                                    <div class="library-four">
+                                        <h4 class="library-h4">{% trans 'Reference books' %}</h4>
+                                       
+                                       {% if request.LANGUAGE_CODE == 'de' %}
+                                        <h4 class="library-h4">Atlas zur Wärmebehandlung der Stähle </h4>
+                                        {% endif %} 
+
+                                        <p class="library-p" >{% trans 'The collection of time-temperature transformation diagrams (TTT) and time-temperature austenitizing diagrams (TTA) from the years 1958-1974, presented with the Heat Treatment Atlas, is a tremendous practical aid in the design of heat treatments even decades after their appearance.' %}</p>
+                                        <p class="library-p">
+                                          {% trans '  In the first and third volume metrological methods, materials science basics as well as a variety of continuous and isothermal TTT diagrams are compiled.' %}
+                                        </p>
+                                        <p class="library-p">
+                                           {% trans ' The aim of the 3rd and 4th volumes is to provide the heat treatment specialist with documents that enable him to estimate the results of time-temperature processes in the rapid heating of steel, for example inductive heat treatment, with sufficient accuracy. The collection was published by the Max Planck Institute for Iron Research (MPIE) in collaboration with the Technical University of Berlin and the Materials Committee of the Steel Institute VDEH.' %}
+                                        </p>
+                                    </div>
+                                    <div class="libary-last">
+                                        <h4 class="library-h4">{% trans 'Precipitation Atlas of Steels' %}</h4>
+                                        <p class="library-p">{% trans 'The "Precipitation Atlas of Steels" was put together as a joint effort by the working group electron microscopy of the Materials Committee of the Steel Institute VDEh. In a representation (600 pages), kept as short as possible by the text and image, the reader finds everything essential about the precipitations and their influences and associated analysis methods (SEM, TEM, etc.) that occur in certain steels and steel groups.' %}</p>
+                                    </div>
+                                </div>
+                        </div>
+                           <!-- third nav tab -->
+                        <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                          <div class="container">
+                            <div class="table-responsive">
+                              <table class="table ">
+                                  <tbody>
+                                    <tr class="frst-row-table">
+                                      <td><b>ACERINOX, S.A.</b></td>
+                                      <td><b>	https://www.acerinox.com</b></td>
+                                   </tr>
+                                    <tr>
+                                      <td><b>Aceros Inoxidables Olarra S.A.</b></td>
+                                      <td>https://www.olarra.com</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>Aciers du Tarn</b></td>
+                                      <td>https://www.aciersdutarn.com</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>AG der Dillinger Hüttenwerke</b></td>
+                                      <td>https://www.dillinger.de</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>APERAM STAINLESS EUROPE</b></td>
+                                      <td>https://www.aperam.com/stainlesseurope</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>ArcelorMittal Commercial Sections S.A.	/b></td>
+                                      <td>https://www.arcelormittal.com</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>ArcelorMittal Ruhrort GmbH/ArcelorMittal Hochfeld GmbH	</b></td>
+                                      <td>https://www.arcelormittal.com</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>ArcelorMittal S.A.</b></td>
+                                      <td>https://www.arcelormittal.com</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>ASCOMETAL</b></td>
+                                      <td>https://www.ascometal.com</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>Aubert & Duval</b></td>
+                                      <td>https://www.aubertduval.fr</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>AUBERT & DUVAL Usine de Gennevilliers</b></td>
+                                      <td>https://www.aubertduval.fr</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>AUBERT & DUVAL Usine d'Imphy</b></td>
+                                      <td>https://www.aubertduval.fr</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>Badische Drahtwerke GmbH</b></td>
+                                      <td>https://www.bdw−kehl.de</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>Badische Stahlwerke GmbH</b></td>
+                                      <td>https://www.bsw−kehl.de	</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>BENTELER Stahl/Rohr GmbH</b></td>
+                                      <td>https://www.benteler.de</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>BGH Edelstahlwerke GmbH</b></td>
+                                      <td>https://www.bgh.de</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>Böhler Bleche GmbH & Co. KG</b></td>
+                                      <td>https://www.bohler−bleche.com</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>BÖHLER Edelstahl GmbH & Co. KG</b></td>
+                                      <td>https://www.bohler−edelstahl.com</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>Böhler Schmiedetechnik GmbH & Co. KG	</b></td>
+                                      <td>https://www.bohler−schmiedetechnik.com</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>BÖHLER-UDDEHOLM Precision Strip GmbH & Co. KG</b></td>
+                                      <td>https://www.bohler−strip.com</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>Böllinghaus Portugal Aços Especiais, S.A.</b></td>
+                                      <td>https://www.boellinghaus.de</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>Buderus Edelstahl GmbH</b></td>
+                                      <td>https://www.buderus−steel.com</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>BWS Philipp Boecker + Wender Stahl GmbH & Co. KG</b></td>
+                                      <td>https://www.b−w−s.de</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>C. & F. vom Brocke Edelstahlwerk</b></td>
+                                      <td>https://www.vombrocke.de</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>C.D. Wälzholz</b></td>
+                                      <td>https://www.cdw.dehttps://www.cdw.de</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>Deutsche Nickel GmbH</b></td>
+                                      <td>https://www.deutsche−nickel.de</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>DEW - (DEUTSCHE EDELSTAHLWERKE GmbH)</b></td>
+                                      <td>https://www.dew−stahl.com</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>DEW Südwestfalen - (DEUTSCHE EDELSTAHLWERKE GmbH)</b></td>
+                                      <td>https://www.dew−stahl.com</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>Dörrenberg Edelstahl GmbH</b></td>
+                                      <td>https://www.doerrenberg.de</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>Drahtwerk Luisenthal GmbH</b></td>
+                                      <td>https://www.drahtwerk−luisenthal.de</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>Drahtwerk St. Ingbert GmbH	</b></td>
+                                      <td>https://www.draht−dwi.de</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>Duferco Clabecq S.A</b></td>
+                                      <td>https://www.duferco.be</td>
+                                    </tr>
+  
+                                    <tr>
+                                      <td><b>Edelstahlwerk Chr. Höver & Sohn GmbH & Co. KG</b></td>
+                                      <td>https://www.hoever−sohn.com</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>Edelstahlwerk W. Ossenberg & Cie. GmbH</b></td>
+                                      <td>https://www.edelstahlwerk−ossenberg.de</td>
+                                    </tr>
+  
+                                    <tr>
+                                      <td><b>Energietechnik Essen GmbH</b></td>
+                                      <td>https://www.energietechnik−essen.de</td>
+                                    </tr>
+  
+                                    <tr>
+                                      <td><b>Engineering Steel Belgium</b></td>
+                                      <td>https://www.esb.be</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>ERASTEEL S.A.S.	</b></td>
+                                      <td>https://www.erasteel.fr	</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>EXMA	</b></td>
+                                      <td>https://www.exma.fr</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>Fábrica Nacional de Tubos Metalicos Oliva, S.A.</b></td>
+                                      <td>https://www.olivatubos.com</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>Friedr. Lohmann GmbH , Werk für Spezial- und Edelstähle</b></td>
+                                      <td>https://www.lohmann−stahl.de</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>Friedrich Wilhelms-Hütte GmbH</b></td>
+                                      <td>https://www.fwh.de</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>Georgsmarienhütte GmbH</b></td>
+                                      <td>https://www.gmh.de</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>Gustav Grimm Edelstahlwerk GmbH & Co. KG</b></td>
+                                      <td>https://www.gustav−grimm.de</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>Hagener Feinstahl GmbH , Edelstahlzieherei</b></td>
+                                      <td>https://www.hagener−feinstahl.de</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>Hammerwerk Erft G. Diederichs GmbH & Co. KG</b></td>
+                                      <td>https://www.hammerwerk−erft.de</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>Hayes Lemmerz Werke GmbH , Walzwerk	</b></td>
+                                      <td>https://www.hayes−lemmerz.com	</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>Hoesch Schwerter Profile GmbH</b></td>
+                                      <td>https://www.schwerter−spezialprofile.de	</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>Hugo Vogelsang GmbH & Co. KG	</b></td>
+                                      <td>https://www.vogelsang−bandstahl.de	</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>Ilsenburger Grobblech GmbH</b></td>
+                                      <td>https://www.ilsenburger−grobblech.de</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>INDUSTEEL</b></td>
+                                      <td>https://www.industeel.info	</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>Karl Diederichs KG Stahl-, Walz- und Hammerwerk	</b></td>
+                                      <td>https://www.dirostahl.de	</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>Kind & Co., Edelstahlwerk, KG Standort Bielstein	</b></td>
+                                      <td>https://www.kind−co.de	</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>KSB Aktiengesellschaft</b></td>
+                                      <td>https://www.ksb.de	</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>Lech-Stahlwerke GmbH	</b></td>
+                                      <td>https://www.lech−stahlwerke.de</td>
+                                    </tr>
+  
+                                    <tr>
+                                      <td><b>MARTIN MILLER GmbH</b></td>
+                                      <td>https://www.martin−miller.com</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>Mittalsteel Hamburg GmbH	</b></td>
+                                      <td>https://www.arcelormittal.com</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>MYRIAD S.A.</b></td>
+                                      <td>https://www.myriad.fr</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>Nedstaal Staal B.V.</b></td>
+                                      <td>https://www.nedstaal.nl	</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>Outokumpu Nirosta GmbH</b></td>
+                                      <td>https://www.nirosta.de</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>Outokumpu Stainless Steel Oy	</b></td>
+                                      <td>https://www.outokumpu.com</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>Ovako Bar Oy Ab</b></td>
+                                      <td>https://www.ovako.com</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>Ozkansteel</b></td>
+                                      <td>https://www.ozkansteel.com	</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>Peiner Träger GmbH</b></td>
+                                      <td>https://www.peinertraeger.de	</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>Platestahl Umformtechnik GmbH	</b></td>
+                                      <td>https://www.platestahl.com</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>Recknagel Präzisionsstahl GmbH</b></td>
+                                      <td>https://www.praezisionsstahl.de	</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>Remscheider Walz- und Hammerwerke Böllinghaus GmbH & Co. KG	</b></td>
+                                      <td>https://www.boellinghaus.de	</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>Remystahl GmbH & Co KG</b></td>
+                                      <td>https://www.remystahl.de</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>Ruukki Metals Oy	</b></td>
+                                      <td>https://www.ruukki.com	</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>S+C Schmidt&Clemens - (Schmidt & Clemens GmbH & Co. KG , Edelstahlwerk Kaiserau)	</b></td>
+                                      <td>https://www.schmidt−clemens.de	</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>Saarstahl AG	</b></td>
+                                      <td>https://www.saarstahl.com</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>Salzgitter Flachstahl GmbH	</b></td>
+                                      <td>https://www.salzgitter−flachstahl.de</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>Salzgitter Mannesmann Stainless Tubes GmbH	</b></td>
+                                      <td>https://www.smst−tubes.de</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>Sande Stahlguss GmbH	</b></td>
+                                      <td>https://www.sande−stahlguss.de</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>Sandvik Steel AB	</b></td>
+                                      <td>https://www.sandvik.com	</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>Schmiedewerke Gröditz GmbH</b></td>
+                                      <td>https://www.stahl−groeditz.de	</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>SCHMOLZ + BICKENBACH Blankstahl GmbH	</b></td>
+                                      <td>https://www.schmolz−bickenbach.de	</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>Schmolz + Bickenbach Guss GmbH & Co. KG	</b></td>
+                                      <td>https://www.schmolz−bickenbach.com	</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>Stahl Judenburg - (Stahl Judenburg GmbH)	</b></td>
+                                      <td>https://www.stahl−judenburg.com	</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>Stahlrump GmbH & Co. KG , Drahtzieherei u. Kaltwalzwerk	</b></td>
+                                      <td>https://www.stahlrump.de</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>Stahlwerk Annahütte Max Aicher GmbH & Co. KG	</b></td>
+                                      <td>https://www.annahuette.com	</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>Swiss Steel AG</b></td>
+                                      <td>https://www.swiss−steel.com	</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>Tata Steel Netherlands Main Office</b></td>
+                                      <td>https://www.tatasteeleurope.com	</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>Tata Steel Tubes Europe Head Office	</b></td>
+                                      <td>https://www.tatasteeleurope.com	</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>Tenaris, S.A.</b></td>
+                                      <td>https://www.tenaris.com	</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>ThyssenKrupp Acciai Speciali Terni S.p.A. Plant Terni	</b></td>
+                                      <td>https://www.acciaiterni.it</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>Thyssenkrupp Electrical Steel GmbH</b></td>
+                                      <td>https://www.tkes.com</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>thyssenkrupp Hohenlimburg GmbH	</b></td>
+                                      <td>https://www.hoesch−hohenlimburg.de</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>ThyssenKrupp Rasselstein GmbH</b></td>
+                                      <td>https://www.thyssenkrupp−rasselstein.com</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>ThyssenKrupp Steel Europe AG	</b></td>
+                                      <td>https://www.thyssenkrupp−steel.com	</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>TREFILEUROPE</b></td>
+                                      <td>https://www.trefileurope.com</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>TSTG Schienen Technik GmbH & Co. KG	</b></td>
+                                      <td>https://www.tstg.de	</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>UGITECH S.A.	</b></td>
+                                      <td>https://www.ugitech.com	</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>VACUUMSCHMELZE GmbH & Co. KG	</b></td>
+                                      <td>https://www.vacuumschmelze.de</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>VALLOUREC & MANNESMANN TUBES V&M DEUTSCHLAND GmbH</b></td>
+                                      <td>https://www.vmtubes.com	</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>VDM Metals GmbH	</b></td>
+                                      <td>https://www.thyssenkruppvdm.de	</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>voestalpine Giesserei Linz GmbH	</b></td>
+                                      <td>https://www.voestalpine.com	</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>voestalpine High Performance Metals Deutschland GmbH	</b></td>
+                                      <td>https://www.bohler−uddeholm.de</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>voestalpine Krems GmbH</b></td>
+                                      <td>https://www.voestalpine.com	</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>voestalpine Stahl Donawitz GmbH & Co. KG	</b></td>
+                                      <td>https://www.voestalpine.com	</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>Walzwerke Einsal GmbH</b></td>
+                                      <td>https://www.Walzwerke−Einsal.de	</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>Westfälische Drahtindustrie GmbH	</b></td>
+                                      <td>https://www.wdi.de</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>Westfälische Drahtindustrie GmbH	</b></td>
+                                      <td>https://www.wdi.de	</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>Wickeder Westfalenstahl GmbH	</b></td>
+                                      <td>https://www.wickeder.de	</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>Wickeder Westfalenstahl GmbH	</b></td>
+                                      <td>https://www.wickeder.de	</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>Zapp Materials Engineering GmbH	</b></td>
+                                      <td>https://www.zapp.com</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>ZAPP Precision Metals GmbH</b></td>
+                                      <td>https://www.zapp.com</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>ACERINOX, S.A.</b></td>
+                                      <td>https://www.acerinox.com</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>Aceros Inoxidables Olarra S.A.</b></td>
+                                      <td>https://www.olarra.com</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>Aceros Inoxidables Olarra S.A.	</b></td>
+                                      <td>https://www.olarra.com	</td>
+                                    </tr>
+                                    <tr>
+                                      <td><b>Aciers du Tarn</b></td>
+                                      <td>https://www.aciersdutarn.com</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                             </div>
+                          </div>
+                        </div>
+                        <!-- third nav tab -->
+                        <div class="tab-pane fade" id="nav-four" role="tabpanel" aria-labelledby="nav-four-tab">
+                            <div class="register mt-3 ">
+                                <h4 class="library-h4">{% trans 'Registration Stahl-Eisen-Liste (Register of European Steel) according EN 10027-2' %}</h4>
+                                <p class="library-p">{% trans 'Producer can register here new steels in the Stahl-Eisen-Liste.' %}</p>
+                                <p class="library-p">{% trans 'For the allocation of material numbers, which are primarily characterized by their chemical composition,please use' %} <a href="https://vdeh.de/media/antragsformular_1.pdf" class="cae-link">{% trans 'Form 1' %}</a>.</p>
+                                <p class="library-p">{% trans 'For the allocation of material numbers, which are primarily characterized by their mechanical properties,please use' %} <a href="https://vdeh.de/media/antragsformular_2.pdf" class="cae-link">{% trans 'Form 2' %}</a>.</p>
+                            </div>
+                        </div>
+                        <!-- dropdown frist nav -->
+                        <div class="tab-pane fade" id="nav-steels" role="tabpanel" aria-labelledby="steels">
+                            <div class="register steels-wraper mt-3 ">
+                                <h4 class="library-h4 steels-h4">{% trans 'Register of European Steels' %}</h4>
+                                 <p class="library-p steels-h4">{% trans 'The Register of European Steels is the official and up-to-date list of all registered steel grades in European standards with their material numbers (EN 10027-2). The European Steel Register also contains all steel grades registered to the European Steel Registry, including trademarks of European manufacturers. The Steel Institute VDEh in the Steel Center Düsseldorf, as the central European steel registry, publishes this data exclusively in the StahlDat SX.' %}</p>
+                                 <div class="steels">
+                                    <h5 class="steels-h5">{% trans 'According to classification in DIN EN 10020: 2000-07 contains the register of European steels' %}</h5>
+                                    <ul class="library-list steels-list">
+                                        <li>{% trans 'over 550 unalloyed and alloyed quality steels' %}</li>
+                                        <li>{% trans 'over 450 stainless steels; heat-resistant and high-temperature resistant materials (RSH steels)' %}</li>
+                                        <li>{% trans 'over 150 unalloyed stainless steels' %}</li>
+                                        <li>{% trans 'over 1000 other alloyed stainless steels. In addition, these materials are linked with' %}</li>
+                                        <li>{% trans 'over 150 European producers of steel and semi-finished products with corresponding trade names' %}</li>
+                                        <li>{% trans 'over 350 international standards' %}</li>
+                                        <li>{% trans 'For 450 selected materials are also thermophysical properties (properties as a function of temperature) available, for example: Elasticity modulus, thermal expansion, thermal conductivity, el. Resistance.' %}</li>
+                                        <li>{% trans 'Pictures from the register of European steels' %}</li>
+                                        
+                                        {% if request.LANGUAGE_CODE == 'de' %}
+                                          <li>Bilder aus dem Register europäischer Stähle</li>
+                                        {% endif %}
+                                          
+                                    </ul>
+                                 </div>
+                                 <div class="register register-dropdown">
+                                   <h5 class="steels-h5">{% trans 'Register of European steels' %}</h5>
+                                    <ul class="library-list steels-list">
+                                        <li><a href="https://stahldaten.de/en/db/?itemid=5c5ac82492d74f531dfde819" class="cae-link">{% trans 'Quality steels' %}</a></li>
+
+                                        <li><a class="cae-link" href="https://stahldaten.de/en/db/?itemid=5c5ac6b292d74f531b9b0d63" >{% trans 'Unalloyed stainless steels' %}</a></li>
+
+                                        <li><a class="cae-link" href="https://stahldaten.de/en/db/?itemid=5c5ac74c92d74f531b9b0d65">{% trans 'Stainless steels' %}</a></li>
+
+                                        <li><a class="cae-link" href="https://stahldaten.de/en/db/?itemid=5c5acb3f92d74f531b9b0d6d">{% trans 'Alloyed tool steels' %}</a></li>
+                                        <li><a class="cae-link" href="https://stahldaten.de/en/db/?itemid=5c5ac85a92d74f53202fa2e9">{% trans 'Alloyed engineering steels' %}</a></li>
+                                        <li>{% trans 'Nickel and cobalt alloys' %}</li>
+                                    </ul>
+                                 </div>
+                            </div>
+                        </div>
+                          <!-- dropdown sec nav -->
+                        <div class="tab-pane fade" id="nav-database" role="tabpanel" aria-labelledby="database">
+                            <div class="register database-wraper mt-3 ">
+                                <h4 class="library-h4 database-h4">{% trans 'Sheet steel database' %}</h4>
+                                <h5  class="steels-h5  database-h5">{% trans 'The reference with characteristic values ​​and raw data' %}</h5>
+                                <p class="library-p">{% trans 'In several joint projects of the steel and automotive industry "Development of material- and processing-compatible characteristic values ​​for thin sheet of normal and high-strength steels and stainless steels", design-relevant parameters were determined under the direction of the Steel Institute VDEh on relevant body steels.' %}</p>  
+                                <div class="metarials">
+                                    <h5 class="steels-h5 meterials-h5" >{% trans 'Materials' %}</h5>
+                                    <p class="library-p">{% trans 'The database contains the main sheet steel materials for vehicle construction, which are linked to the corresponding tests:' %}</p>
+                                    <ul class="library-list">
+                                      <li>{% trans 'LC steels, IF steels' %}</li>
+                                      <li>{% trans 'deep drawing steels' %}</li>
+                                      <li>{% trans 'Bake-Hardening steels' %}</li>
+                                      <li>{% trans 'Micro-alloyed steels' %}</li>
+                                      <li>{% trans 'High strength steels' %}</li>
+                                      <li>{% trans 'DP steels' %}</li>
+                                      <li>{% trans 'TRIP steels' %}</li>
+                                      <li>{% trans 'austenitic steels' %}</li>
+                                    </ul>
+                                    <p class="library-p">{% trans 'The steels were investigated both in the initial state and in defined pre-deformation and heat-treatment conditions.' %}</p>
+                                </div>
+                                <div class="tests">
+                                <h5 class="steels-h5 tests-h5">{% trans 'Tests' %}</h5>
+                                <p class="library-p">{% trans 'Contents are thousands of real traces and stress-strain diagrams:' %}</p>
+                                <ul class="library-list ">
+                                  <li>{% trans 'Bulge exams' %}</li>
+                                  <li>{% trans 'Dynamic tests' %}</li>
+                                  <li>{% trans 'Elastic tests' %}</li>
+                                  <li>{% trans 'Plastic test' %}</li>
+                                  <li>{% trans 'Cyclic test' %}</li>
+                                  <li>{% trans 'boundary shape change' %}</li>
+                                </ul>
+                                </div>
+                            </div>
+                        </div>
+                           <!-- dropdown third nav -->
+                        <div class="tab-pane fade" id="nav-curves" role="tabpanel" aria-labelledby="curves">
+                            <div class="register mt-3 ">
+                                <h4 class="library-h4 curves-h4">{% trans 'Hardenability curves' %}</h4>
+                                <p class="library-p">{% trans 'The underlying models are valid for a limited range of chemical composition, which is displayed with. Within the validity periods, the user can generate as many hardenability curves as they like and export them from the system - the standard display corresponds to the mean value analysis The hardenability calculation is part of the StahlDat SX standard version.' %}</p>
+
+                                <div class="calculation mt-5">
+                                  <h5 class="steels-h5 calculation-h5">{% trans 'Calculation of hardenability' %}</h5>
+                                  <p class="library-p"> {% trans 'Calculate forehead quenching hardness (Jominy test) from the chemical analysis' %}</p>
+                                  <p class="library-p">{% trans 'All Steel Iron Test Sheet 1664 models: 2013 The Steel Iron Test Sheet SEP1664-2013 provides regression models for the calculation of hardenability for the following material groups:' %}</p>
+
+                                  <ul class="library-list">
+                                    <li>{% trans 'Cr-tempered steels' %}</li>
+                                    <li>{% trans 'CrMo tempered steels' %}</li>
+                                    <li>{% trans 'MnCr insert steels' %}</li>
+                                    <li>{% trans 'MnCr hardened steels higher strength' %}</li>
+                                    <li>{% trans 'MnCrB tempered steels' %}</li>
+                                    <li>{% trans 'MnCrB insert steels' %}</li>
+                                    <li>{% trans 'CrNi insert steels' %}</li>
+                                    <li>{% trans 'CrNiMo Case Steels (2003)' %}</li>
+                                    <li>{% trans 'MoCr Case Steels (2012)' %}</li>
+                                    <li>{% trans 'CrV tempering steel' %}</li>
+                                    <li>{% trans 'C-tempered steels' %}</li>
+                                    <li>{% trans 'CrB tempered steels' %}</li>
+                                    <li>{% trans 'AFP steels' %}</li>
+                                    <li>{% trans 'chain steels' %}</li>
+                                  </ul>
+                                </div>
+                            </div>
+                        </div>
+                          <!-- dropdown four nav -->
+                          <div class="tab-pane fade" id="nav-ttt" role="tabpanel" aria-labelledby="ttt">
+                            <div class="register mt-3 ">
+                                <h4 class="library-h4">{% trans 'TTT database' %}</h4>
+                                <p class="library-p">{% trans 'Data and literature for the heat treatment of steels Unlike the previous Stahldat, the new Stahldat SX contains a continuously growing number of TTT and TTA diagrams.' %}</p>
+                                <p class="library-p">{% trans 'With the StahlDat SX TTT database, finding suitable data is particularly easy:' %}</p>
+                                <ul class="library-list">
+                                  <li>{% trans 'Search for chart type and austenitizing conditions' %}</li>
+                                  <li>{% trans 'Search for names and chemical composition' %}</li>
+                                  <li>{% trans 'Similarity search with ranking' %}</li>
+                                  <li>{% trans 'Tabular comparisons of different diagrams' %}</li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- dropdown five nav -->
+                        <div class="tab-pane fade" id="nav-flow" role="tabpanel" aria-labelledby="flow">
+                            <div class="register mt-3 ">
+                                <h4 class="library-h4 flow-h4">{% trans 'Flow curves database' %}</h4>
+                                <h5 class="steels-h5 flow-h5">{% trans 'More than 500 models for cold and hot forming' %}</h5>
+                                <p class="library-p">{% trans 'The flow curves were kindly provided by the Institute for Metal Forming of the TU Bergakademie Freiberg. They are the result of decades of experience in this field and are also internationally regarded as a solid basis for the design of forming processes' %}.</p>
+                                
+                                <div class="flow-curvs">
+                                    <h5  class="steels-h5 flow-h5">{% trans 'Flow curves' %}</h5>
+                                    <p class="library-p">{% trans 'All flow curves are parametric models (Hensel-Spittel, IMF TU Freiberg) with the parameters temperature, degree of deformation and deformation rate. Within the scope of the validity of the models, any flow curves for steel can be generated and compared with each other. In addition, relationships with other steel data, e.g. chemical composition and thermophysical properties, with the extensive analytical capabilities of the StahlDat SX Professional. Flow curves characterize the forming behavior of steels. They serve as a basis for the calculation of forces and the workload during forming. For example, e.g. the result of a finite element simulation largely depends on the quality of the flow curves used. The flow curve is the representation of the yield stress as a function of the logarithmic main shape change at constant other parameters such as temperature and strain rate.' %}</p>
+                                    <p class="library-p">
+                                    {% trans '  Flow curves are available for more than 150 steels for different microstructure states. The flow curve database is directly linked to the materials of the Register of European Steels.' %}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                         <!-- dropdown six nav -->
+                        <div class="tab-pane fade" id="nav-thermophysical" role="tabpanel" aria-labelledby="thermophysical">
+                            <div class="register mt-3 ">
+                                <h4 class="library-h4">{% trans 'Thermophysical data' %} </h4>
+                                <p class="library-p"> {% trans 'based on the 100 steels program of Friedhelm Richter Investigated properties / measuring methods and measuring instruments' %}</p>
+
+                                <div class="density mt-4">
+                                    <ul  class="library-list">
+                                      <li> <b>{% trans 'Density' %}</b></li>
+                                    </ul>
+                                    <p  class="library-p">{% trans 'The density was determined by weighing in air and under water using a thermostated semi-microbalance.' %}</p>
+                                </div>
+                                <div class="thermal mt-5">
+                                  <ul  class="library-list">
+                                    <li> <b>{% trans 'Thermal expansion' %}</b></li>
+                                  </ul>
+                                  <p class="library-p">{% trans 'For measuring the thermal expansion, i. the average linear thermal expansion coefficient and the differential linear thermal expansion coefficient, a specially constructed Dilatometermessplatz was used with vertical sample positioning.' %}</p>
+                                </div> 
+
+                                <div class="density mt-5">
+                                  <ul  class="library-list">
+                                    <li> <b>{% trans 'Young,s modulus and transverse contraction number' %}</b></li>
+                                  </ul>
+                                  <p  class="library-p">{% trans 'The two elastic sizes, the modulus of elasticity and the transverse contraction number, were recorded by measuring the resonance frequencies of free-swinging rod-shaped samples. The "dynamic" quantities determined in this way can differ from the "static" sizes, in particular at higher temperatures, as determined in the tensile or bending test. For these investigations, the measuring arrangements with the designation "Elastomat" and "Tectanel" were available.' %}</p>
+                              </div>
+                              <div class="density mt-5">
+                                <ul  class="library-list">
+                                  <li> <b>{% trans 'Specific heat capacity' %}</b></li>
+                                </ul>
+                                <p  class="library-p">{% trans 'An adiabatic calorimeter was used to determine the heat content and thus the true specific heat capacity and the average specific heat capacity. The recent studies used a dynamic power-difference calorimeter.' %}</p>
+                            </div>
+                            <div class="density mt-5">
+                              <ul  class="library-list">
+                                <li> <b>{% trans 'Specific electrical resistance' %}</b></li>
+                              </ul>
+                              <p  class="library-p">{% trans 'A specially constructed experimental setup allows the measurement of the specific electrical resistance. On rod-shaped samples, the specific electrical resistance in a thermostatted bath at 20 ° C can be determined. To determine the temperature dependence, thin sample plates are used, in which antiparallel Sägeschnitte be introduced to increase the electrical resistance.' %}</p>
+                          </div>
+                          <div class="density mt-5">
+                            <ul  class="library-list">
+                              <li> <b>{% trans 'Thermal conductivity' %}</b></li>
+                            </ul>
+                            <p  class="library-p">{% trans 'Based on the law of Wiedemann-Franz-Lorenz, the thermal conductivity can be calculated, especially if one has derived the coefficients in the relationship of heat conductance and resistance measurements on samples of the steel to be examined with the same or similar composition.' %}</p>
+                        </div>
+                        <div class="density mt-5 mb-5">
+                          <ul  class="library-list">
+                            <li> <b>{% trans 'Thermal conductivity' %}</b></li>
+                          </ul>
+                          <p  class="library-p">{% trans 'From the determined values ​​of thermal conductivity, true specific heat capacity and density, the numerical values ​​for the thermal diffusivity result. For the direct measurement, the laser flash method was used for some steels.' %}</p>
+                      </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>       
+        </section>
+{% endblock body %}

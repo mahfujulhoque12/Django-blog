@@ -1,0 +1,109 @@
+{% extends 'base.html' %}
+{% load static i18n %}
+
+{% block body %}
+ <section class="search-wrap">
+    <div class="container pt-5">
+        <h2 class="search-h2">Search for "{{term}}"</h2>
+        <hr>
+
+        <div class="searh-content">
+          {% for post in posts %}
+
+              {% if post.post_type == 'RESEARCH' %}
+                {% if post.external_url %}
+                  <div>
+                    <p class="search-p">
+                      <a href="{{ post.external_url }}" class="cae-link">{{ post.title }}</a>
+                    </p>
+                    <p class="search-p">{{ post.summary.html|safe }}</p>
+                  </div>
+                {% else %}
+                  <div>
+                    <p class="search-p">
+                      
+                      <a href="{% url 'show_research_content' research_id=post.id %}" class="cae-link">{{post.title}}</a>
+                    </p>
+                  
+                    <p class="search-p">{{post.summary.html|safe}}</p>
+                  </div>
+                {% endif %}
+              {% endif %}
+
+              {% if post.post_type == 'NEWS' %}
+                {% if post.external_url %}
+                  <div>
+                    <p class="search-p">
+                      <a href="{{ post.external_url }}" class="cae-link">{{ post.title }}</a>
+                    </p>
+                    <p class="search-p">{{ post.summary.html|safe }}</p>
+                  </div>
+                  {% elif post.external_url_endpoint %}
+                  <div>
+                    <p class="search-p">
+                      <a href="{{post.external_url_endpoint }}" class="cae-link">{{ post.title }}</a>
+                    </p>
+                    <p class="search-p">{{ post.summary.html|safe }}</p>
+                  </div>
+                  {% else %}
+                    <div>
+                      <p class="search-p">
+                        
+                        <a href="{% url 'more_info' news_id=post.id %}" class="cae-link">{{post.title}}</a>
+                      </p>
+                    
+                      <p class="search-p">{{post.summary.html|safe}}</p>
+                    </div>
+                {% endif %}
+              {% endif %}
+
+              {% if post.post_type == 'PRODUCTS' %}
+                {% if post.external_url %}
+                  <div>
+                      <p class="search-p">
+                        <a href="{{ post.external_url }}" class="cae-link">{{ post.title }}</a>
+                    </p>
+                    <p class="search-p">{{ post.summary.html|safe }}</p>
+                  </div>
+                {% elif post.external_url_endpoint %}
+                    <div>
+                      <p class="search-p">
+                        <a href="{{post.external_url_endpoint }}" class="cae-link">{{ post.title }}</a>
+                      </p>
+                      <p class="search-p">{{ post.summary.html|safe }}</p>
+                    </div>
+                {% else %}
+                    <div>
+                      <p class="search-p">
+                          <a href="{% url 'database_details' database_id=post.id %}" class="cae-link">{{ post.title }}</a>
+                      </p>
+                      <p class="search-p">{{ post.summary.html|safe }}</p>
+                  </div>
+                {% endif %}
+              {% endif %}
+            
+              {% if post.post_type == 'EDA' %}
+                {% if post.external_url_endpoint %}
+                  <div>
+                    <p class="search-p">
+                      <a href="{{post.external_url_endpoint }}" class="cae-link">{{ post.title }}</a>
+                    </p>
+                    <p class="search-p">{{ post.summary.html|safe }}</p>
+                  </div>
+                {% else %}
+                  <div>
+                    <p class="search-p">
+                      
+                      <a href="{% url 'eda_details' eda_id=post.id %}" class="cae-link">{{post.title}}</a>
+                    </p>
+                  
+                    <p class="search-p">{{post.summary.html|safe}}</p>
+                  </div>
+                {% endif %}
+              {% endif %}
+
+          {% endfor %}
+        </div>
+    </div>
+ </section>
+{% endblock body %}

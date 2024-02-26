@@ -1,0 +1,181 @@
+{% load static %}
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+{% get_available_languages as LANGUAGES %}
+{% get_language_info_list for LANGUAGES as languages %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta property="og:site_name" content="Matplus GmbH"/>
+        <meta property="og:type" content="website"/>
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@">
+        <link rel="icon" type="image/x-icon" href="{% static 'images/icon.png' %}">
+          <!-- this this for meta    -->
+  
+        {% block meta %}
+            
+        {% endblock meta %}
+          
+            
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/main.css' %}">
+        <link rel="stylesheet" href="{% static 'css/news.css' %}">
+        <link rel="stylesheet" href="{% static 'css/research.css'%}">
+        <link rel="stylesheet" href="{%  static 'css/contact.css' %}">
+        <link rel="stylesheet" href="{%  static 'css/company.css' %}">
+        <link rel="stylesheet" href="{%  static 'css/customers.css' %}">
+        <link rel="stylesheet" href="{%  static 'css/partner.css' %}">
+        <link rel="stylesheet" href="{%  static 'css/jm.css' %}">
+        <link rel="stylesheet" href="{%  static 'css/database.css' %}">
+        <link rel="stylesheet" href="{%  static 'css/meterial.css' %}">
+        <link rel="stylesheet" href="{%  static 'css/eda.css' %}">
+        <link rel="stylesheet" href="{%  static 'css/implement.css' %}">
+        <link rel="stylesheet" href="{%  static 'css/stahldat.css' %}">
+        <link rel="stylesheet" href="{%  static 'css/aluselect.css' %}">
+        <link rel="stylesheet" href="{%  static 'css/jm_pro.css' %}">
+        <link rel="stylesheet" href="{%  static 'css/footer.css' %}">
+        <link rel="stylesheet" href="{% static 'css/fontawesome.min.css' %}">
+       
+      </head>
+<body>
+      
+      <!-- navbar start -->
+      <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="container">
+            <a class="navbar-brand  navbar-image" href="{% url 'index' %}">
+                <img src="{% static 'images/nav.png' %}" alt="Matplus GmbH" />
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item dropdown me-2">
+                      <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      {% trans 'Company' %}
+                      </a>
+                      <ul class="dropdown-menu dropdown-bg-color" aria-labelledby="navbarDropdown">
+                        <li><a href="{%url 'company'%}" class="dropdown-item">{% trans 'Company' %}</a></li>
+                        <li><a href="{%url 'customers'%}" class="dropdown-item">{% trans 'Selected Customers' %}</a></li>
+                        <li><a href="{% url 'partner' %}" class="dropdown-item">{% trans 'Partners' %}</a></li>
+                      </ul>
+                    </li>
+                    <li class="nav-item dropdown me-2">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                     {% trans 'Products' %}
+                      </a>
+                      <ul class="dropdown-menu dropdown-bg-color" aria-labelledby="navbarDropdown">
+                          <li><a href="{% url 'eda' %}" class="dropdown-item">{% trans 'EDA ®' %}</a></li>
+                          <li><a href="{% url 'jm' %}" class="dropdown-item">{% trans 'JMatPro ®' %}</a></li>
+                          <li><a href="{%url 'databases'%}" class="dropdown-item">{% trans 'Databases' %}</a></li>
+                      </ul>
+                    </li>
+                <li class="nav-item dropdown me-2">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  {% trans 'Services' %}
+                  </a>
+                  <ul class="dropdown-menu dropdown-bg-color" aria-labelledby="navbarDropdown">
+                      <li><a href="{% url 'meterial' %}" class="dropdown-item">{% trans 'Material Innovation' %}</a></li>
+                      <li><a href="{% url 'implement' %}" class="dropdown-item">{% trans 'Implementation' %}</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item me-2">
+                  <a class="nav-link" href="{% url 'research' %}" tabindex="-1" aria-disabled="true">{% trans 'Research' %}</a>
+                </li>
+                <li class="nav-item me-2">
+                  <a class="nav-link" href="{% url 'news' %}" tabindex="-1" aria-disabled="true">{% trans 'News' %}</a>
+                </li>
+                <li class="nav-item ">
+                  <a class="nav-link" href="{% url 'contact'%}" tabindex="-1" aria-disabled="true">{% trans 'Contact' %}</a>
+                </li>
+              </ul>
+              <div class="d-flex justify-content-between align-items-center gap-5"> 
+                  <div>
+                    <form class="form-inline d-flex justify-content-center align-items-center" action="/search" method="GET">
+                      <input class="form-control mx-2" type="text" name="term" maxlength="255"  placeholder="Search"  id="id_s">
+                      <button type="submit" class="btn ml-3 icon-responsive">
+                        <i class="fas fa-search icon-font mt-1 ms-3"></i>
+                      </button>
+                    </form>
+                  </div>
+                  <div>
+                    <form action="{% url 'set_language' %}" method="post">
+                      {% csrf_token %}
+                      <div class="py-2 d-flex justify-content-center align-items-center">
+                        <i class="icon fas fa-globe"></i>
+      
+                        <select class="langauge-select" name="language" onchange="this.form.submit()">
+                          {% for language in languages %} 
+                          <option value="{{ language.code }}" {% if language.code == LANGUAGE_CODE %} selected {% endif %}>{{ language.name }}</option>
+                          {% endfor %}
+                        </select>
+                      </div>
+                    </form> 
+                  </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+      <!-- navbar end -->
+
+
+
+   <!-- this is for body    -->
+    {% block body %}
+
+    
+    {% endblock body %}
+<!-- footer start -->
+    <footer>
+        <div class="container">
+        <div class="row ">
+            <div class="col-lg-8 d-flex footer-left">
+              <img src="{% static '/images/footer1.png' %}" onmouseover="this.src='{% static '/images/footer.png' %}'"  onmouseout="this.src='{% static '/images/footer1.png' %}'"  alt="footer" />
+
+
+            <div class=" d-flex flex-column">
+                <p class="footer-p">&copy; {% trans 'Copyright' %} 2022 <span class="mx-3">|</span> {% trans 'ALL RIGHTS RESERVED' %} <span class="mx-3">|</span> Matplus GmbH <span class="ms-1">|</span> </p>
+
+                <div class="footer-links">
+                <a href="/imprint">{% trans 'Imprint' %}</a><span class="links-das-color">|</span>
+                <a href="/cookies">{% trans 'Cookie Policy' %}</a><span class=" links-das-color">|</span>
+                <a href="/privacy">{% trans 'Privacy Policy' %}</a><span class="links-das-color">|</span>
+                <a href="/notice">{% trans 'Legal notice' %}</a><span class=" links-das-color">|</span>
+                <a href="/terms">{% trans 'General terms and conditions' %}</a>
+                </div>
+            </div>
+            
+            </div>
+            <div class="col-lg-3">
+            <div class="footer-right d-flex justify-content-between mt-5"> 
+                <img class="footer-img" src="{% static '/images/fotter2.png' %}"  alt="footer" />
+
+                <div  class="mt-5">
+                    <i class="fa-brands fa-linkedin-in linkedin-custom"></i>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+    </footer>
+<!-- footer end -->
+
+<!-- <script>
+  function toggleSearch() {
+      var formGroup = document.querySelector('.form-group');
+      formGroup.style.display = (formGroup.style.display === 'none' || formGroup.style.display === '') ? 'flex' : 'none';
+  }
+</script> -->
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/fontawesome.min.js' %}"></script>
+
+
+</body>
+</html>

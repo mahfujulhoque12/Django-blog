@@ -1,0 +1,138 @@
+{% extends 'base.html' %}
+{% load static i18n %}
+
+
+{% block meta %}
+    <title>JMatPro: Material simulation &amp; calculation of material data</title>
+    <link rel="canonical" href="{{request.get_full_path}}">
+    <meta name="description" content="JMatPro is the best-practice tool for the calculation of temperature-dependent materials properties for a variety of technical alloys" />
+    <meta property="og:title" content="JMatPro: Material simulation &amp; calculation of material data" />
+    <meta property="og:description" content="JMatPro is the best-practice tool for the calculation of temperature-dependent materials properties for a variety of technical alloys" />
+    <meta property="og:image" content="http://EN/media/images/20220808_Matplus_logo_redesign.original.png" />
+    <meta property="og:url" content="http://EN/en-us/products/jmatpro/" />
+    <meta name="twitter:title" content="JMatPro: Material simulation &amp; calculation of material data">
+    <meta name="twitter:image" content="http://EN/media/images/20220808_Matplus_logo_redesign.original.png">   
+{% endblock meta %}
+    
+
+{% block body %}
+<!-- jm hero -->
+    <section class="jm-wrapper">
+        <div class="container-fluid jm-bg"  style="background-image: url({%static 'images/jm-bg.png'%});">
+           <div class="container jm-hero">
+            <h1 class="jm-h1">{% trans 'JMatPro ®' %}</h1>
+            <p class="jm-p">{% trans 'Leading Simulation Software' %}</p>
+           </div>
+        </div>
+     
+            <div class="container ">
+                <div class="row jm-des-contaier-bg">
+                    <div class="jm-box-content">
+                        <h1 class="jm-des-h1">{% trans 'JMatPro® in brief' %}</h1>
+                        <p class="jm-des-p">{% trans 'JMatPro® is a product of Sente Software Ltd. in Guildford/UK. We are representative in German speaking countries and offer sales, support, services and trainings.' %}</p>
+                        <p  class="jm-des-p">{% trans 'JMatPro® is the best-practice tool for the calculation of temperature-dependent materials properties for a variety of technical alloys,' %}</p>
+                        <p  class="jm-des-p">{% trans 'e.g. steels, nickel, aluminum, titanium, magnesium, cobalt, zirconium, copper alloys and tin-based solder:' %}</p>
+    
+                        <div class="jm-list">
+                            <ul>
+                                <li class="jm-des-p">{% trans 'Phase equilibria, phase transformations based on thermodynamics/Calphad' %}</li>
+                                <li class="jm-des-p">{% trans 'Solidification simulation (Scheil, back diffusion)' %}</li>
+                                <li class="jm-des-p">{% trans 'Phase transformation and precipitation diagrams (TTT, CCT, TTP),' %}</li>
+                                <li class="jm-des-p">{% trans 'Physical properties, e.g. thermal expansions, heat capacities' %}</li>
+                                <li class="jm-des-p">{% trans 'Mechanical-technological properties, e.g. strength, flow curves' %}</li>
+                                <li class="jm-des-p">{% trans 'Export of material cards to various CAE systems' %}</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="effective">
+                    <h2><b>{% trans 'Effective use in many companies' %}</b></h2>
+                    <p class="jm-des-p">{% trans 'JMatPro® is popular in many companies around the world and is also increasingly used in education and research:' %}</p>
+                    <div>
+                        <ul>
+                            <li class="jm-des-p">{% trans 'Development / optimization of materials / technologies' %}</li>
+                            <li class="jm-des-p">{% trans 'Generation of material data for CAE / FEM calculations' %}</li>
+                    
+                        </ul>
+                    </div>
+                    <p class="jm-des-p">{% trans 'JMatPro® has an easy to use graphical user interface and is also liked by occasional users. Even for complex alloys it delivers tangible results in a short time.' %}</p>
+                    <p class="jm-des-p"> {% trans ' A table summarising the available JMatPro® calculation types per material type is available for download here.' %}</p>
+                  
+                </div>
+                <div class="jm-banner"  style="background-image: url({%static 'images/jm-bg.png'%});">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-12">
+                            <img class="jm-banner-left" src="{%static 'images/jm-laptop.png'%}" alt="">
+                        </div>
+                        <div class="col-lg-8 col-md-12">
+                            <div class="jm-banner-right">
+                                    <h1>{% trans 'JMatPro® in Action' %}</h1>
+                                    <p class="jm-des-p">{% trans 'The free demo version of JMatPro® offers a large number of calculated examples for different alloy systems' %}</p>
+                                    <a href="/jm_details/" title="More Information" class="btn btn-danger company-btn banner-btn" id="mar-button-top">{% trans 'Application examples' %}</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+         
+                <div class="jm-list selling mt-5">
+                    <h2><b>{% trans 'Unique Selling Points' %}</b></h2>
+                    <ul>
+                        <li class="selling-p">{% trans 'JMatPro® is unique worldwide by the combination of solid and user-friendly thermodynamics (CalPhaD) together with the calculation of material properties' %}</li>
+                        <li class="selling-p">{% trans 'JMatPro® provides consistent results over a wide range of compositions by applying solid thermodynamics + physically based models' %}</li>
+                        <li class="selling-p">{% trans 'JMatPro® extends equilibrium calculations by application of practical calculation modules for phase transformations and precipitations' %}</li>
+                        <li class="selling-p">{% trans 'JMatPro® has a great usability and requires minimal effort for learning and training' %}</li>
+                        <li class="selling-p">{% trans 'JMatPro® uses fast and robust algorithms, so that even complex multi-component alloys are calculated in short time' %}</li>
+                        <li class="selling-p">{% trans 'JMatPro® allows the calculation of accurate material cards for a variety of CAE systems' %}</li>
+                    </ul>
+                </div>
+                <div class="jm-list selling mt-5">
+                    <h2><b>{% trans 'Users and Community' %}</b></h2>
+                    <ul>
+                        <li class="selling-p">{% trans 'JMatPro is continuously developed by the team of from' %} <a href="https://www.sentesoftware.co.uk/" class="cae-link">{% trans 'Sente Software ' %}</a> {% trans 'in England. Regular user meetings in Germany and the USA ensure a lively exchange with users, so that further development remains relevant to practice.' %}</li>
+
+                        <li class="selling-p">{% trans 'The group of satisfied users is growing continuously - we try to strengthen the exchange of experiences in the form of customer days, user meetings and specific training courses. Feel free to ask us for references for your industry.' %}</li>
+                    </ul>
+                </div>
+
+                <div class="jm-list selling mt-5">
+                    <h2><b>{% trans 'Interfaces to CAE systems - material cards' %}</b></h2>
+                    <ul>
+                        <li class="selling-p"><a href="https://hexagon.com/products/product-groups/computer-aided-engineering-software/virtual-manufacturing" class="cae-link">{% trans 'Simufact' %} </a>{% trans '(Simufact.forming - forming simulation, Simufact.premap - heat treatment simulation)' %}</li>
+                        <li class="selling-p"><a href="https://www.deform.com/" class="cae-link">{% trans 'Deform' %} </a>{% trans '(Deform - forming simulation, Deform-HT - heat treatment simulation)' %}</li>
+                        <li class="selling-p"><a href="https://www.transvalor.com/en/homepage" class="cae-link">{% trans 'Forge ' %}</a> {% trans '(forming simulation)' %}</li>
+                        <li class="selling-p"><a href="https://www.comsol.de/" class="cae-link">{% trans 'COMSOL Multiphysics ' %} </a> {% trans '(heat treatment simulation)' %}</li>
+                        <li class="selling-p"><a href="https://www.qform3d.com/" class="cae-link">{% trans 'QForm' %} </a>{% trans '(forming simulation)' %}</li>
+                        <li class="selling-p"><a href="https://www.3ds.com/de/produkte-und-services/simulia/produkte/abaqus/" class="cae-link">{% trans 'Abaqus ' %}</a>{% trans '(forming simulation)' %}</li>
+                        <li class="selling-p"><a href="https://www.dynamore.de/de/" class="cae-link">{% trans 'LS-Dyna ' %}</a> {% trans '(forming simulation)' %}</li>
+                        <li class="selling-p"><a href="https://www.dynamore.de/de/" class="cae-link">{% trans 'Dynaweld' %}</a> {% trans '(forming simulation)' %}</li>
+
+                        <li class="selling-p"><a href="https://www.dynaweld-automotive.de/" class="cae-link">{% trans 'Sysweld' %} </a> {% trans '(welding simulation)' %}</li>
+                        <li class="selling-p"><a href="https://www.cadfem.net/de/de/" class="cae-link">{% trans 'Ansys' %}</a>{% trans '(generic FEM simulation)' %}</li>
+                        <li class="selling-p"><a href="https://www.magmasoft.com.sg/en/" class="cae-link">{% trans 'Magmasoft' %}</a>{% trans '(solidification simulation)' %}</li>
+                        <li class="selling-p"><a href="https://www.transvalor.com/en/thercast" class="cae-link">{% trans 'TherCast' %}</a>{% trans '(solidification simulation)' %}</li>
+                        <li class="selling-p"><a href="https://www.flow3d.de/" class="cae-link">{% trans 'Flow3D' %}</a>{% trans '(solidification simulation)' %}</li>
+                    </ul>
+                    <p class="selling-p">{% trans 'Data can also be written as ASCII files or extracted using copy / paste.' %}</p> 
+                </div>
+                <div class="additional mt-5 pb-5">
+                    <h3><b>{% trans 'Additional information' %}</b></h3>
+                    <p class="selling-p">{% trans 'Resellers for other countries can be found' %} <a href="https://www.sentesoftware.co.uk/contact-us.aspx" class="cae-link"><b>{% trans 'here.' %}</b></a></p>
+                    <p class="selling-p">{% trans 'Much more information can be found on the website of Sente Software Ltd., e.g.:' %}</p>
+                    <div class="card-fotter-styel additional-btn d-flex gap-2">
+                        <a href="https://www.sentesoftware.co.uk/demo" class="btn btn-primary">{% trans 'JMatPro Demo Version' %}</a>  
+                        <a href="https://www.sentesoftware.co.uk/downloads/articles-and-papers.aspx" class="btn btn-primary">{% trans 'Download of articles and docs' %}</a>   
+                    </div>
+                    <div class="only-german">
+                        
+                        {% if request.LANGUAGE_CODE == 'de' %}
+                            <p class="jm-des-p">Viele Grundlagen von JMatPro® sind im sind im international anerkannten Standardwerk von <a href="https://shop.elsevier.com/books/calphad-calculation-of-phase-diagrams-a-comprehensive-guide/saunders/978-0-08-042129-2" class="cae-link"> Nigel Saunders und Peter Miodownik: CalPhad – Calculation of phase diagrams, 1998,</a> beschrieben. Darüber hinaus steht auf der Webseite des Herstellers Fa. Sente Software eine Vielzahl von Veröffentlichungen zum Download bereit.</p>
+                        {% endif %}
+                            
+                    </div>
+                </div>
+            </div>
+      
+    </section>
+<!-- jm des -->
+
+{% endblock body %}

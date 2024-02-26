@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static i18n %}
+
+
+{% block meta %}  
+    <title>Contact — Matplus GmbH</title>
+    <link rel="canonical" href="{{request.get_full_path}}">
+    <meta name="description" content="" />
+    <meta property="og:title" content="Contact — Matplus GmbH" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="http://EN/media/images/matplus-mediacenter-header-img.original.jpg" />
+    <meta property="og:site_name" content="Matplus GmbH" />
+    <meta property="og:url" content="http://EN/en-us/contact/" />
+    <meta name="twitter:title" content="Contact — Matplus GmbH">
+    <meta name="twitter:image" content="http://EN/media/images/matplus-mediacenter-header-img.original.jpg">
+{% endblock meta %}
+    
+
+{% block body %}
+    <!-- contact hero start-->
+    <section>
+        <div class="container-fluid contact-img" style="background-image: url('{% static 'images/contact.png' %}');">
+            <div class="row contact-hero">
+                <div class="col-lg-6 col-md-12">
+                    <h1>{% trans 'Contact' %}</h1> 
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    <!-- contact hero end-->
+    <!-- contact info start -->
+    <section class="contact-info-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 contact-info p-3">
+                    <h3><b>Matplus GmbH</b></h3>
+                    <p>Tel. +49 (0)202 29 78 97 80 <br>
+                        Fax. +49 (0)202 29 78 97 89</p>
+                    <p>E-Mail: contact@matplus.eu</p>
+                    <p>Hofaue 55 <br>
+                        D-42103 Wuppertal/Germany</p>
+                </div>
+            </div>
+        </div>
+    </section>
+ <!-- contact info end -->
+{% endblock body %}
+

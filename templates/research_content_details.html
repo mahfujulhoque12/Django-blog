@@ -1,0 +1,69 @@
+
+{% extends 'base.html' %}
+
+{% load static %}
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+
+{% block meta %}
+  <title>{{research.title}}</title>  
+  <link rel="canonical" href="{{research.title}}">
+  <meta name="description" content="" />
+  <meta property="og:title" content="{{research.title}} — Matplus GmbH" />
+  <meta property="og:description" content="" />
+  <meta property="og:image" content="http://EN/media/images/20220808_Matplus_logo_redesign.original.png" />
+  <meta property="og:url" content="{{research.title}}" />
+  <meta name="twitter:title" content="{{research.title}} — Matplus GmbH">
+  <meta name="twitter:image" content="http://EN/media/images/20220808_Matplus_logo_redesign.original.png">
+{% endblock meta %}
+
+{% block title %}
+    
+{% endblock title %} 
+
+{% block body %}
+
+
+
+<div class="content-details">
+   
+   {% if research.cover_photo and research.headers_content%}
+    
+  
+    
+  <div class="flex-row-reverse gap-0 content-responsive">
+    
+    {% if research.cover_photo %}
+      <div id="image-div" class="col-lg-6 col-md-12">
+        <img class="research-details-cover-photo" src="{{ research.cover_photo.url }}" alt="Cover Photo">
+    </div>
+    {% endif %}
+    
+    {% if research.headers_content.html|safe %}
+      <div class="headers-content col-lg-6 col-md-12">
+        {{research.headers_content.html|safe}}
+      </div>
+    {% endif %}
+  </div>
+  {% endif %}
+    <div class="container customize">
+    
+      {% load editorjs %}
+      
+      {% if LANGUAGE_CODE == 'en' %}
+        
+      {{research.content_en|editorjs}}
+      {% elif LANGUAGE_CODE == 'de' %}
+
+      {{research.content_de|editorjs}}
+      {% else %}
+      
+      {{research.content_ja|editorjs}}
+      {% endif %}
+        
+      
+    </div>
+</div>
+    
+
+{% endblock body %}

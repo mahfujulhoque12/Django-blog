@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+{% load static i18n%}
+ 
+
+{% block meta %}
+    <title>Service &amp; application technology | Implementation</title>
+    <link rel="canonical" href="{{request.get_full_path}}">
+    <meta name="description" content="We help you in the introduction of tailored software systems for materials." />
+    <meta property="og:title" content="Service &amp; application technology | Implementation" />
+    <meta property="og:description" content="We help you in the introduction of tailored software systems for materials." />
+    <meta property="og:image" content="http://EN/media/images/20220808_Matplus_logo_redesign.original.png" />
+    <meta property="og:url" content="{{request.get_full_path}}" />
+    <meta name="twitter:title" content="Service &amp; application technology | Implementation">
+    <meta name="twitter:image" content="http://EN/media/images/20220808_Matplus_logo_redesign.original.png">
+{% endblock meta %}
+    
+
+{% block body %}
+<section class="meterial-wrap">
+    <div class="container-fluid">
+       <div class="">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 research-left" >
+                        <h1 class="research-left-h1">{% trans 'Implementation of Service & Application technology' %}</h1>
+                        <p class="research-left-p">{% trans 'We deliver the right data in the right version at the right time to the right user.' %}</p>
+                        <a href="/eda/" class="button-outline-org text-decoration-none">{% trans 'Software Systems' %}</a>
+                </div>
+                <div class="col-lg-6 col-md-12 research-img" style="background-image: url({% static 'images/implement.png' %});"></div>
+            </div>
+       </div>
+    </div>
+    <div class="container material-sec-part implement">
+        <div class="row">
+            <div class="jm-list selling mt-5">
+                <h3><b>{% trans 'Implementation' %}</b></h3>
+                
+                {% if request.LANGUAGE_CODE == 'de' %}
+                <p class="selling-p">Unsere <a href="/eda/" class="cae-link">Software-Lösungen </a> unterstützen bei der Entwicklung und Optimierung von innovativen Werkstoffen und effizienten Verarbeitungsprozessen.</p>
+                <p class="selling-p">Die Implementierung von Softwarelösungen und der Aufbau unternehmensweiter Wissensbasen für Werkstoffinformationen ist ein wichter Schwerpunkt unseres Unternehmens.</p>
+                {% endif %}
+                    
+
+                <p class="selling-p">{% trans 'We help you in the introduction of tailored software systems for materials. This can include:' %}</p>
+                <ul>
+                    <li class="selling-p">{% trans 'Analysis of existing data, e.g. databases, file systems and data from testing machines' %}</li>
+                    <li class="selling-p">{% trans 'Analysis of the process requirements, e.g. Material development, materials testing, CAD and CAE integrations' %}</li>
+                    <li class="selling-p">{% trans 'Analysis of system and user requirements, e.g. ERP integrations, certificate writing, software architectures' %}</li>
+                    <li class="selling-p">{% trans 'Development of concepts for a requirement-compliant data and knowledge management for materials' %}</li>
+                    <li class="selling-p">{% trans 'Concept and evaluation of solutions based on JMatPro and EDA' %}</li>
+                    <li class="selling-p">{% trans 'Planning and implementation of the solution coordinated and shared with the customer' %}</li>
+                    <li class="selling-p">{% trans 'Migration of legacy data to the new system landscape' %}</li>
+                    <li class="selling-p">{% trans 'Creating interfaces to the system landscape, e.g. Testing machines, ERP and CAE' %}</li>
+                    <li class="selling-p">{% trans 'Individual adjustments' %}</li>
+                    
+                    {% if request.LANGUAGE_CODE == 'de' %}
+                        <li class="selling-p">Schulung für <a href="/jm/" class="cae-link">JMatPro</a> und <a href="/eda/" class="cae-link">EDA</a></li>
+                    {% else %}
+                        <li class="selling-p">{% trans 'Training for JMatPro and EDA' %}</li>
+                    {% endif %}
+                        
+               
+
+                </ul>
+            </div>
+            <div class="integration mt-5">
+                <h3><b>{% trans 'Integration' %}</b></h3>
+                <p class="selling-p integration-p"> {% trans 'Development of customer-specific databases and knowledge bases for materials as well as interface to other systems: we deliver the right data in the right version at the right time to the right user. The diversity of information on the Internet is generally not a solution but a new problem.' %}</p>
+                
+                {% if request.LANGUAGE_CODE == 'de' %}
+                    <p class="selling-p integration-p"><b>Die richtigen Daten in der richtigen Version zur richtigen Zeit beim richtigen Anwender.</b></p>  
+                {% endif %}
+                    
+                <p class="selling-p integration-p">{% trans 'We create the specific knowledge bases for use in large and small businesses, providing an overview that ultimately leads to increased user productivity.' %}</p>
+                <p class="selling-p integration-p">
+                   {% trans ' A publicly available example of our work is the' %} <a href="https://www.stahldaten.de/" class="cae-link">Stahldat-SX</a>, {% trans 'which is being developed by VDEh as the leading European database for steel on behalf of the European Steel Registry.' %}
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+    
+{% endblock body %}

@@ -1,0 +1,133 @@
+{% extends 'base.html' %}
+{% load static i18n %}
+
+
+{% block meta %}
+    <title>ALUSELECT Material Database — Matplus GmbH</title>
+    <link rel="canonical" href="{{request.get_full_path}}">
+    <meta name="description" content="" />
+    <meta property="og:title" content="ALUSELECT Material Database — Matplus GmbH" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="http://EN/media/images/20220808_Matplus_logo_redesign.original.png" />
+    <meta property="og:site_name" content="Matplus GmbH" />
+    <meta property="og:url" content="http://EN/en-us/products/databases/aluselect/" />
+    <meta name="twitter:title" content="ALUSELECT Material Database — Matplus GmbH">
+    <meta name="twitter:image" content="http://EN/media/images/20220808_Matplus_logo_redesign.original.png">
+{% endblock meta %}
+
+    
+{% block body %}
+
+<section class="aluselect-wraper">
+    <div class="container-fluid">
+        <div class="">
+         <div class="row">
+             <div class="col-lg-6 col-md-12 research-left alu-left" >
+                     <h1 class=" aluselect-h1">{% trans 'ALUSELECT' %}</h1>
+                     <h5 class="aluselect-h5">{% trans 'Material Database' %}</h5>
+                     <p class="research-left-p alu-p">{% trans 'AluSelect is a computer-based reference database containing technical information on the most widely used aluminium alloys. This freely accessible website allows the user to obtain information about the mechanical, physical and chemical properties of aluminium alloys. At present, 35 wrought alloys and 12 casting alloys are indexed.' %}</p>
+                    <a href="https://sso.matplus.eu/realms/matplus/protocol/openid-connect/auth?response_type=code&scope=openid+email&client_id=matglobe.de&redirect_uri=https%3A%2F%2Faluminium.matplus.eu%2Foidc%2Fcallback%2F&state=dzehdJZxTZE9871Y7mSEMOf54uKN7DJH&nonce=RphkSSoc7UEk5NnDb5cER72ZaqcvSeDq" class="btn btn-danger alu-bnt">{% trans 'Login' %}</a>
+             </div>
+             <div class="col-lg-6 col-md-12 research-img alu-img" style="background-image: url({% static 'images/aluselect.png' %})"></div>
+     
+         </div>
+        </div>
+     </div>
+     <div class="alu-description">
+        <div class="container">
+            <div class="row">
+                <div class="economy mt-5">
+                    <h2 class="economy-h2">{% trans 'The world is moving into a low carbon economy.' %}</h2>
+                    <p class="economy-p">{% trans 'As we are witnessing the development of new business models, IT innovation, decentralized governance, and energy efficiency, Aluminium is playing a fundamental role to drive this transformation. Aluminium has a broad range of unique properties that contributes to building a new society based on low carbon products, lighter cars, energy efficient-buildings and recycling.' %}</p>
+                    <p class="economy-p">
+                        {% trans 'For instance; Transport is the single largest sector for aluminium products in Europe, absorbing almost 40% of industry output. Its lightweight characteristics reduce the weight of a range of vehicles from passenger aircraft to cars, increasing fuel efficiency and reducing CO2 emissions.' %}
+                    </p>
+                    <p class="economy-p">{% trans 'Today, aluminium is the second most widely used metal in the world. This is because aluminium has a unique combination of attractive properties and effects that can be summarised as follows:' %}</p>
+                </div>          
+            </div>
+            <div class="light mt-5">
+                <div class="row">
+                <div class="col-lg-6 col-sm-12">
+                    <h2 class="economy-h2">{% trans 'Light yet strong' %}</h2>
+                    <p class="economy-p">{% trans 'Despite its relatively low weight, aluminium has a remarkable strength to weight ratio. As an alloy, aluminium offers similar performance to advanced steels and titanium.' %}</p>
+                </div>
+                <div class="col-lg-6 col-sm-12">
+                    <h2 class="economy-h2">{% trans 'Recyclability' %}</h2>
+                    <p class="economy-p">{% trans '5% of original enerfy consumption 75% of all aluminium produced still in use' %}</p>
+                </div>
+            </div>
+            </div>
+            <div class="light mt-5">
+                <div class="row">
+                <div class="col-lg-6 col-sm-12">
+                    <h2 class="economy-h2">{% trans 'High versatility' %}</h2>
+                    <p class="economy-p">{% trans 'Aluminium is not only light; it has a low melting point and is highly ductile. This makes it easy to work with, shape and join adding to its versatility.' %}</p>
+                </div>
+                <div class="col-lg-6 col-sm-12">
+                    <h2 class="economy-h2">{% trans 'Energy saving' %}</h2>
+                    <p class="economy-p">{% trans 'Aluminium’s unique properties allow for significant energy savings in many applications; for example in vehicles and buildings. In addition, recycled aluminium is highly energy efficient, using only 5% of the energy of primary production.' %}</p>
+                </div>
+            </div>
+            </div>
+            <div class="light mt-5">
+                <div class="row">
+                <div class="col-lg-6 col-sm-12">
+                    <h2 class="economy-h2">{% trans 'Corrosion free & durable' %}</h2>
+                    <p class="economy-p">{% trans 'Aluminium develops a natural oxide layer, protecting it against corrosion and making it virtually maintenance free. This makes aluminium the ideal material for packaging, building and vehicles and transport.' %}</p>
+                </div>
+                <div class="col-lg-6 col-sm-12">
+                    <h2 class="economy-h2">{% trans 'Alloying technology' %}</h2>
+                    <p class="economy-p">{% trans 'aluminium can be made hard, soft, stiff, bendable, smooth, temperature resistance etc. depending on the actual need, by developing tailor-made alloys' %}</p>
+                </div>
+            </div>
+            </div>
+            <div class="light mt-5">
+                <div class="row">
+                <div class="col-lg-12 col-sm-12">
+                    <h2 class="economy-h2">{% trans 'Impermeability' %}</h2>
+                    <p class="economy-p impermeability-p">{% trans 'Aluminium can be rolled extremely thinly – less than 100th of a millimetre – while remaining completely impermeable to light, odour and contamination. This makes it the ideal material for packing food, pharmaceuticals and other sensitive products.' %}</p>
+                </div>
+               
+            </div>
+            </div>
+
+            <div class="presentation mt-5">
+                <h2 class="economy-h2 pb-4">{% trans 'Presentation of Mechanical Properties in AluSelect' %}</h2>
+                <div class="row">
+                    <div class="col-lg-6 col-sm-12">
+                        <div class="grap-column h-100">
+                            <img class="w-100" src="{% static 'images/alu1.png' %}" alt="">
+                        <h4 class=" mt-5"><b>{% trans 'YIELD STRENGTH' %}</b></h4>
+                        <p class="economy-p"> {% trans 'Illustration and Comparison of Yield Strength of every Wrought and Cast Alloys' %}</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-12">
+                        <div class="grap-column h-100">
+                            <img class="w-100" src="{% static 'images/alu2.png' %}" alt="">
+                        <h4 class=" mt-5"><b>{% trans 'TENSILE STRENGTH VS YIELD STRENGTH' %}</b></h4>
+                        <p class="economy-p"> {% trans 'Comparison of Tensile Strength vs Yield Strength' %}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-lg-6 col-sm-12">
+                        <div class="grap-column h-100">
+                            <img class="w-100" src="{% static 'images/alu-3.png' %}" alt="">
+                        <h4 class=" mt-5"><b>{% trans 'CREEP DATA' %}</b></h4>
+                        <p class="economy-p"> {% trans 'Creep Rupture Stress Information of Aluminium Alloys' %}</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-12">
+                        <div class="grap-column h-100">
+                            <img class="w-100" src="{% static 'images/alu2.png' %}" alt="">
+                        <h4 class=" mt-5"><b>{% trans 'FATIGUE DATA' %}</b></h4>
+                        <p class="economy-p">{% trans ' Valuable information about fatigue properties of aluminium alloys' %}</p>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+         </div>
+       
+     </div>
+</section>
+{% endblock body %}

@@ -1,0 +1,24 @@
+
+{% load i18n %}
+
+<div class="row  mt-5" >
+    {% for post in posts %}
+        <div class="col-lg-4 mb-3">
+            <div class="card card-custom  h-100">
+            <div class="card-body">
+                <h2>{{post.title}}</h2>
+                <p>{{post.summary.html|safe }}</p>
+            </div>
+                <div class="card-fotter-styel">
+                    {% if post.external_url %}
+                    <a href="{{post.external_url }}" class="btn btn-primay">{% trans 'Explore' %}</a>
+                    {% elif post.external_url_endpoint %}
+                    <a href="{{BASE_URL}}{{post.external_url_endpoint }}" class="btn btn-primay">{% trans 'Explore' %}</a>
+                    {% else %}
+                    <a href="{% url details_url post.slug %}" class="btn btn-primary">{% trans 'Explore' %}</a>
+                   {% endif %}
+                </div>
+            </div>
+        </div>
+    {% endfor %} 
+</div>

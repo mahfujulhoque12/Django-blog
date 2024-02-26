@@ -1,0 +1,193 @@
+{% extends 'base.html' %}
+{% load static i18n%}
+
+{% block meta %}
+    <title>EDA for JMatPro (JM) — Matplus GmbH</title>
+    <link rel="canonical" href="{{request.get_full_path}}">
+    <meta name="description" content="" />
+    <meta property="og:title" content="EDA for JMatPro (JM) — Matplus GmbH" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="http://EN/media/images/20220808_Matplus_logo_redesign.original.png" />
+    <meta property="og:site_name" content="Matplus GmbH" />
+    <meta property="og:url" content="http://EN/en-us/products/eda/eda-for-jmatpro-jm/" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="EDA for JMatPro (JM) — Matplus GmbH">
+    <meta name="twitter:image" content="http://EN/media/images/20220808_Matplus_logo_redesign.original.png">
+    <meta name="twitter:site" content="@" />
+    
+{% endblock meta %}
+
+{% block body %}
+
+    <section class="jm-pro-wraper">
+        <div class="jm-pro-bg" style="background-image: url('{% static 'images/eda-bg.png' %}');">
+          <div class="container">
+            <div class="jm-pro-hero-content">
+                <h1 class="eda-h1">{% trans 'EDA®' %}</h1>
+                <h3 class="eda-h3">{% trans 'For JMatPro®' %}</h3>
+            </div>
+          </div>
+        </div>
+        <!-- second part -->
+        <div class="container">
+          <div class="eda-small mt-3 ">
+            <div class="row">
+                <div class="col-lg-6"><p><small><a href="/eda/" class="text-muted text-decoration-none">EDA®</a>> {% trans 'EDA® for JMatPro®' %}</small></p></div>
+                <div class="col-lg-6">
+                    <img class="jm-pro-laptop" src="{% static 'images/jm-pro-laptop.png' %}" alt="">
+                </div>
+            </div>
+                </div>
+            <div class="row">
+                <div class="unleash">
+                    <h2 class="unleash-h2"><b>{% trans 'Unleash the Power of JMatPro® using EDA®' %}</b></h2>
+                    <h3 class="unleash-h3">{% trans 'JMatPro is increasingly used in research and industry for calculation of materials properties.' %}</h3> 
+                    <p class="unleash-p">{% trans 'JMatPro is increasingly used in research and industry for calculation of materials properties. JMatPro calculations result in a physically consistent dataset for a specific chemical composition. Technical alloys show a certain bandwidth of chemical compositions – many calculations are therefore necessary to cover the related bandwidth of properties.EDA helps you to analyze big volumes of data from JMatPro calculations. ICME (Integrated Computational Materials Engineering) with EDA and JMatPro is successfully used in many practical projects.' %}</p>    
+                </div>
+            </div>
+            <!-- third part -->
+            <div class="row mt-4">
+                <div class="col-lg-6 col-md-12">
+                    <h3 class="unleash-h3">{% trans 'Data Management for JMatPro Calculations' %}</h3>
+                    <ul class="jm-pro-list">
+                        <li>{% trans 'Distribute results from JMatPro to engineering teams' %}</li>
+                        <li>{% trans 'Access JMatPro data using a web browser' %}</li>
+                        <li>{% trans 'Reduce the volume of data and complexity' %}</li>
+                    </ul>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <h3 class="unleash-h3 list-h3">{% trans 'Comparison of different materials and calculations' %}</h3>
+                    <ul class="jm-pro-list">
+                        <li>{% trans 'Find and Compare results of different calculation' %}</li>
+                        <li>{% trans 'Use interactive graphics for comparisons' %}</li>
+                        <li>{% trans 'Create custom views and tables' %}</li>
+                    </ul>
+                </div>
+
+            </div>
+            <!-- four part -->
+            <div class="row mt-5">
+                <div class="col-lg-7 col-md-12">
+                    <h3 class="unleash-h3 list-h3">{% trans 'Exploratory data analysis for big data from JMatPro' %}</h3>
+                    <ul class="jm-pro-list">
+                        <li>{% trans 'Optimize materials and processes' %}</li>
+                        <li>{% trans 'Increase performance and process stability by simulation-assisted adaptation of technical delivery specifications' %}</li>
+                        <li>{% trans 'Evaluate more than 10,000 JMatPro calculations easily' %}</li>
+                        <li>{% trans 'Parameterize statistics to identify the influence of alloying elements' %}</li>
+                        <li>{% trans 'Resolve trade-offs by multi-dimensional selection of optimal variants' %}</li>
+                    </ul>
+                </div>
+                <div class="col-lg-5 col-md-12">
+                    <img class="not-found-img" src="{% static 'images/jm-pro.png' %}" alt="">
+                </div>
+            </div>
+            <!-- part five -->
+            <div class="row icme mt-3">
+                <div class="col-lg-6 col-md-12">
+                    <div class="icme-left">
+                        <h1 class="icme-h1">{% trans 'ICME workflows' %}</h1>
+                        <h2 class="unleash-h2 mt-4"><b>{% trans 'made easy with JMatPro and EDA' %}</b></h2>
+                        <p class="icme-p"><b>{% trans '*(Integrated Computational Materials Engineeering)' %}</b></p>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <img src="{% static 'images/jm-pro-banner.png'%}" class="w-100 image-banner" alt="">
+                </div>
+            </div>
+            <!-- part six -->
+            <div class="row mt-5">
+                <h3 class="unleash-h3  list-h3">{% trans 'Why do you need data management for JMatPro calculations?' %}</h3>
+                <p class="unleash-p">{% trans 'Typically JMatPro is used by a few employees in the company. However, the data from JMatPro are beneficial for a variety of engineers in their daily work for the design of products and processes. EDA helps distribute the right information to relevant employees. Thus, for example, calculated material data sheets can be provided for all relevant materials - and users benefit from the unique consistency and comparability of the data, which is not given in classical databases and catalogs from standards.' %}</p>
+                <p class="unleash-p">{% trans 'The data from JMatPro can also be customized in EDA, e.g. by hiding information using permission control or by defining specific views on the data.' %}</p>
+                <p  class="unleash-p">{% trans 'Of course, the web-based EDA system can be seamlessly integrated into the IT infrastructure. Scalability ranges from standalone application through a Matplus-powered cloud solution on the Internet to integration as an "on-premise" solution with interfaces, e.g. to Teamcenter PLM.' %}</p>
+            </div>
+            <!-- part seven -->
+            <div class="row">
+                <div class="col-lg-7 col-md-12">
+                    <h3 class="unleash-h3  list-h3">{% trans 'How can material properties from JMatPro be supplemented using test data?' %}</h3>
+                    <p class="unleash-p grap-p">{% trans 'Not all material data result from JMatPro. In practice, prices, availability, product forms and experience as well as test data are important. EDA allows the supplementation of the calculated material data with additional information. An example is the automatic estimation of the alloy surcharge from the chemical composition and configurable price lists for the alloying elements. Further data can be added easily, for example via Copy & Paste. A comparison of test data with calculated material characteristics is also easily possible.' %}</p>
+
+                    {% if request.LANGUAGE_CODE == 'de' %}
+                    <h2 class="unleash-h2"> <b>Wie können verschiedene Materialien mit EDA verglichen werden?</b></h2>
+                    <p class="unleash-p"> Klassische Kataloge und Datenblätter liegen heute oft als PDF-Dateien vor, der Vergleich der Daten ist umständlich. Benutzern von JMatPro fehlt die Möglichkeit, Daten aus verschiedenen Berechnungen zu vergleichen. EDA wurde entwickelt, um die komplexen Daten von JMatPro in einer leistungsstarken Datenbank zu speichern und sie in einem Webbrowser verfügbar zu machen. Dazu gehören auch Einheitenumrechnungen und Berechtigungskontrolle.</p>
+                {% endif %}
+                </div>
+                <div class="col-lg-5 col-md-12">
+                    <div class="white-container">
+                        <img class="grap-img w-75" src="/static/images/jm-pro-chart.png" alt="">
+                        <p class="icme-p"><b>{% trans 'Example' %}</b></p>
+                        <p class="icme-p">{% trans 'Easy comparison of material records by multiple select using the content tree within the web-browser' %}</p>
+                   </div>
+                </div>
+            </div>
+            <!-- part eight -->
+            <div class="row mt-3 pb-5">
+                
+                {% if request.LANGUAGE_CODE == 'en' %}
+                    <h3 class="unleash-h3  list-h3">{% trans 'How can different materials be compared using EDA?' %}</h3>
+                    <p class="unleash-p">{% trans 'Classic catalogs and datasheets are today often available as PDF-files, comparison of data is awkward. Users of JMatPro are missing the capability to compare data from different calculations. EDA was designed to store the complex data from JMatPro in a powerful database and make them available in a web-browser. This also includes unit conversions and permission control.' %}</p>
+                {% endif %}
+                    
+                <div class="col-lg-6 col-md-12">
+                    <div class="white-container h-100">
+                        <img class="grap-img w-100" src="/static/images/jm-pro-chart1.png" alt="">
+                        <p class="icme-p"><b>{% trans 'Example' %}</b></p>
+                        <p class="icme-p">{% trans 'Overlaying curves for the high-temperature strength of different AlSi cast alloys' %}</p>
+                   </div>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <div class="white-container h-100">
+                        <img class="grap-img w-100" src="/static/images/jm-pro-chart2.png" alt="">
+                        <p class="icme-p"><b>{% trans 'Example' %}</b></p>
+                        <p class="icme-p">{% trans 'Interactive graphic (statistical box plot) in EDA: Influence of the Mo content on the duplex temperature with 1000 different material variants.' %}</p>
+                   </div>
+                </div>
+            </div>
+            <!-- part nine -->
+            <div class="row mt-5 pb-3">
+                <h2 class="unleash-h2"><b>{% trans 'All data from JMatPro can be displayed comparatively in tables with filter functions' %}</b></h2>
+                <img class="not-found-img2" src="{% static 'images/jm-pro.png' %}" alt="">
+            </div>
+            <!-- part ten -->
+            <div class="row mt-5">
+                <div class="col-lg-8 col-md-12">
+                    <h2  class="unleash-h2"><b>{% trans 'EDA offers many capabilities for displaying and comparing material properties from JMatPro.' %}</b></h2>
+                    <p class="unleash-p"> {% trans 'A flexible tree structure is only one entry point to locate materials. Multiple selection of materials shows all data of the marked materials in parallel – Curves are automatically superimposed. In addition, configurable summary tables are available that work with their filter functions like common spreadsheets. Of course, the tables can also be graphically evaluated, e.g. through X-Y plots or histograms.' %}</p>
+                </div>
+                <div class="col-lg-4 col-md-12">
+                    <div class="white-container">
+                        <img class="grap-img w-100" src="/static/images/jm-pro-chart3.png" alt="">
+                        <p class="icme-p"><b>{% trans 'Example' %}</b></p>
+                        <p class="icme-p">{% trans 'Interactive graphic (histogram) in EDA: Histogram on the duplex temperature for 1000 different material variants.' %}</p>
+                   </div>
+                </div>
+            </div>
+            <!-- part eleven -->
+            <div class="row mt-3">
+                <h2  class="unleash-h2"><b>{% trans 'How can EDA help to resolve target conflicts in material selection systematically?' %}</b></h2>
+                <p class="unleash-p">{% trans 'When choosing materials, there are often conflicting goals: For example, high strength, excellent processing properties and a low price are often required at the same time. This not only applies when deciding on the use of different materials - even a single material designation offers a great deal of optimization potential within the scope of the often broad range of specifications.' %}</p>
+
+                <p class="unleash-p">{% trans 'EDA facilitates and supports the calculation of material variants with JMatPro. In our own material innovation projects we usually calculate several thousand material modifications. This saves much time and efforts in practical tests and experiments.' %}</p>
+                <p class="unleash-p"> {% trans 'EDA offers a built-in tool to automatically generate JMatPro batch files which represent a full factorial record of chemical compositions. JMatPro is then used to generate data which are imported into EDA.' %}</p>
+            </div>
+            <!-- part twelve -->
+            <div class="row mt-5 pb-5">
+                <div class="col-lg-8 col-md-12">
+                    <h2 class="unleash-h2"><b>{% trans 'How can EDA be used to derive global optima from goal conflicts?' %}</b></h2>
+                    <p class="unleash-p"> {% trans 'Interactive Trade-off plots in EDA allow the comparison of large amounts of data. In X-Y diagrams certain properties of the individual variants are compared, for example: strength to alloying costs for 1000 material variants. Target areas in this representation can now be marked graphically and transferred in selection sets. Any number of conflicting Trade-off plots can be created, e.g. for production-relevant information such as conversion kinetics and heat treatment temperatures. The different target conflict representations can then be combined via common selection sets. Selection sets can be visualized in trade-off plots so that global optima can be identified..' %}</p>
+                    
+                   
+                        
+                </div>
+                <div class="col-lg-4 col-md-12">
+                    <div class="white-container">
+                        <img class="grap-img w-100" src="/static/images/jm-pro-chart4.png" alt="">
+                        <p class="icme-p"><b>{% trans 'Example' %}</b></p>
+                        <p class="icme-p">{% trans 'Graphical comparison of 1000 variants of a duplex steel in terms of cost and strength' %}</p>
+                   </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock body %}

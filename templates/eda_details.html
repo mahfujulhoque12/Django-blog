@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static editorjs  %}
+
+
+{% block meta %}
+    <title>{{detail.title}}</title>
+    <link rel="canonical" href="{{request.get_full_path}}">
+    <meta name="description" content="" />
+    <meta property="og:title" content="{{detail.title}} — Matplus GmbH" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="http://EN/media/images/mmpds_key_vis.original.jpg" />
+    <meta property="og:site_name" content="Matplus GmbH" />
+    <meta property="og:url" content="{{request.get_full_path}}" />
+    <meta property="og:type" content="website" />
+{% endblock meta %}
+    
+
+{% block body %}
+
+   <section class="eda-details-wrap">
+    <div class="eda-details-hero-bg" style="background-image:url({{detail.cover_photo.url}}) ;">
+         <div class="container eda-details-header">
+             {{detail.headers_content.html|safe}}
+         </div>
+         
+    </div>
+    <div>
+        {% load editorjs %}
+      
+        {% if LANGUAGE_CODE == 'en' %}
+          
+        {{detail.content_en|editorjs}}
+        {% elif LANGUAGE_CODE == 'de' %}
+  
+        {{detail.content_de|editorjs}}
+        {% else %}
+        
+        {{detail.content_ja|editorjs}}
+        {% endif %}
+    </div>
+   </section>
+{% endblock body %}st
+
+

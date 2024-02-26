@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+{% load static i18n %}
+
+{% block meta %}
+    <title>{% trans 'Matplus GmbH - Software &amp; Service for Material Innovation' %}</title>
+    <link rel="canonical" href="{{request.get_full_path}}">
+    <meta property="og:title" content="Matplus GmbH - Software &amp; Service for Material Innovation" />
+    <meta name="description" content="Software &amp; Service for Material Innovation. Software solutions &amp; services for development and optimization of materials ...">
+    <meta property="og:title" content="Matplus GmbH - Software &amp; Service for Material Innovation">
+    <meta property="og:description" content="Software &amp; Service for Material Innovation. Software solutions &amp; services for development and optimization of materials ...">
+    <meta property="og:image" content="http://EN/media/images/20220808_Matplus_logo_redesign.original.png">
+    <meta property="og:url" content="{{request.get_full_path}}">
+    <meta name="twitter:title" content="Matplus GmbH - {{post.title}}">
+    <meta name="twitter:image" content="http://EN/media/images/20220808_Matplus_logo_redesign.original.png">    
+{% endblock meta %}
+
+{% block body %}
+    
+<!-- hero start -->
+<section class="index-wraper">
+    <div class="hero-bg-image" style="background-image: url('{% static 'images/bg-img.jpeg' %}');">
+    
+    <div class="container ">
+        <div class="row">
+            <div class="col-lg-6 hero-left landing-page-header-h1-column ">
+                <h1>{% trans 'Software & Service for' %}<br> <span> {% trans 'Materials Innovation' %}</span></h1>
+                <a href="/company/" type="button" class="btn btn-light">{% trans 'Company' %}</a>
+            </div>
+            <div class="col-lg-6 hero-right">
+                <img src="{% static 'images/lapt.png' %}" alt="laptop" />
+            </div>
+    
+        </div>
+    </div>
+    </div>
+
+<!-- hero start -->
+
+<!-- card-section start  -->
+<div class="card-section-bg">
+    <div class="container top-container-position">
+        <div class="row top-container " >
+            
+            {% for post  in  posts_frist_three  %}
+      
+            <div class="col-lg-4 col-md-12">
+                <div class="card card-custom h-100">
+                   <div class="card-body">
+                    <h2>{{post.title}}</h2>
+                    <p>{{post.summary.html|safe }}</p>
+
+                   </div>
+                    <div class="card-fotter-styel">                     
+                        {% if post.external_url %}
+                         <a href="{{post.external_url }}" class="btn btn-primay">{% trans 'More Infromation' %}</a>
+                        {% elif post.external_url_endpoint %}
+                        <a href="{{post.external_url_endpoint }}" class="btn btn-primay">{% trans 'More Infromation' %}</a>
+                         {% else %}
+                         <a href="{% url 'home_details' post.slug %}" class="btn btn-primary">{% trans 'More Information' %}</a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+                      
+            {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- frist row -->
+        <div class="row database">
+            <div class="col-lg-6 col-md-12 database-left">
+                <h1>{% trans 'Databases' %}</h1>
+                <h4>{% trans 'Material data as a basis for sophisticated engineering' %}</h4>
+            </div>
+            <div class="col-lg-6 col-md-12 database-right">
+                <div id="home-ci-element-container"></div>
+            </div>
+        </div>
+        
+         {% include 'includes/database_dynamic.html' with posts=posts details_url='home_details' %}
+       
+    </div>
+        <!-- explore shop -->
+        <div class="container custom-padding">
+            <div class="row explore-shop p-3">
+                <h1>{% trans 'Explore our Shop' %}</h1>
+                <h4 class="text-light"><b>{% trans 'The most important publications' %}</b><br> <b>{% trans 'for the Steel Industry' %}</b></h4>
+                <a href="https://matplus.shop/" class="btn btn-outline-light ms-2 mt-4 mb-2 access-shop-btn">{% trans 'Access Shop' %}</a>
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- card-section end -->
+    
+{% endblock body %}

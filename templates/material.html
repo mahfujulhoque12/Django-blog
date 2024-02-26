@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% load static i18n%}
+
+
+{% block meta %}
+    <title>Material Innovation — Matplus GmbH</title>
+    <link rel="canonical" href="{{request.get_full_path}}">
+    <meta property="og:title" content="Material Innovation — Matplus GmbH" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="http://EN/media/images/20220808_Matplus_logo_redesign.original.png" />
+    <meta property="og:url" content="http://EN/en-us/service/material-innovation/" />
+    <meta name="twitter:title" content="Material Innovation — Matplus GmbH">
+    <meta name="twitter:image" content="http://EN/media/images/20220808_Matplus_logo_redesign.original.png">
+{% endblock meta %}
+    
+
+{% block body %}
+
+
+ <section class="meterial-wrap">
+    <div class="container-fluid">
+       <div class="">
+        <div class="row">
+            <div class="col-lg-6 col-md-12 research-left" >
+                    <h1 class="research-left-h1">{% trans 'Material Innovation' %}</h1>
+                    <p class="research-left-p">{% trans 'We help you with practical consulting and development projects in the field of metallic structural materials. We build on extensive practical industrial experience of our employees, especially in the steel sector. This is complemented by the use of our own simulation environments and knowledge bases (ICME Integrated Computational Materials Engineering).' %}</p>
+             
+            </div>
+            <div class="col-lg-6 col-md-12 research-img" style="background-image: url({% static 'images/meterial.png' %});"></div>
+           
+        </div>
+       </div>
+    </div>
+    <!-- sec part -->
+    <div class="container material-sec-part">
+        <div class="row">
+            <h2 class="material-h2"> <b>{% trans ' Together with our selected partners we are a full service provider from ideas to final material solutions.' %}</b></h2>
+            <div class="jm-list selling mt-5">
+                <h4><b>{% trans 'We work efficient and goal oriented:' %}</b></h4>
+                <ul>
+                    <li class="selling-p">{% trans 'Melting in a vacuum induction furnace (50 kg – 500 kg, up to 10 t on request)' %}</li>
+                    <li class="selling-p">{% trans 'Forging slabs and billets' %}</li>
+                    <li class="selling-p">{% trans 'Hot and cold rolling of strip, pulling wire' %}</li>
+                    <li class="selling-p">{% trans 'Heat treatment (hardening, tempering, soft annealing, normalizing, etc.)' %}</li>
+                    <li class="selling-p">{% trans 'Metallography with light microscopy, scanning electron microscopy' %}</li>
+                    <li class="selling-p">{% trans 'Mechanical material testing, flow curves, fatigue, fracture mechanics at all temperatures and speeds' %}</li>
+                    <li class="selling-p">{% trans 'Thermophysical tests (CCT/TTTdiagrams, DSC, dilatometry, laserflash)' %}</li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+  </section>
+
+{% endblock body %}

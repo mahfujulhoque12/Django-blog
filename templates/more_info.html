@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block meta %}
+    <title>{{news.title}}</title>
+    <link rel="canonical" href="{{request.get_full_path}}">
+    <meta property="og:title" content="{{news.title}} — Matplus GmbH" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="http://EN/media/images/20220808_Matplus_logo_redesign.original.png" />
+    <meta property="og:url" content="{{request.get_full_path}}" />
+    <meta name="twitter:title" content="{{news.title}} — Matplus GmbH">
+    <meta name="twitter:image" content="http://EN/media/images/20220808_Matplus_logo_redesign.original.png">
+{% endblock meta %}
+
+
+{% block body %}
+
+
+<section class="more-info-bg">
+      
+    {% load editorjs %}
+      
+    {% if LANGUAGE_CODE == 'en' %}
+      
+    {{news.content_en|editorjs}}
+    {% elif LANGUAGE_CODE == 'de' %}
+
+    {{news.content_de|editorjs}}
+    {% else %}
+    
+    {{news.content_ja|editorjs}}
+    {% endif %}
+   
+   {% if news.title == '3rd EDA® User Conference 2024' or news.title == '12th JMatPro® User Conference 2024' %} 
+    <div class="container pb-5">
+        <div class="card-fotter-styel additional-btn d-flex gap-2">
+            <a href="{% static 'file/Registrationform_Userconference_2024_EN (1).pdf' %}" target="_blank" class="btn btn-primary" download>Registrationform</a>  
+            <a href="{% static 'file/Eventinformation_Userconference_2024_EN (1).pdf' %}" target="_blank" class="btn btn-primary" download> Eventinformation</a>   
+        </div>
+    </div>
+   {% endif %}
+   {% if news.title == '11th JMatPro®-Conference' or news.title == '2nd EDA®-Conference' %} 
+   <div class="container pb-5">
+       <div class="card-fotter-styel additional-btn d-flex gap-2">
+           <a href="{% static 'file/Registrationform_Userconference_2024_EN (1).pdf' %}" target="_blank" class="btn btn-primary" download>Registrationform</a>  
+           <a href="{% static 'file/Eventinformation_Userconference_2024_EN (1).pdf' %}" target="_blank" class="btn btn-primary" download> Eventinformation</a>   
+           <a href="{% static 'file/Agenda_Userconferences_2023_EN.pdf' %}" target="_blank" class="btn btn-primary" download> Agenda</a>   
+       </div>
+   </div>
+  {% endif %}
+  
+  {% if news.title == '10th JMatPro-Conference' %}
+  <div class="container pb-5">
+    <div class="card-fotter-styel additional-btn d-flex gap-2">
+        <a title="User Conference agenda"  class="btn btn-primary"> User Conference agenda </a>  
+        <a  title="Registration form" class="btn btn-primary" >Registration form</a>   
+        <a  title="Event information" class="btn btn-primary" download> Event information</a>   
+    </div>
+</div>
+  {% endif %}
+    
+</section>
+
+    
+{% endblock body %}
+
+

@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static i18n %}
+
+
+{% block body %}
+    <section class="notice-wrap">
+        <div class="container">
+            <div class="row">
+               <div class="imprint">
+                  <h3 class="mt-5"><b>&copy; Copyright</b></h3>
+                  <div class="imprint-content">
+                    <p class="company-about-us-p1">{% trans 'All rights reserved. Text, images, graphics, sound, animations and videos as well as the arrangement of the same on Matplus websites are protected by copyright and other commercial protective rights. The content of these websites may not be copied, disseminated, altered or made accessible to third parties for commercial purposes. In addition, some Matplus websites contain images that are subject to third-party copyrights.' %}</p>
+                   
+                  </div>
+                  <div class="imprint-content mt-3">
+                    <h3 class="mt-5"><b> {% trans 'Trademark information' %}</b></h3>
+                    <p class="company-about-us-p1">{% trans 'Unless specified otherwise, all trademarks on Matplus websites are protected by trademark law. This applies in particular to Matplus brands, nameplates, company logos and emblems. The brands and design elements used on our pages are the intellectual property of Matplus GmbH, Germany.' %}</p>
+                    
+                  </div>
+                  <div class="imprint-content mt-3">
+                    <h3 class="mt-5"><b> {% trans 'Warranty information' %}</b></h3>
+                    <p class="company-about-us-p1">{% trans 'This website was compiled with utmost care. Nonetheless, the accuracy or correctness of the information contained cannot be guaranteed. Any liability for damage resulting directly or indirectly from use of this website is precluded, unless caused intentionally or in gross negligence by Matplus.' %}</p>
+                  </div>
+                  <div class="imprint-content mt-3">
+                    <h3 class="mt-5"><b>{% trans 'Licence information' %}</b></h3>
+                    <p class="company-about-us-p1">{% trans 'The intellectual property contained in the Matplus website such as patents, marks and copyrights, is protected. This website does not grant a licence for utilising the intellectual property of companies of the Matplus GmbH or third parties.' %}</p>
+                  </div>
+                  <div class="imprint-content mt-3">
+                    <h3 class="mt-5"><b>{% trans 'Online dispute resolution (ODR)' %}</b></h3>
+                    <p class="company-about-us-p1">{% trans 'Information regarding online dispute resolution (ODR): The European Commission offers a platform for the resolution of online disputes. This platform is dedicated to facilitating the out-of-court settlement of disputes concerning contractual obligations in online sales and service agreements.' %}</p>
+                   
+
+                    
+                    {% if LANGUAGE_CODE == 'de' %}
+                    <p class="company-about-us-p1">Die Plattform ist unter <a href="https://ec.europa.eu/consumers/odr/main/index.cfm?event=main.home.chooseLanguage" class="cae-link">http://ec.europa.eu/consumers/odr/</a> erreichbar.</p>
+                    {% else %}
+                        <p class="company-about-us-p1">{% trans 'The platform can be found at' %} <a href="https://ec.europa.eu/consumers/odr/main/index.cfm?event=main.home.chooseLanguage" class="cae-link">http://ec.europa.eu/consumers/odr/</a> .</p>
+                    {% endif %}
+                        
+                    <p class="company-about-us-p1">{% trans 'We do not engage in out-of-court settlements before consumer arbitration bodies.' %}</p>
+
+        
+                  </div>
+               </div>
+            </div>
+        </div>
+    </section>
+{% endblock body %}
+    
+
+

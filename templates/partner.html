@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% load static i18n%}
+
+
+{% block meta %}
+    <title>Partner — Matplus GmbH</title>
+    <link rel="canonical" href="https://EN/en-us/company/partner/">
+    <meta name="description" content="" />
+    <meta property="og:title" content="Partner — Matplus GmbH" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="http://EN/media/images/20220808_Matplus_logo_redesign.original.png" />
+    <meta property="og:url" content="http://EN/en-us/company/partner/" />
+    <meta name="twitter:title" content="Partner — Matplus GmbH">
+    <meta name="twitter:image" content="http://EN/media/images/20220808_Matplus_logo_redesign.original.png">
+{% endblock meta %}
+    
+
+{% block body %}
+
+<section class="partner-bg">
+    <div class="container">
+        <div class="row">
+           <div class="partner-heading">
+            <h1 class="partner-h1">{% trans 'Partner' %}</h1>
+            <h3  class="partner-h3">{% trans 'We can offer comprehensive services to the industry in cooperation with our partners:' %}</h3>
+           </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6 col-md-12">
+               <div class="white-container h-100">
+                    <img src="{% static 'images/partner1.png'%}" class="w-50 partner-logo mb-3" alt="nordmetall_logo.png">
+                    <h4><b>Nordmetall GmbH</b></h4>
+                    <p class="partner-p"><a href="https://www.nordmetall.net/" class="partner-card-a">Nordmetall GmbH</a> {% trans 'is a specialist in the high-speed characterization of materials and components. One focus is the creation of constitutive material laws for the numerical simulation of momentum-dynamic processes, e.g. Crash load. The materials range from metallic materials, plastics, fiber composites, ceramics and glass, building materials to biological materials.' %}</p>
+                    <a href="https://www.nordmetall.net/" title="More Information" class="btn btn-outline-primary ">{% trans 'More Information' %}</a>  
+               </div>   
+           </div>
+           <div class="col-lg-6 col-md-12  ">
+            <div class="white-container h-100">
+                <img src="{% static 'images/parter2.png'%}" class="w-50  partner-logo mb-3" alt="nordmetall_logo.png">
+                <h4><b>Comtes FHT a.s.</b></h4>
+                <p class="partner-p"><a href="https://www.comtesfht.de/" class="partner-card-a">Comtes FHT a.s.</a> {% trans 'forms the entire value-added chain for metallic structural materials, from the production of test melts on pilot plant scale to forging, rolling and heat treatment. This is supplemented by powerful laboratories for materials testing and metallography.' %}</p>
+                <a href="https://www.comtesfht.de/"title="More Information" class="btn btn-outline-primary ">{% trans 'More Information' %}</a>  
+            </div>   
+       </div>
+        </div>
+        <!-- sec row -->
+        <div class="row mt-3 pb-3">
+            <div class="col-lg-6 col-md-12">
+               <div class="white-container h-100">
+                    <img src="{% static 'images/partner3.png'%}" class="w-50  partner-logo mb-3" alt="nordmetall_logo.png">
+                    <h4><b>Sente Software Ltd.</b></h4>
+                    <p class="partner-p">{% trans 'The' %} <a href="https://www.sentesoftware.co.uk/"  class="partner-card-a">Sente Software Ltd.</a> {% trans 'is the manufacturer of JMatPro® software, which we exclusively sell in German-speaking countries. Collaboration between our employees and Sente Software, based in Guildford, UK, dates back to 2004.' %}</p>
+                    <a href="https://www.sentesoftware.co.uk/" title="More Information" class="btn btn-outline-primary">{% trans 'More Information' %}</a> 
+               </div>   
+           </div>
+           <div class="col-lg-6 col-md-12  ">
+            <div class="white-container h-100">
+                <img src="{% static 'images/partner4.png'%}" class="w-50  mb-3" alt="nordmetall_logo.png">
+                <h4><b>MatCalc Engineering GmbH</b></h4>
+                <p class="partner-p"><a href="https://www.matcalc-engineering.com/index.php"  class="partner-card-a">MatCalc Engineering GmbH</a>, {% trans ' based in Vienna, is a spin-off company from the Vienna University of Technology and has extensive experience in the field of computer-aided material technology for metallic alloy systems. MatCalc Engineering sells the MatCalc software package globally and also develops CALPHAD databases for this system.' %}</p>
+
+                <p class="partner-p">{% trans 'The next generation materials data system EDA from Matplus is used as the data integration platform for calculations from JMatPro and Matcalc. Moreover data from advanced material tests, such as gleebles, dilatometers, etc can be included and analyzed.' %}</p>
+                <a href="https://www.matcalc-engineering.com/index.php" title="More Information" class="btn btn-outline-primary ">{% trans 'More Information' %}</a>  
+            </div>   
+       </div>
+        </div>
+    </div>
+</section>
+    
+{% endblock body %}

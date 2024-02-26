@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% load static editorjs i18n %}
+
+  
+{% block meta %}
+ <title>{{database_detail.title}}</title>
+  <link rel="canonical" href="{{request.get_full_path}}">
+  <meta name="description" content="" />
+  <meta property="og:title" content="  {{database_detail.title}} — Matplus GmbH" />
+  <meta property="og:description" content="" />
+  <meta property="og:image" content="http://EN/media/images/20220808_Matplus_logo_redesign.original.png" />
+  <meta property="og:url" content="{{request.get_full_path}}" />
+  <meta name="twitter:title" content="{{database_detail.title}}">
+  <meta name="twitter:image" content="http://EN/media/images/20220808_Matplus_logo_redesign.original.png">
+{% endblock meta %}
+  
+
+{% block body %}
+
+
+<div class="home-details"> 
+  {% if database_detail.headers_content.html|safe %}
+   <div class="flex-row-reverse gap-0 ">
+       <div id="image-div" class="col-lg-6 col-md-12">
+         <img class="home-details-cover-photo" src="{{  database_detail.cover_photo.url }}" alt="Cover Photo">
+   </div>
+
+       <div class="home_details_header headers-content col-lg-6 col-md-12">
+         {{ database_detail.headers_content.html|safe}}
+       </div>
+
+</div>
+{% endif %}
+
+
+     <div class="container">
+     
+ 
+       {% if LANGUAGE_CODE == 'en' %}
+         
+       {{ database_detail.content_en|editorjs}}
+       {% elif LANGUAGE_CODE == 'de' %}
+ 
+       {{ database_detail.content_de|editorjs}}
+       {% else %}
+       
+       {{ database_detail.content_ja|editorjs}}
+       {% endif %} 
+      
+      
+      {% if database_detail.title == 'MMPDS-Database' or database_detail.title == 'MMPDS-Datenbank' %}    
+        <div class="banner-gap mt-3">
+          <div class="mmp-banner mt-5"style="background-image: url({% static 'images/mmp-banner-bg.png' %});">
+              <div class="row">
+                  <div class="col-lg-6">
+                      <div class="mmp-left">
+                          <h1>{% trans 'Order the MMPDS - Online in our shop:' %}</h1>
+                          <a href="#" class="btn btn-danger order-mmp-btn">{% trans 'order now' %}</a>
+                      </div>
+                  </div>
+                  <div class="col-lg-6">
+                      <img class="mmp-right " src="{% static 'images/mmp-laptop.png' %}" alt="">
+                  </div>
+              </div>
+        </div>
+        </div>
+      {% endif %}
+     </div>
+ </div>
+  
+{% endblock body %}

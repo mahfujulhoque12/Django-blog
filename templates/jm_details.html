@@ -1,0 +1,120 @@
+{% extends 'base.html' %}
+{% load static i18n%}
+
+
+{% block meta %}
+<title>JMatPro in Action — Matplus GmbH</title>
+    <link rel="canonical" href="{{request.get_full_path}}">
+    <meta name="description" content="" />
+    <meta property="og:title" content="JMatPro in Action — Matplus GmbH" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="http://EN/media/images/20220808_Matplus_logo_redesign.original.png" />
+    <meta property="og:url" content="http://EN/en-us/products/jmatpro/jmatpro-bilder-und-anwendungsbeispiele/" />
+    <meta name="twitter:title" content="JMatPro in Action — Matplus GmbH">
+    <meta name="twitter:image" content="http://EN/media/images/20220808_Matplus_logo_redesign.original.png">
+{% endblock meta %}
+    
+
+{% block body %}
+    <section class="jm-details-wrap">
+        <div class="container">
+            <div class="jmd-hero">
+                <h1 class="py-5">{% trans 'JMatPro in Action' %}</h1>
+            </div>
+            <!-- frist row -->
+            <div class="row mt-5 pb-5">
+                <div class="col-lg-6">
+                    <img class="w-100" src="{% static 'images/jmd1.png' %}" alt="">
+                </div>
+                <div class="col-lg-6">
+                    <h2><b>{% trans 'JMatPro Demo' %}</b></h2>
+                    
+                    {% if request.LANGUAGE_CODE == 'en' %}
+                         <p class="jm-des-p">{% trans 'Please feel free to download the' %} <a class="cae-link" href="https://www.sentesoftware.co.uk/media/demo/demo-install.exe"><b>{% trans 'demo version' %}</b></a> {% trans 'of JMatPro. We do not require you to register but any comment or feedback you can make at jmatpro@sentesoftware.co.uk is welcome.' %}</p>
+                    {% else %}
+                        <p class="jm-des-p"> Die Demo-Version von JMatPro ermöglicht zwar keine eigenen Berechnungen, bietet aber sehr viele berechnete Beispiele zu allen Legierungssystemen. Damit erhalten Sie einen guten Überblick über die Möglichkeiten.</p>   
+                        <p class="jm-des-p">
+                            Die Demo-Version kann ohne Registrierung hier heruntergeladen werden: <a href="https://www.sentesoftware.co.uk/media/demo/demo-install.exe" class="cae-link">JMatPro-Demo.</a>
+                        </p>
+                        <p class="jm-des-p">Bei mehr Interessse bieten bieten wir auch Kundentage, Anwendertreffen und Schulungen an.</p>
+                    {% endif %}
+                        
+                  
+                </div>
+            </div>
+            <!-- sec row -->
+            <div class="row mt-5 pb-5">
+                <div class="col-lg-6">
+                    <h2><b>{% trans 'Material Browser' %}</b></h2>
+                    <p class="jm-des-p">{% trans 'JMatPro calculation results are displayed clearly in a corresponding browser.' %}</p>
+                    <p  class="jm-des-p">{% trans 'In JMatPro, a file has a certain chemical composition. An advantage of JMatPro is that many different compositions can be calculated to a material designation.' %}</p>
+                </div>
+                <div class="col-lg-6">
+                    <img class="w-100" src="{% static 'images/jmd2.png' %}" alt="">
+                </div>
+            </div>
+            <!-- third row -->
+            <div class="row mt-5 pb-5">
+                <div class="col-lg-6">
+                    <img class="w-100" src="{% static 'images/jmd3.png' %}" alt="">
+                </div>
+                <div class="col-lg-6">
+                    <h2><b>{% trans 'Calculation of Phase Diagrams (Isopleths)' %}</b></h2>
+                    <p class="jm-des-p">{% trans 'JMatPro calculates arbitrary pseudo-binary slices through the phase space. Such isopleth diagrams correspond optically to the binary phase diagrams, e.g. Iron-carbon phase diagram. However, the calculated diagrams are much more relevant to practice, as also other alloying elements are included.' %}</p>
+                </div>
+            </div>
+            <!-- fourth row -->
+            <div class="row mt-5 pb-5">
+                <div class="col-lg-6">
+                    <h2><b>{% trans 'Equilibrium Calculations' %}</b></h2>
+                    <p  class="jm-des-p">{% trans 'The fastest way to calculate the phase contributions, phase composition, and distribution of chemical elements in an alloy is temperature stepping. Here, starting from all known phases, the thermodynamic equilibrium is calculated as a function of the temperature. The example shows a duplex steel which has equal phase proportions of ferrite and austenite at a duplex temperature of about 1160 ° C.' %}</p>
+                </div>
+                <div class="col-lg-6">
+                    <img class="w-100" src="{% static 'images/jmd4.png' %}" alt="">
+                </div>
+            </div>
+            <!-- fifth row -->
+            <div class="row mt-5 pb-5">
+                <div class="col-lg-6">
+                    <img class="w-100" src="{% static 'images/jmd5.png' %}" alt="">
+                </div>
+                <div class="col-lg-6">
+                    <h2><b>{% trans 'Calculation of thermo-physicalischer Properties' %}</b></h2>
+                    <p class="jm-des-p">{% trans 'From the calculated phase fractions and their chemical composition, JMatPro calculates a whole range of properties as a function of composition and temperature. This is a basis for creating material maps for FEM calculations. Since all data is derived from a physically based model, it is also consistent and consistent.' %}</p>
+                    
+                    {% if  request.LANGUAGE_CODE == 'de' %}
+                        <p class="jm-des-p">Da alle Daten aus einem physikalisch basierten Modell abgeleitet sind, sind diese auch konsistent und widerspruchsfrei.</p>
+                    {% endif %}
+                        
+                </div>
+            </div>
+            <!-- sixth row -->
+            <div class="row mt-5 pb-5">
+                <div class="col-lg-6">
+                    <h2><b>{% trans 'Phase Transformations and TTT-Diagrams' %}</b></h2>
+                    <p  class="jm-des-p">{% trans 'JMatPro calculates not only thermodynamic equilibria but also phase transformations – in the case of steels these are continuous and isothermal time-temperature transformation diagrams (ZTU) as well as time-temperature austenitisation diagrams (ZTA). In this way, JMatPro can also calculate the material properties as a function of the cooling and heating rate.' %}</p>
+
+                    {% if  request.LANGUAGE_CODE == 'de' %}
+                        <p class="jm-des-p">Damit kann JMatPro auch die Werkstoffeigenschaften zusätzlich in Abhängigkeit von der Abkühl- und Aufheizrate berechnen.</p>
+                    {% endif %}
+                </div>
+                <div class="col-lg-6">
+                    <img class="w-100" src="{% static 'images/jmd6.png' %}" alt="">
+                </div>
+            </div>
+            <!-- seventh row -->
+            <div class="row mt-5 pb-5">
+                <div class="col-lg-6">
+                    <img class="w-100" src="{% static 'images/jmd7.png' %}" alt="">
+                </div>
+                <div class="col-lg-6">
+                    <h2><b>{% trans 'Strength and Flow Curves' %}</b></h2>
+                    <p class="jm-des-p">{% trans 'For forming simulation and heat treatment simulation, flow curves as a function of temperature and forming speed are required. JMatPro calculates these over wide temperature ranges and speeds.' %}</p>
+                {% if  request.LANGUAGE_CODE == 'de' %}
+                    <p class="jm-des-p">JMatPro berechnet diese über weite Temperaturbereiche und Geschwindigkeiten.</p>
+                {% endif %}
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock body %}

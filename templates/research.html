@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% load static i18n%}
+
+
+{% block meta %}
+    <title>Research Projects — Matplus GmbH</title>
+    <link rel="canonical" href="{{research.title}}">
+    <meta property="og:title" content="Research Projects — Matplus GmbH" />
+    <meta property="og:image" content="http://EN/media/images/20220808_Matplus_logo_redesign.original.png" />
+    <meta property="og:url" content="http://EN/en-us/research/" />
+    <meta name="twitter:title" content="Research Projects — Matplus GmbH">
+    <meta name="twitter:image" content="http://EN/media/images/20220808_Matplus_logo_redesign.original.png">
+{% endblock meta %}
+    
+
+{% block body %}
+ <!-- hero section start -->
+  <section>
+    <div class="container-fluid">
+       <div class="">
+        <div class="row">
+            <div class="col-lg-6 col-md-12 research-left" >
+                    <h1 class="research-left-h1">{% trans 'Research Projects' %}</h1>
+                    <p class="research-left-p">{% trans 'We offer the leading solutions for industrial practice and also support research and teaching with our systems. We actively participate in materials engineering research and development projects.' %}</p>
+             
+            </div>
+            <div class="col-lg-6 col-md-12 research-img" style="background-image: url({% static 'images/research.png' %});"></div>
+    
+        </div>
+       </div>
+    </div>
+  </section>
+<!-- hero section end -->
+
+<!-- row section start -->
+
+<section class="row-bg">
+   
+    <div class="container top-container-position">
+        <div class="row top-container research-frist-row ">
+            {% for research in  researches%}
+            
+            {% if research.title and research.summary.html|safe  %}
+                
+                <div class="col-lg-6 col-md-12 mb-3">
+                    <div class="card card-custom h-100">
+                    <div class="card-body">
+                        <h2>{{research.title}}</h2>
+                        <p>{{research.summary.html|safe }}</p>
+                    </div>
+                        <div class="card-fotter-styel">
+                            {% if research.external_url%}
+                            <a href="{{research.external_url}}"  class="btn btn-primay">{% trans 'More Infromation' %}</a>
+                             {% else %}
+                             <a href="{% url 'show_research_content' research.slug %}" class="btn btn-primary">{% trans 'More Information' %}</a>
+                            {% endif %}      
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+
+</section>
+<!-- row section end -->
+{% endblock body %}

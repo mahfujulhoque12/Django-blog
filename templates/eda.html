@@ -1,0 +1,222 @@
+{% extends 'base.html' %}
+{% load static i18n%}
+
+{% block meta %}
+    <title>EDA® | Data and knowledge management for materials technology</title>
+    <link rel="canonical" href="{{request.get_full_path}}">
+    <meta name="description" content="Knowledge management + material data system, achieve resource efficiency, compare material data: chemical &amp; mechanical properties ..." />
+    <meta property="og:title" content="EDA® | Data and knowledge management for materials technology" />
+    <meta property="og:description" content="Knowledge management + material data system, achieve resource efficiency, compare material data: chemical &amp; mechanical properties ..." />
+    <meta property="og:image" content="http://EN/media/images/20220808_Matplus_logo_redesign.original.png" />
+    <meta property="og:url" content="{{request.get_full_path}}" />
+    <meta name="twitter:title" content="EDA® | Data and knowledge management for materials technology">
+    <meta name="twitter:image" content="http://EN/media/images/20220808_Matplus_logo_redesign.original.png">
+{% endblock meta %}
+    
+
+{% block body %}
+  
+<!-- Eda hero start -->
+   <section>
+    <div class="container-fluid eda-hero-bg" style="background-image: url('{% static 'images/eda-bg.png' %}');">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 eda-hero-left">
+                    <h1 class="eda-headin-1">{% trans 'EDA®' %}</h1>
+                    <h1 class="eda-headin-2">{% trans 'NEXT GENERATION' %}</h1>
+                    <h1 class="eda-headin-3">{% trans 'MATERIALS DATA SYSTEM' %}</h1>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <img class="eda-laptop" src="{% static 'images/lapt.png' %}" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+   </section>
+<!-- Eda hero end --> 
+
+<!-- eda described start -->
+<section class="eda-des">
+    <div class="container">
+        <div class="row">
+            <div class="eda-frist-des">
+                <h1>{% trans 'Materials Technology with Passion' %}</h1>
+                <p>{% trans 'Materials are the key enabler for innovative and resource efficient products. Matplus experts develop industrial material technologies - from the idea to the finished semi-finished product – as part of their daily work. Their successful operations rely on advanced systems for material simulation and material property databases – which are now available also for customers: EDA® the leading solution for materials engineering and beyond.' %}</p>
+            </div>
+            <!-- eda-second-des -->
+            <div class="eda-second-des eda-frist-des">
+                <p><b>{% trans 'EDA®' %}</b> {% trans 'enables seamless integration of data management, modelling and knowledge management.' %}</p>
+            </div>
+            <!-- eda-third-des -->
+            <div class="eda-third-des eda-frist-des">
+              <h1>{% trans 'More than Material Reference Data' %}</h1>
+                <div class="thid-div-p">
+                    <p><b>{% trans '✓ Material Optimization:' %}</b> {% trans 'Explorative data analysis of JMatPro® calculations and materials testing' %}</p>
+                    <p><b>{% trans '✓ Test Data Management:' %} </b> {% trans 'Consolidate and evaluate demanding test data from different sources' %}</p>
+                    <p><b>{% trans '✓ Material Models: ' %} </b> {% trans 'Create and fit models for Plasticity, Fatigue, Damage – ready to be used in CAE downstream applications' %}</p>
+                    <p><b>{% trans '✓ Knowledge Management: ' %}</b> {% trans 'Integrate reference data, own test data, documents and reports to your “single source of enterprise materials knowledge”' %}</p>
+                </div>
+            </div>  
+            <!-- eda-four-des -->
+            <div class="eda-frist-des eda-four-des">
+                <h1>{% trans 'Designed for Materials Engineering' %}</h1>
+                <p>{% trans 'EDA® was designed to support and accelerate materials engineering processes. The core is a flexible and extendable data management in combination with configurable rich functionality for processing, evaluation and visualization of data. It is the cloud-enabled end-to-end solution for the entire lifecycle of materials information. Interfaces to test machines, CAE- and CAD systems and other enterprise software can be configured.' %}</p>
+            </div>  
+            <!-- eda-five-des -->
+            <div class="eda-frist-des eda-five-des">
+                <h1>{% trans 'Why Materials Information Management using EDA®?' %}</h1>
+                <hr>
+            </div>  
+            <!-- eda-six-des -->
+            <div class="eda-frist-des eda-six-des">
+                <h1>{% trans 'Customer voices' %}</h1>
+                <div class="thid-div-p">
+                    <p><b>{% trans '“We decided to upgrade to Matplus EDA® and now benefit from extended capabilities”' %}</b></p>
+                    <p>{% trans 'Dr. Thomas Witulski, head of materials and processes at Otto Fuchs KG' %}</p>
+                    <p><b>{% trans '“Using EDA® we reach our goals much faster thanks to better evaluable data”' %}</b></p>
+                    <p class="mb-5">{% trans 'Dr. Walter Berger, CEO at voestalpine Research Service' %}</p>
+                </div>
+                <hr>
+            </div>  
+            <!-- eda-seven-des -->
+            <div class="eda-frist-des eda-seven-des">
+                <h1>{% trans 'How Can EDA® help you to generate business value?' %}</h1>
+            </div> 
+            <!-- eda-eight-des -->
+            <div class="eda-frist-des eda-eight-des">
+                <div class="row mt-3">
+                    <div class="col-lg-4 col-md-12 customer-responsive-card eda-responsive-card">
+                        <div class="ead-card card h-100">
+                            <div class="card-body">
+                                <img class="eda-card-img" src="{% static 'images/eda-l1.png' %}" alt="">
+                                <h5 class="eda-card-title">{% trans 'Improve Quality' %}</h5>
+                                <p>{% trans 'of products and processes, create sustainable products' %}</p>
+                            </div>
+                          
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12 customer-responsive-card eda-responsive-card">
+                        <div class="ead-card card h-100">
+                            <div class="card-body">
+                                <img class="eda-card-img" src="{% static 'images/eda-l2.png' %}" alt="">
+                                <h5 class="eda-card-title">{% trans 'Decrease Time' %}</h5>
+                                <p>{% trans 'for processing of inquiries and quality management' %}</p>
+                            </div>
+                          
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12 customer-responsive-card eda-responsive-card"">
+                        <div class="ead-card card h-100">
+                            <div class="card-body">
+                                <img class="eda-card-img" src="{% static 'images/eda-l3.png' %}" alt="">
+                                <h5 class="eda-card-title">{% trans 'Lower Costs' %}</h5>
+                                <p>{% trans 'by managing complexity, alloying & energy costs' %}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+            <!-- eda-nine-des -->
+            <div class="eda-frist-des eda-nine-des"> 
+                <div class="row">
+                    <div class="col-lg-6 col-md-12">
+                       <div class="white-container h-100">
+                            <h2><b>{% trans 'Test Data and Material Models' %}</b></h2>
+                            <p class="partner-p">{% trans 'EDA covers the entire workflow from test data to parametrization of different constitutive equations, e.g. for plasticity models. Such material models can then be exported to CAE downstream applications, like Abaqus, LS-Dyna and more.' %}</p>
+                            <img class="grap-img" src="{% static 'images/eda-grap1.jpeg' %}" alt="">
+                       </div>   
+                   </div>
+                   <div class="col-lg-6 col-md-12">
+                    <div class="white-container h-100">
+                         <h2><b>{% trans 'High Throughput Calculations' %}</b></h2>
+                         <p class="partner-p">{% trans 'High Throughput Calculations using EDA® in combination with JMatPro® and Matcalc® can be used to invent new alloys, to stabilize production processes, to find the most robust variant within the wide span of a materials designation, etc.' %}</p>
+                         <img class="grap-img" src="{% static 'images/eda-grap-2.png' %}" alt="">
+                    </div>   
+                </div>
+                </div>
+            </div>
+    </div>
+</div>
+</section>
+<!-- eda described end -->
+<!-- eda-ten-des -->
+<section class="eda-ten-des-bg">
+ 
+     <div class="eda-frist-des eda-ten-des"> 
+        <div class="container-fluid">
+            <h1><span>{% trans 'EDA® is the future' %}</span> {% trans ' proof next generation system -on premises and in the cloud' %}</h1>
+            <div class="container">
+                <div class="row mt-5 pb-5">
+                <div class="col-lg-4 col-md-12">
+                    <h5 class="eda-card-title eda-ten-des-title">{% trans 'Sustainability' %}</h5>
+                    <p class="eda-ten-des-p">{% trans 'EDA® stores all data in an industry standard data format (JSON) – no proprietary formats' %}</p>
+                </div>
+                <div class="col-lg-4 col-md-12">
+                    <h5 class="eda-card-title  eda-ten-des-title">{% trans 'Scalability' %}</h5>
+                    <p class="eda-ten-des-p">{% trans 'EDA® is a scalable solution using state-of-the-art micro-services (Docker) for integration into any environment' %}</p>
+                </div>
+                 <div class="col-lg-4 col-md-12">
+                    <h5 class="eda-card-title  eda-ten-des-title">{% trans 'Extensibility' %}</h5>
+                    <p class="eda-ten-des-p">{% trans 'EDA® uses mature, free and open source software components – designed to be extended by customers' %}</p>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- eda-ten-end -->
+
+<!-- eda-11-des -->
+<section class="eda-des">
+    <div class="container">
+        <div class="eda-third-des eda-frist-des pt-5">
+           
+              <div class="thid-div-p eda-des-11">
+                <p><b>{% trans 'Selected features and properties are :' %}</b></p>
+                <ul>
+                    <li><b>{% trans 'Import and export of data' %}</b> {% trans 'from different sources, e.g. xls, csv, JSON' %}</li>
+                    <li><b>{% trans 'Visualization' %}</b>{% trans ' through 2D / 3D graphics, tabular comparisons' %}</li>
+                    <li><b>{% trans 'Unit conversion,' %}</b> {% trans 'unit-neutral storage of content' %}</li>
+                    <li><b>{% trans 'Support for complex data types,' %}</b> {% trans 'such as multidimensional fields' %}</li>
+                    <li><b>{% trans 'Free definition ' %}</b> {% trans 'of different views on the data' %}</li>
+                    <li><b>{% trans 'Multilingualism' %} </b> {% trans 'at all levels (metadata and data content)' %}</li>
+                    <li><b>{% trans 'Advanced wiki system ' %}</b> {% trans 'with equations (MathJax), data integration, bibliographies' %}</li>
+                    <li><b>{% trans 'Integrated management ' %}</b> {% trans 'of bibliographies' %}</li>
+                    <li><b>{% trans 'Import and full-text indexing of files,' %}</b>  {% trans 'e.g. PDF and Office, using Elasticsearch' %}</li>
+                    <li><b>{% trans 'Reportwriting' %}</b> {% trans 'with configurable templates in LaTeX quality' %}</li>
+                    <li><b>{% trans 'Extensibility' %}</b>  {% trans 'in the Python language, use of all scientific-technical Python libraries' %}</li>
+                </ul>
+              </div>
+          </div>
+
+          <div class="row pb-5">
+            {% for eda in eda_data %}     
+             <div class="col-lg-4 col-md-12 mb-3">
+                <div class="card card-custom h-100">
+                   <div class="card-body">
+                    <h2>{{eda.title}}</h2>
+                    <p>{{eda.summary.html|safe}}</p>
+
+                   </div>
+                    <div class="card-fotter-styel">
+                       {% if eda.external_url %}
+                         <a href="{{eda.external_url}}" class="btn btn-primay">{% trans 'More Infromation' %}</a>
+                         {% elif eda.external_url_endpoint %}
+                         <a href="{{eda.external_url_endpoint }}" class="btn btn-primay">{% trans 'More Infromation' %}</a>
+                        {% else %}
+                         <a href="{% url 'eda_details' eda.id %}" class="btn btn-primay">{% trans 'More Infromation' %}</a>
+                        {% endif %}
+                    </div>
+                </div>
+             </div>
+           {% endfor %}
+          </div>
+    </div>
+
+</section>
+
+{% endblock body %}
+
+
+
+

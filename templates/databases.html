@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static i18n%}
+
+
+{% block meta %}
+  <title>Databases</title>
+  <link rel="canonical" href="{{request.get_full_path}}">
+  <meta name="description" content="Discover our databases. Material knowledge for your competitive advantage: ✓ StahlDat SX ✓ Aluselect ✓ Matglobe ✓ MMPDS database ✓ Creep data" />
+  <meta property="og:title" content="Databases" />
+  <meta property="og:description" content="Discover our databases. Material knowledge for your competitive advantage: ✓ StahlDat SX ✓ Aluselect ✓ Matglobe ✓ MMPDS database ✓ Creep data" />
+  <meta property="og:image" content="http://EN/media/images/20220808_Matplus_logo_redesign.original.png" />
+  <meta property="og:url" content="{{request.get_full_path}}" />
+  <meta name="twitter:title" content="Databases">
+  <meta name="twitter:image" content="http://EN/media/images/20220808_Matplus_logo_redesign.original.png">
+{% endblock meta %}
+
+
+{% block body %}
+
+  <section class="database-wrap">
+    <div class="container-fluid database-hero">
+       <div class="row">
+        <div class="col-lg-6">
+            <h1 class="jm-h1 database-h1">{% trans 'Databases' %}</h1>
+            <p class="jm-p database-p">{% trans 'SCALE YOUR PRODUCTIVITY' %}</p>
+        </div>
+        <div class="col-lg-6">
+            <img id="spin-img" src="{%static 'images/spin.png'%}" alt="">
+        </div>
+       </div>
+    </div>
+    <div class="container">
+      
+        {% include 'includes/database_dynamic.html' with posts=databases details_url='database_details' %}
+
+    </div>
+  </section>
+{% endblock body %}

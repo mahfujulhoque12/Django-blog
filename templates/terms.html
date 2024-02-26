@@ -1,0 +1,188 @@
+{% extends 'base.html' %}
+{% load static i18n %}
+
+
+{% block body %}
+    <section class="terms-wrap">
+        <div class="container">
+            <div class="row">
+               <div class="imprint">
+                
+                {% if LANGUAGE_CODE == 'de' %}
+                  <h1 class="mt-5 mb-5">Allgemeine Lizenz- und Geschäftsbedingungen</h1>
+                {% else %}
+                  <h1 class="mt-5 mb-5">General terms and conditions</h1>
+                {% endif %}
+                    
+                  <h2 class="mt-5">{% trans 'Matplus GmbH General licensing terms and Terms and Conditions' %}</h2>
+                  <h2 class="mb-5">{% trans '1. Scope/Conclusion of Contract' %}</h2>
+                  <div class="imprint-content">
+                    <p class="company-about-us-p1"><b>1.1.</b> {% trans 'The business relationship between Matplus GmbH, Hofaue 55, 42103 Wuppertal, Germany, represented by its CEO Mr Uwe Diekmann (hereinafter referred to as Matplus), and the Customer, which is an entrepreneur, shall be governed exclusively by the following General Terms and Conditions in the version valid at the time the Contract was concluded.' %}</p>
+
+                    <p class="company-about-us-p1"><b>1.2.</b> {% trans 'Any deviating terms and conditions of the Client or a third party shall not be recognised unless Matplus has expressly accepted their validity in writing' %}.</p>
+                    <p class="company-about-us-p1"><b>1.3.</b> {% trans 'For the purposes of the General Terms and Conditions, Customers are entrepreneurs.' %}</p>
+                   
+                  </div>
+                  <div class="imprint-content mt-3">
+                    <h2>2. {% trans 'Definitions' %}</h2>
+                    <p class="company-about-us-p1"><b>2.1.</b> {% trans 'Software is the software product defined in the specification included with the offer, excluding any open source components provided as gifts free of charge, plus the related documentation.' %}</p>
+                    <p class="company-about-us-p1"><b>2.2.</b> {% trans 'Open source software refers to “free software” provided by third parties, which may be used and edited on the basis of the published source code in accordance with the respective terms of use.' %}</p>
+
+                    <p class="company-about-us-p1"><b>2.3.</b> {% trans 'For the purposes of the General Terms and Conditions, entrepreneurs are natural or legal persons or partnerships with a legal capacity acting in the performance of a commercial or independent commercial activity.' %}</p>
+
+                    <h2>{% trans '3. Permanent transfer of software against payment/purchase' %}</h2>
+                    <p class="company-about-us-p1">{% trans 'The Object of this Agreement is the permanent transfer of software (both software developed by third parties and software developed by Matplus) to the Customer as well as the granting of the corresponding rights of use. Matplus shall supply the Customer with a copy of the software purchased in addition to the accompanying documentation on a data medium or via download, for the Customer’s exclusive use Unless otherwise agreed, the installation of the software supplied by Matplus shall not constitute part of the Contract.' %}</p>
+                    <p class="company-about-us-p1"><b>3.1.</b> {% trans ' Object of Agreement' %}</p>
+                    <p class="company-about-us-p1"><b>3.2.</b>{% trans 'Rights of use and reproduction of proprietary software' %}</p>
+
+                    <p class="company-about-us-p1"><b>3.2.1.</b> {% trans 'In the case of third-party software, the respective licensing conditions of the manufacturer shall apply.' %}</p>
+                    <p class="company-about-us-p1"><b>3.2.2</b> {% trans 'With regard to software developed by Matplus, Matplus hereby grants the Customer a simple, non-exclusive, temporally and spatially unlimited, irrevocable right of use for the software created by Matplus and the associated documentation for the Customer’s own use and in line with the intended use. This right shall be granted on the condition precedent that the full amount of the remuneration agreed is paid. Unless otherwise agreed, purchasing the software shall entitle the Customer to install and run the software on a single device at any one time and on a single network. The number of licenses and the type and scope of use shall also be determined based on the content of the Contract. Should the Customer purchase a multiple-user version, the agreed number of copies may be used on different computers within the same network. Use refers to the storage of the software on a temporary storage medium (RAM) as well as in a permanent memory (particularly on a hard drive, removable disc, USB stick or CD-ROM).' %}</p>
+
+                    <p class="company-about-us-p1"><b>3.2.3.</b> {% trans 'The Customer shall be entitled to create a backup copy of the data carrier provided to it if necessary to secure future use. The Customer must write the note “backup copy” and add a copyright notice in a visible location on the backup copy created.' %}</p>
+
+                    <p class="company-about-us-p1"><b>3.2.4.</b> {% trans 'The Customer is prohibited from creating any further copies, including printouts of the program code and photocopies of the entire manual or significant portions thereof.' %}</p>
+
+                    <p class="company-about-us-p1">{% trans '<b>3.3 </b>Multiple use/network use' %}</p>
+                    
+                    <p class="company-about-us-p1">{% trans '<b>3.4</b> The Customer may install the software on any hardware available to it. However, if the Customer changes hardware, the software must be deleted from the mass storage of the hardware used until that point. The software must not be saved, stored or used on more than one item of hardware unless otherwise agreed. The simultaneous use of the software by multiple users is also not permitted; any such use must be paid for separately in advance.' %}</p>
+
+                    <p class="company-about-us-p1"> <b>3.5.</b> Reservation of title' </p>
+                
+                    
+                    {% if LANGUAGE_CODE == 'en' %}
+                        <div>
+                        <p class="company-about-us-p1"><b> 3.5.1.</b> Matplus shall retain the title to the software provided to the Customer until all receivables associated with this contractual relationship existing at the time of delivery or arising subsequently are paid in full. If payment is made by cheque or bill of exchange, the title shall be retained until the cheque or bill of exchange has cleared.' </p>
+
+                        <p class="company-about-us-p1"><b>3.5.2.</b> If the customer is in arrears with payment, the retention of title by Matplus shall not constitute withdrawal from the Contract unless Matplus expressly informs the user accordingly.' </p>
+
+                        <p class="company-about-us-p1"><b>3.5.3.</b> trans 'Should Matplus assert its right to retention of title, the Customer’s right to make further use of the software shall lapse. All copies of the program created by the Customer must be returned or demonstrably deleted.' </p>
+                    </div>
+                    {% endif %}
+                        
+                   
+
+                    <h2>{% trans '4. Permanent provision of software developed by Matplus free of charge (freeware)' %}</h2>
+
+                    <p class="company-about-us-p1"><b>4.1.</b>  {% trans 'The object of the Agreement is the permanent provision of software developed by Matplus to the free of charge in the form of a gift.' %}</p>
+                    <p class="company-about-us-p1"><b>4.2.</b> {% trans 'In providing software to the customer permanently and free of charge, Matplus grants the Customer a simple, non-exclusive, temporally and spatially unlimited, irrevocable right of use to the software provided by Matplus for the Customer’s own use. Use refers to the storage of the software on a temporary storage medium (RAM) as well as in a permanent memory (hard drive, USB stick, etc.).' %}</p>
+
+                    <p class="company-about-us-p1"><b> 4.3.</b> {% trans 'The specific provisions set forth in Clauses 3.2.2., 3.2.3., 3.3. and 3.4. shall apply accordingly.' %}</p>
+
+                    <h2>5. {% trans ' Creation of software' %}</h2>
+                    <p class="company-about-us-p1"><b> 5.1.</b> {% trans 'Object of Agreement' %}</p>
+                    <p class="company-about-us-p1"><b> 5.1.1.</b> {% trans 'With respect to software creation, the Object of the Agreement is a piece of software to be developed by Matplus based on the Customer’s specifications, to be provided to the customer along with the corresponding user guide and the granting of the corresponding user rights. The scope of services owed and any further specifications must be described in detail by the Customer in a specification sheet it must create. Matplus shall produce the software in accordance with the requirements outlined in the specification sheet and on the basis of the scientific and technical state of the art. Matplus shall provide the software to the Customer in the form of an executable program on an appropriate medium. Installation shall be performed by the Customer.' %}</p>
+
+                    <p class="company-about-us-p1"><b>5.1.2.</b> {% trans 'The deadlines for delivery of the works to be provided shall be defined in the specification sheet. Upon becoming aware that an execution deadline cannot be respected, Matplus must inform the Customer immediately in writing, citing the reason and indicating the expected duration of the delay.' %}</p>
+                    <p class="company-about-us-p1"><b> 5.2.</b> {% trans 'Customer’s duty to cooperate' %}</p>
+                    <p class="company-about-us-p1">{% trans 'The customer shall provide Matplus with the information, documentation and other work materials (pre-imstalled DV components, individual customer software) necessary to perform the services owed free of charge and in a timely manner, without first being asked to do so. The Customer shall ensure that technically proficient employees are available to Matplus to provide binding information if required.' %}</p>
+
+                    <p class="company-about-us-p1"><b>5.3.</b> {% trans 'Acceptance' %}</p>
+
+                    <p class="company-about-us-p1">{% trans 'Matplus shall provide the Customer with a copy of the program in encoded, input-ready form as well as the related documentation for the purposes of performing the performance test outlined in the specification sheet. Should the performance test reveal that the service provided by Matplus corresponds to that described in the specification sheet, the Customer shall immediately confirm its acceptance of the work in writing. Should the customer fail to confirm its acceptance within an appropriate time frame, Matplus may grant it an appropriate grace period within which to submit the confirmation. Once this period has expired, the service shall be deemed accepted if the Customer has neither confirmed acceptance nor cited the reasons for extending the performance test and has not itself specified an additional grace period. Matplus shall specifically make the Customer aware of the intended significance of its conduct when this grace period begins.' %}</p>
+                    <p class="company-about-us-p1"><b>5.4.</b> {% trans 'Rights of use' %}</p>
+                    <p class="company-about-us-p1"><b>5.5.</b>{% trans 'Unless otherwise agreed,, Matplus shall grant the Customer a simple, non-exclusive, temporally and spatially unlimited, irrevocable right of use to the software created by Matplus and the associated documentation for the Customer’s own use, subject to acceptance and full remuneration. The specific provisions set forth in Clauses 3.2.2., 3.2.3., 3.3. and 3.4. shall apply accordingly.' %}</p>
+
+                    <p class="company-about-us-p1"><b>5.6. </b>{% trans 'Infringement of third-party proprietary rights   Where Matplus creates software based on the Customer’s drafts and instructions, the Customer shall indemnify Matplus against all claims and costs arising in connection with the infringement of third-party proprietary rights that can be linked to the Customer’s drafts and instructions. Upon request by Matplus, the Customer shall pay an appropriate advance on litigation costs.' %}</p>
+
+
+                    <h2>6. {% trans 'Maintenance and other services' %}</h2>
+
+                    <p class="company-about-us-p1"><b>6.1.</b> {% trans 'Where Matplus agrees to provide maintenance services free of charge, the maintenance in question shall include the services specified in the order confirmation. It shall, as the very least, consist of the provision of a hotline, the automatic transmission of medium and large updates, remote diagnostics and maintenance services and an internet service, via which interim releases can be accessed.' %}</p>
+                    <p class="company-about-us-p1"><b> </b>{% trans ' 6.2. Maintenance shall be limited exclusively to software created by Matplus. Should the customer sell the Matplus software, Matplus shall no longer be obliged to provide maintenance and upkeep services. Matplus shall refund the customer the payment for the remaining period only to the extent that Matplus saves costs or acquires profits through other use of the services.' %}</p>
+
+                    <p class="company-about-us-p1"><b>6.3. </b>{% trans 'The duration, extent and remuneration shall be defined in the individual maintenance contracts concluded.' %}</p>
+                    <p class="company-about-us-p1"><b>6.4. </b>{% trans 'Should the Customer enter into arrears with payment, Matplus may postpone the further performance of maintenance or upkeep until full payment has been made and may also demand advance payment.' %}</p>
+                    <p class="company-about-us-p1"><b>6.5. </b>{% trans 'Matplus shall perform additional services for the Customer where these have been agreed in writing. The Customer shall pay for additional services in accordance with the respective valid Marplus service price lists.' %}</p>
+
+                    <h2>7. {% trans 'Software rental' %}</h2>
+
+                    <p class="company-about-us-p1"><b> 7.1. </b>{% trans 'The object of the Agreement is the provision of software, free of charge and for a limited time, to the customer by Matplus.' %}</p>
+                    <p class="company-about-us-p1"><b>7.2. </b> {% trans 'The services to be provided, duration of the Contract and remuneration shall be defined in the individual contracts concluded.' %}</p>
+
+                    <p class="company-about-us-p1"><b>7.3.</b> {% trans 'As part of the software rental, Matplus shall grant the Customer a the simple right, limited in time to the duration of the contract, to use the software in accordance with its intended purpose, without restriction in terms of space or content.' %}</p>
+
+                    <p class="company-about-us-p1"><b>7.4. </b>{% trans 'The Customer may neither sell the software, including the user manual and any other accompanying third-party materials, nor make them available for a limited period of time; in particular, it may not rent or loan it out.' %}</p>
+
+                    <p class="company-about-us-p1"><b>7.5. </b>{% trans 'Ant defects may either be rectified by means of a repair free of charge or a replacement delivery, at the discretion of Matplus.' %}</p>
+                    <p class="company-about-us-p1"><b>7.6. </b>{% trans 'The Customer may not assert its right to terminate the Agreement based on a failure to permit use of the property as per Section 543(2)(1)(1) German Civil Code (BGB) unless the repair or replacement has failed.' %}</p>
+
+                    <p class="company-about-us-p1"><b>7.7. </b>{% trans 'The strict liability of Matplus, as the lessor, for defects already existing at the time of conclusion of this contract according to Section 536(a)(1) BGB is expressly excluded.' %}</p>
+
+                    <h2>8. {% trans 'General Terms and Conditions' %}</h2>
+
+                    <p class="company-about-us-p1"><b>8.1.</b> {% trans 'Appointment of third parties' %}</p>
+
+                    <p class="company-about-us-p1">{% trans 'Matplus shall be entitled to avail itself of the assistance of third parties and to transfer the rights and obligations to perform the Contract to third parties as vicarious agents accordingly.' %}</p>
+                    <p class="company-about-us-p1"><b>8.2. </b>{% trans 'Payment terms' %}</p>
+                    <p class="company-about-us-p1"><b>8.2.1. </b>{% trans 'The respective valid Matplus price list shall apply. Prices listed are in euros plus any costs incurred for postage, packaging, insurance, travel and the applicable value added tax.' %}</p>
+
+                    <p class="company-about-us-p1"><b>8.2.2. </b>{% trans 'Unless otherwise agreed, payments shall fall due no later than upon delivery/provision of the software or upon provision of the access data to the Customer and must be paid within 14 days of invoicing.' %}</p>
+
+                    <p class="company-about-us-p1"><b>8.3.</b> {% trans 'Force majeure' %}</p>
+                    <p class="company-about-us-p1">{% trans 'In the event that Matplus is impeded in the timely provision of its deliveries and services by force majeure, strike, operational disruption, lockout, fire, natural disaster, transport obstructions, official measures or delays in the delivery of important raw and auxiliary materials to Matplus itself or to its sub-supplier, the delivery time shall be extended accordingly.' %}</p>
+
+                    <p class="company-about-us-p1"><b>8.4. </b>{% trans 'Use of open source software' %}</p>
+                    <p class="company-about-us-p1"><b>8.4.1. </b>{% trans 'Unless any contrary provisions are agreed upon, Matplus shall be entitled to use various free software components (open source software) in providing the agreed services. The provision of open source components by Matplus shall be free of charge and shall take the form of a gift.' %}</p>
+
+                    <p class="company-about-us-p1"><b>8.4.2. </b>{% trans 'The granting of rights of use for the open source software shall be governed by the respective provisions set forth in the open source terms of use of the respective rights holder. Mayplus shall inform the Customer about the use of open source software and shall issue the corresponding licensing conditions.' %}</p>
+
+                    <p class="company-about-us-p1"><b>8.4.3. .</b>{% trans 'The Customer shall be obliged to respect the licensing conditions of the respective rights holder and, if the software and the open source software components are issued to a third party, to ensure that the third party is also obliged to respect them.' %}</p>
+
+                    <p class="company-about-us-p1"><b>8.5.</b> {% trans 'Labelling/copyright notes' %} <br>{% trans 'Copyright notices, serial numbers and any other features that serve to identify the program must not be removed from the software or changed. The same shall apply to any suppression of corresponding features on the screen.' %}</p>
+
+                    <p class="company-about-us-p1"> <b>8.6. </b> {% trans 'Warranty' %}</p>
+                    <p class="company-about-us-p1"><b>8.6.1. </b>{% trans 'The software provided by Matplus shall essentially correspond to the product description. Product descriptions cannot be considered warranties without a separate written agreement. With regard to the provision of updates, upgrades and new versions, any claims of defects shall be limited to the new features introduced in connection with the provision of updates, upgrades and new versions as compared with the previous version.' %}</p>
+
+                    <p class="company-about-us-p1"><b>8.6.2. </b>{% trans 'Any obvious defects must be reported to Matplus in writing within one week after receipt of the goods; otherwise, the Customer may not assert the warranty claim. The sending of such notice in a timely manner shall suffice with respect to the observance of this deadline. In this case, the Customer shall bear the full burden of proof with respect to all claim prerequisites, in particular for the defect itself, for the time of discovery of the defect and for the timeliness of the notice of defects.' %}</p>
+
+                    <p class="company-about-us-p1"><b>8.6.3. </b>{% trans 'Any defects must be reported in writing, providing a clear description of the error symptoms, substantiated as far as possible by written records, hard copies or other documents illustrating the defects in question. The notice of defect should allow the defect to be reproduced.' %}</p>
+
+                    <p class="company-about-us-p1"><b>8.6.4. </b>{% trans 'The warranty period shall extend for one year from delivery of the product. The one-year warranty period shall not apply if and to the extent that a case as outlined in Clause 4.7.1 or 4.7.2. arises.' %}</p>
+                    <p class="company-about-us-p1"><b>8.7. {% trans 'Liability' %}</b>  <br> {% trans 'Claims by the Customer for damages or compensation for futile expenses shall be governed by this clause irrespective of the legal nature of the claim:' %}</p>
+
+                    <p class="company-about-us-p1"><b> 8.7.1. </b> {% trans 'Matplus shall be liable without limitation for damages or reimbursement of futile expenditure' %}
+                    <br>
+                   {% trans ' – in the event of intent or gross negligence' %} <br>
+                   {% trans ' – for injury to life, limb or health,' %} <br>
+                  {% trans '  – in accordance with the provisions of German product liability law and ' %}<br>
+                   {% trans ' – within the scope of a warranty assumed by Matplus' %} <br>
+                  {% trans '  – in the case of fraudulent intent on the part of Matplus.' %}
+
+                    </p>
+
+                    <p class="company-about-us-p1"><b>8.7.2. </b>{% trans 'In the event of a slightly negligent breach of an obligation that is essential to achieve the purpose of the Contract (cardinal obligation), Matplus’ liability shall be limited in amount to the damage that is typical and to be expected for the type of transaction in question, and shall not exceed five times the remuneration paid for the service.' %}</p>
+
+                    <p class="company-about-us-p1"><b>8.7.3. </b> {% trans 'Matplus shall only be liable for the loss of data up to the cost that would have been incurred if the data had been properly and regularly backed up in order to restore it.' %}</p>
+
+                    <p class="company-about-us-p1"><b>8.7.4.</b> {% trans 'Matplus shall accept no further liability. In particular, Matplus shall accept no liability for incipient defects unless the requirements set forth in Clauses 8.7.1 or 8.7.2. are met.' %}</p>
+
+                    <p class="company-about-us-p1"><b>8.7.5.</b>{% trans 'The above liability limitation shall also apply with regard to the personal liability of all Matplus employees, representatives and bodies.' %}</p>
+
+                    <p class="company-about-us-p1"><b>8.8. {% trans 'Provision of source code.' %}</b>  <br> {% trans 'Unless otherwise agreed, the Customer shall not be entitled to request the provision of the source code.' %}</p>
+
+                    <p class="company-about-us-p1"><b>8.9. {% trans 'Data protection/data security' %}</b> <br>{% trans 'Matplus shall collect, process and use the personal data of customers exclusively for the purposes of the proper execution of the Contract within the scope of the applicable data protection laws. Both Parties shall comply with the provisions set forth in the applicable data protection legislation and regulations. This shall apply in particular to the collection, processing, editing, transmission and erasure of data or databases. The Parties shall ensure that employees and agents who are granted access to data respect these provisions accordingly.' %}</p>
+
+                    <p class="company-about-us-p1"><b>8.10.</b> {% trans 'Other' %}</p>
+                    <p class="company-about-us-p1"><b>8.10.1.</b> {% trans 'The Customer may only offset undisputed or legally established claims.' %}</p>
+                    <p class="company-about-us-p1"><b>8.10.2. </b>{% trans 'The Customer may not exercise a right of retention that is not based on a right arising from this contractual relationship.' %}</p>
+
+                    <p class="company-about-us-p1"><b>8.10.3. </b> {% trans 'The Customer shall only transfer its rights as arising from this Contract to a third party with the prior consent of Matplus; Section 354 a of the German Commercial Code shall remain unaffected.' %}</p>
+                    <p class="company-about-us-p1"><b>8.10.4. </b> {% trans 'The software may be subject to (re-)export restrictions, e.g. with respect to the USA or the EU. The Customer must respect these provisions in the event of a resale or other transfer.' %}</p>
+
+                    <p class="company-about-us-p1"><b>8.11.</b> {% trans 'Final provisions' %}</p>
+                    <p class="company-about-us-p1"><b>8.11.1.</b> {% trans 'Changes and additions to this Contract require the written form to be valid. This shall also apply to amendments to or the removal of this Clause. Electronic text documents shall not be sufficient to fulfil this requirement for the written form.' %}</p>
+
+                    <p class="company-about-us-p1"><b>8.11.2. </b>{% trans 'The law of the Federal Republic of Germany shall apply, excluding reference to the UN Convention on Contracts for the International Sale of Goods (CISG) dated 11/04/1980' %}</p>
+                    <p class="company-about-us-p1"><b>8.11.3. </b>{% trans 'The place of fulfilment and exclusive place of jurisdiction shall be Wuppertal, provided that each Party is a merchant or a legal person governed by public law.' %}</p>
+                    <p class="company-about-us-p1"><b>8.11.4. </b>{% trans 'Should any of the individual provisions of this Contract be invalid, this shall not, in principle, affect the validity of the remaining provisions.' %}</p>
+
+                    <p class="company-about-us-p1">Date: 08/11/2021</p>
+                  </div>
+    
+                 
+               </div>
+            </div>
+        </div>
+    </section>
+{% endblock body %}
+    

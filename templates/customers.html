@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+{% load static i18n%}
+
+{% block meta %}
+    <title>Selected Customers — Matplus GmbH</title>
+    <link rel="canonical" href="{{request.get_full_path}}">
+    <meta name="description" content="" />
+    <meta property="og:title" content="Selected Customers — Matplus GmbH" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="http://EN/media/images/20220808_Matplus_logo_redesign.original.png" />
+    <meta property="og:url" content="http://EN/en-us/company/customers/" />
+    <meta name="twitter:title" content="Selected Customers — Matplus GmbH">
+    <meta name="twitter:image" content="http://EN/media/images/20220808_Matplus_logo_redesign.original.png">
+{% endblock meta %}
+    
+{% block body %}
+
+<section class="customers-bg">
+<div class="container">
+    <div class="row customers">
+        <h1 class="customer-h1">{% trans 'Selected Customers' %}</h1>
+        <h4 class="customer-h4">{% trans 'Producers of steel' %}</h4>
+    </div>
+    <div class="row mt-5">
+        
+        {% for frist in frist_part %}
+            <div class="col-lg-4 col-md-12 customer-responsive-card mb-3">
+                <div class="customer-card card h-100">
+                    <div class="customer-card-body card-body">
+                        <h5 class="card-title">{{frist.title}}</h5>
+                    </div>
+                    <div class="customer-card-text">
+                        <a href="{{frist.external_url}}">{{frist.external_url_title}}</a>
+                    </div>
+                    <div class="card-footer">
+                        <a href="{{frist.external_url}}" title="Visit Website" class="btn btn-outline-primary">{% trans 'Visit Website' %}</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+        
+    </div>
+
+
+
+    <h4 class="customer-h4 customer-sec-h4">{% trans 'Automotive and aerospace industry' %}</h4>
+
+    <div class="row customer-sec-row pb-5">
+        
+        {% for second in second_part %}
+            <div class="col-lg-4 col-md-12 customer-responsive-card mb-3">
+                <div class="customer-card card h-100">
+                    <div class="customer-card-body card-body">
+                        <h5 class="card-title">{{second.title}}</h5>
+                    </div>
+                    <div class="customer-card-text">
+                        <a href="{{second.external_url}}">{{second.external_url_title}}</a>
+                    </div>
+                    <div class="card-footer">
+                        <a href="{{second.external_url}}" title="Visit Website" class="btn btn-outline-primary">{% trans 'Visit Website' %}</a>
+                    </div>
+                </div>
+            </div> 
+        {% endfor %}
+        
+</div>
+</section>
+    
+{% endblock body %}

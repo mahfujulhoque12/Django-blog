@@ -1,0 +1,163 @@
+{% extends 'base.html' %}
+{% load static i18n%}
+
+
+{% block meta %}
+  <title>Latest news — Matplus GmbH</title>
+  <link rel="canonical" href="{{request.get_full_path}}">
+  <meta name="description" content="" />
+  <meta property="og:title" content="Latest news — Matplus GmbH" />
+  <meta property="og:description" content="" />
+  <meta property="og:image" content="http://EN/media/images/20220808_Matplus_logo_redesign.original.png" />
+  <meta property="og:url" content="{{request.get_full_path}}" />
+  <meta name="twitter:title" content="Latest news — Matplus GmbH">
+  <meta name="twitter:image" content="http://EN/media/images/20220808_Matplus_logo_redesign.original.png">
+{% endblock meta %}
+  
+
+{% block body %}
+  <div id="content">
+    <section class="news" style="background-image: url({%static 'images/news-bg.webp'%});">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="carousel-container">
+              <div class="mySlides animate" style="display: block;">
+                  <div class="txt-container-teaser">
+                  <div class="blue-frames-heading heading-2">JMatPro®</div>
+                  <div class="org-frames-heading">{% trans 'User Conference' %}</div>
+                  <div class="blue-frames-heading-2">18.06.2024 - 19.06.2024</div>
+                  <p class="thema-veranstaltung">{% trans 'PRACTICAL MATERIALS SIMULATION' %}</p>
+                  <a class="btn btn-outline-danger on-news blog-hero-info" href="/more_info/12th-jmatpro-user-conference-2024/">{% trans 'More Information' %}</a>
+                  </div>
+                      <video loop="true" autoplay="autoplay" controls="hidden" muted="" src="{% static 'video/2711715105.mp4' %}" alt="slide">
+                      <div class="number">1 / 3</div>
+                      <div class="text"> JMATPRO® JMATPRO®</div>
+                      </video>
+              </div>
+              
+              
+              <div class="mySlides animate" style="display: none;">
+                  <div class="txt-container-teaser nafems">
+                      <div class="blue-frames-heading">EDA®</div>
+                      <div class="org-frames-heading">{% trans 'User Conference' %}</div>
+                      <div class="blue-frames-heading-2">19.06.2024 - 21.06.2024</div>
+                      <p class="thema-veranstaltung">{% trans 'MATERIALS DATA MANAGEMENT' %}</p>
+                      <a class="btn btn-outline-danger on-news blog-hero-info" href="/more_info/3rd-eda-user-conference-2024/">{% trans 'More Information' %}</a>
+                  </div>
+                  <img class="nafems-header-img" src="{% static 'images/news-hero.png' %}" alt="slide">
+                  
+              </div>
+              
+              
+                  <!-- Next and previous buttons -->
+                  <a class="prev" onclick="prevSlide()">❮</a>
+                  <a class="next" onclick="nextSlide()">❯</a>
+              
+                  <!-- The dots/circles -->
+                  <div class="dots-container">
+                  <span class="dots active" onclick="currentSlide(1)"></span>
+                  <span class="dots" onclick="currentSlide(2)"></span>
+                  <!-- <span class="dots" onclick="currentSlide(3)"></span>-->
+                  </div>
+          </div>
+         </div>
+          
+      </div>
+      <div class="container">
+  
+         
+      </div>
+  
+      <div class="container">
+          <!-- frist row -->
+          <div class="row  mt-5">
+              {% for news in newss %}
+                  <div class="col-lg-6 mb-3">
+                      <div class="card card-custom  h-100">
+                          <div class="card-body">
+                              <h2>{{news.title}}</h2>
+                              <h6 class="card-subtitle mt-2 text-muted">{{news.created_at}}</h6>
+                              <p>{{news.summary.html|safe}}</p>
+                          </div>
+                          <div class="card-fotter-styel news-card">
+                            
+                        {% if news.external_url %}
+                            <a href="{{news.external_url}}" class="btn btn-outline-danger on-news">{% trans 'More Information' %}</a>
+                        {% elif news.external_url_endpoint %}
+                            <a href="{{news.external_url_endpoint}}" class="btn btn-outline-danger on-news">{% trans 'More Information' %}</a>
+                        {% else %}
+                            <a class="btn btn-outline-danger on-news" href="{% url 'more_info' news.slug %}">{% trans 'More Information' %}</a>
+                        {% endif %}
+                        
+                          </div>
+                      </div>
+                  </div>        
+             {% endfor %}
+      </div>
+     </section>
+  </div>
+   
+
+
+    <!-- carusole js code -->
+    <script>
+        let slideIndex = 0;
+        showSlides();
+        
+        // Next-previous control
+        function nextSlide() {
+          slideIndex++;
+          showSlides();
+          timer = _timer; // reset timer
+        }
+        
+        function prevSlide() {
+          slideIndex--;
+          showSlides();
+          timer = _timer;
+        }
+        
+        // Thumbnail image controlls
+        function currentSlide(n) {
+          slideIndex = n - 1;
+          showSlides();
+          timer = _timer;
+        }
+        
+        function showSlides() {
+          let slides = document.querySelectorAll(".mySlides");
+          let dots = document.querySelectorAll(".dots");
+        
+          if (slideIndex > slides.length - 1) slideIndex = 0;
+          if (slideIndex < 0) slideIndex = slides.length - 1;
+          
+          // hide all slides
+          slides.forEach((slide) => {
+            slide.style.display = "none";
+          });
+          
+          // show one slide base on index number
+          slides[slideIndex].style.display = "block";
+          
+          dots.forEach((dot) => {
+            dot.classList.remove("active");
+          });
+          
+          dots[slideIndex].classList.add("active");
+        }
+        
+        // autoplay slides --------
+        let timer = 70; // sec
+        const _timer = timer;
+        
+        // this function runs every 1 second
+        setInterval(() => {
+          timer--;
+        
+          if (timer < 1) {
+            nextSlide();
+            timer = _timer; // reset timer
+          }
+        }, 1000); // 1sec
+    </script>
+{% endblock body %}
