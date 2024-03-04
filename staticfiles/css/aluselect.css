@@ -1,0 +1,136 @@
+/* hero start */
+.aluselect-h1 {
+    font-size: 3rem;
+    color: #fff;
+    font-weight: 600;
+    margin-left: 128px;
+    margin-top: 39px;
+}
+.aluselect-h5 {
+    color: #fff;
+    font-size: 1.8rem;
+    margin-left: 134px;
+    margin-top: 11px;
+    margin-bottom: -6px;
+}
+.alu-bnt {
+    margin-left: 131px;
+    margin-top: 17px;
+    width: 147px;
+    height: 32px;
+    font-size: 16px;
+    padding: 3px;
+}
+.alu-bnt:hover{
+    text-decoration: underline;
+    background-color: #F95710;
+}
+.alu-img {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.alu-p {
+    max-width: 642px;
+}
+/* hero end */
+
+/* description start */
+.alu-description{
+    background-color:#F2F5F0;
+
+}
+
+.economy-h2 {
+    font-size: 1.9rem;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+.economy-p {
+    font-size: 1.4rem;
+    max-width: 1128px;
+}
+.impermeability-p{
+    width: 100% !important;
+}
+
+/* graph style */
+.grap-column{
+    background-color: white;
+    max-width: 650px!important;
+    margin: 0 10px;
+    border-bottom: 41px solid #f7f7f7;
+    padding: 24px;
+    box-shadow: 0px 3px 5px #5050503d;
+}
+/* description end */
+
+
+/* responsive  */
+
+@media screen and (max-width:1200px) {
+    .alu-left {
+        height: 625px;
+    }
+}
+
+@media screen and (max-width:992px) {
+    .alu-img {
+        display: none;
+    }
+    .alu-description {
+        margin-top: -33px;
+    }
+    .alu-p {
+        margin-left: 122px;
+        text-align: start !important;
+    }
+    .alu-left {
+        height: 557px;
+    }
+   
+}
+
+@media screen and (max-width:768px) {
+    .aluselect-h1 {
+        margin-left: 75px;
+    }
+    .aluselect-h5 {
+        margin-left: 75px;
+    }
+    .alu-p {
+        margin-left: 70px;
+    }
+    .alu-bnt {
+        margin-left: 66px;
+    }
+}
+@media screen and (max-width:600px) {
+    .aluselect-h1 {
+        margin-left: 4px;
+    }
+    .aluselect-h5 {
+        margin-left: 10px;
+    }
+    .alu-p {
+        margin-left: 7px;
+    }
+    .alu-bnt {
+        margin-left: 5px;
+    }
+    .alu-left {
+        height: 485px;
+    }
+}
+
+@media screen and (max-width:440px) {
+    .alu-left {
+        height: 524px;
+    }
+}
+@media screen and (max-width:375px) {
+    .alu-left {
+        height: 568px;
+    }
+}

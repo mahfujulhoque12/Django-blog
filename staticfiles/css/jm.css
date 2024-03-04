@@ -1,0 +1,147 @@
+.jm-wrapper {
+    background-color: #F2F5F0;
+    margin-bottom: -14px;
+}
+.container-fluid.jm-bg {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: white;
+    height: 500px;
+    z-index: 1000;
+}
+.jm-h1{
+    font-size: 3.2rem;
+    font-weight: 600;
+ 
+}
+.jm-hero {
+    padding-top: 78px !important;
+  
+}
+p.jm-p {
+    background-color: #F95710;
+    padding: 15px;
+    max-width: 322px;
+    font-weight: 600;
+    font-size: 21px;
+}
+
+/* jm des style */
+
+h1.jm-des-h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    padding-top: 36px;
+}
+.jm-des-p {
+    max-width: 1128px;
+    font-size: 1.4rem;
+    line-height: 1.55;
+}
+.jm-des-contaier-bg {
+    background-color: #F2F5F0;
+    margin-top: -200px;
+    border-radius: 5px 5px 0 0;
+}
+
+.jm-box-content {
+    margin-left: 41px;
+}
+
+.effective {
+    margin-top: 58px;
+}
+
+
+
+/* .jm-banner start */
+
+.jm-banner-left {
+    padding: 11px;
+    max-width: 366px;
+    margin-left: 75px;
+    margin-top: 22px;
+    margin-bottom: 23px;
+}
+.jm-banner-right {
+    background-color: #1C2631;
+    margin-top: 35px;
+    border-radius: 7px;
+    max-width: 721px;
+}
+.jm-banner-right h1 {
+    font-size: 1.9rem;
+    letter-spacing: -.03rem;
+    line-height: 1.2;
+    color: #fff;
+    font-weight: bold;
+    padding-top: 14px;
+    padding-left: 23px;
+}
+
+.jm-banner-right p {
+    color: #fff;
+    padding-left: 24px;
+}
+.banner-btn{
+    margin-top: 12px;
+}
+/* .jm-banner end */
+
+/* selling start */
+.selling-p {
+    font-size: 1.4rem;
+    line-height: 1.55;
+    margin-top: 7px;
+}
+
+/* selling end */
+
+a.cae-link {
+    color: #F95710;
+    text-decoration: none;
+}
+
+.additional-btn {
+    background-color: #F2F5F0;
+    border-top: none;
+    margin-left: -19px;
+}
+
+
+
+/* responsive start */
+@media screen and (max-width: 1200px) {
+    .jm-banner-left {
+        max-width: 295px;
+        margin-left: 0;
+    }
+    .jm-banner-right {
+        margin-top: 13px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .jm-banner-left {
+        margin-left: 97px;
+    }
+}
+@media screen and (max-width: 420px) {
+    .jm-banner-left {
+        margin-left: 52px;
+    }
+}
+
+@media screen and (max-width: 356px) {
+    .jm-banner-left {
+        margin-left: 6px;
+    }
+}
+
+
+/* jm details start */
+
+.jm-details-wrap{
+    background-color: #F2F5F0;
+}

@@ -1,0 +1,213 @@
+ /* hero :start */
+ .company-hero-h1 {
+    color: #fff;
+    padding: 80px 0;
+    text-shadow: -1px 3px 4px #000000;
+    max-width: 420pt;
+    font-size: 48px;
+}
+ /* hero end */
+
+ /* about us start */
+ .company-about-us-bg {
+    background-color: #F2F5F0;
+    margin-top: -8px;
+}
+
+.company-about-us-h1 {
+    font-weight: 600;
+    padding-top: 110px;
+}
+.company-about-us-p1{
+    max-width: 1128px;
+    font-size: 1.4em;
+    line-height: 1.55;
+}
+.company-card-title{
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+.contact h1 b{
+    padding-top:30px ;
+}
+.company .card{
+    box-shadow: 0px 3px 5px #5050503d;
+    transition: 300ms;
+}
+p.company-hr {
+    border-top: 1px solid #d9d9d9;
+    margin-top: 7px;
+}
+.education{
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+.company-card-p2 {
+    max-width: 1128px;
+    font-size: 1.2em;
+    line-height: 1.55;
+}
+.company ul li {
+    font-size: 1.2rem;
+    margin-left: 32px;
+}
+.company h6{
+    font-size: 1.1rem;
+}
+.team-card{
+    max-height:250px;
+    overflow:hidden;
+    transition: max-height 2s ease-in-out .5s;
+    background-color:white!important;
+    }
+.team-card:hover{
+    max-height:800px;
+    transition: max-height  ease-in-out .5s;
+}
+.team-card:not(:hover){
+    transition-delay: 3s!important;
+}
+    
+ /* about us end */
+
+
+ /* our coustometers start */
+ .our-customers {
+    background-color: #1f2b3b12;
+    margin-top: 100px;
+}
+.customer-h2 {
+    font-size: 2.5rem;
+    padding-left: 30px;
+    padding-top: 30px;
+    font-weight: 600;
+}
+.padding-custom{
+    padding-left: 30px;
+}
+.our-customers ul {
+    padding-left: 52px;
+}
+.our-customers ul li{
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+.btn-danger{
+    background-color: #F95710;
+}
+.company-btn {
+    margin-top: 45px;
+    margin-left: 35px;
+    margin-bottom: 57px;
+}
+/* our coustometers end */
+
+/* our mission start*/
+.our-mission {
+    margin-top: 50px;
+    padding-bottom: 80px;
+}
+.our-mission-h2 {
+    padding-left: 0;
+}
+.our-mission-p {
+    padding-left: 0;
+    font-size: 1.4rem;
+}
+#company-ci-element-container {
+    background-color: #F95710;
+    left: 0;
+    top: 2102px;
+    width: 63px;
+    height: 107px;
+    position: absolute;
+    transition: max-height 0.8s 2s, height 0.8s 2s ease-in-out;
+    overflow: hidden;
+}
+
+#company-ci-element-container:hover {
+    max-height: 500px;
+    height: 500px;
+    transition: max-height 0.8s, height 0.3s ease-in-out;
+    transition-delay: 0s; 
+}
+/* our mission end*/
+
+
+/* responsive start */
+@media screen and (max-width: 1700px) {
+    .our-mission {
+        margin-left: 80px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    #company-ci-element-container {
+        top: 2277px;
+      
+    }
+}
+
+@media screen and (max-width: 1080px) {
+#company-ci-element-container {
+    top: 2342px;
+}
+}
+
+@media screen and (max-width: 992px) {
+    #company-ci-element-container {
+        top: 3366px;
+    }
+}
+@media screen and (max-width: 768px) {
+    #company-ci-element-container {
+        top: 3599px;
+    }
+}
+
+@media screen and (max-width: 582px) {
+    #company-ci-element-container {
+        top: 3478px;
+    }
+    .img-customize {
+        width: 90% !important;
+        margin-left: 0 !important;
+    }
+}
+
+@media screen and (max-width: 554px) {
+    #company-ci-element-container {
+        top: 3606px;
+    }
+    .company-hero-h1 {
+        padding: 80px 86px;
+      
+    }
+}
+@media screen and (max-width: 470px) {
+#company-ci-element-container {
+    top: 3801px;
+}
+}
+@media screen and (max-width: 422px) {
+#company-ci-element-container {
+    top: 4040px;
+}
+}
+@media screen and (max-width: 375px) {
+#company-ci-element-container {
+    top: 4177px;
+}
+}
+
+@media screen and (max-width: 359px) {
+    #company-ci-element-container {
+        top: 4272px;
+    }
+}
+
+@media screen and (max-width: 344px) {
+    #company-ci-element-container {
+        top: 4611px;
+    }
+}

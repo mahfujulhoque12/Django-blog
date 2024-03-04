@@ -1,0 +1,615 @@
+/* Eda Hero start */
+.eda-hero-bg{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: white;
+}
+.eda-headin-1 {
+    font-size: 59px;
+    font-weight: 600;
+    padding-top: 80px;
+}
+.eda-headin-2 {
+    font-size: 2.4em;
+    font-weight: 600;
+    color: #F95710;
+}
+h1.eda-headin-3 {
+    font-weight: 600;
+    padding-bottom: 80px;
+}
+.eda-laptop {
+    width: 446px;
+}
+
+/* Eda Hero end */
+/* eda des start */
+.eda-des{
+    background-color: #F2F5F0;
+}
+.eda-frist-des{
+    padding-top: 100px;
+}
+.eda-frist-des h1 {
+    font-size: 1.9rem;
+    font-weight: 600;
+    letter-spacing: -.03rem;
+    line-height: 1.2;
+}
+.eda-frist-des p {
+    max-width: 1128px;
+    font-size: 1.4em;
+    line-height: 1.55;
+}
+.eda-laptop {
+    width: 487px;
+    position: absolute;
+    top: 125px;
+    left: 1220px;
+}
+.eda-second-des {
+    padding: 49px 0;
+}
+.eda-third-des {
+    padding-top: 5px;
+    padding-bottom: 54px;
+}
+.eda-second-des p {
+    margin-left: 12px;
+}
+.thid-div-p {
+    padding-top: 32px;
+}
+.eda-four-des {
+    padding-top: 3px;
+}
+.eda-five-des {
+    padding-top: 29px;
+}
+.eda-six-des {
+    padding-top: 64px;
+}
+.eda-seven-des {
+    padding-top: 51px;
+}
+/* eda des end */
+
+/* eda-card start */
+.ead-card{
+    background-color: #212D3E;
+}
+.eda-card-img {
+    width: 69px !important;
+    position: absolute;
+    top: -56px;
+    left: 214px;
+}
+.eda-card-title {
+    color: #F95710;
+    text-decoration: underline;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 25px;
+}
+.ead-card p {
+    font-size: 1.4rem;
+    color: #fff;
+    text-align: center;
+    padding: 11px 14px;
+}
+.eda-nine-des{
+    padding-bottom: 80px;
+}
+.eda-ten-des-bg{
+    background-color: #212D3E;
+}
+.eda-ten-des {
+    padding-top: 29px;
+}
+.eda-ten-des h1 {
+    font-size: 2.5rem;
+    color: #fff;
+    max-width: 985px;
+    text-align: center;
+    margin: 0 auto;
+    font-weight: 600;
+}
+.eda-ten-des span {
+    color: #F95710;
+}
+.eda-ten-des-p {
+    max-width: 396px !important;
+    color: #F2F5F0;
+}
+.eda-ten-des-title {
+    margin-left: -171px;
+}
+.eda-des-11 ul li{
+    font-size: 1.4rem;
+    margin-top: 10px;
+}
+/* eda-card end */
+
+/* responsive start */
+@media screen and (max-width: 1710px) {
+    .eda-laptop {
+        left: 1029px;
+    }
+}
+
+@media screen and (max-width: 1520px) {
+    .eda-laptop {
+        left: 859px;
+    }
+}
+
+@media screen and (max-width: 1364px) {
+    .eda-laptop {
+        left: 699px;
+    }
+    .eda-card-img {
+        left: 130px;
+    }
+    img.grap-img {
+        width: 350px;
+    }
+}
+@media screen and (max-width: 1180px) {
+    .eda-card-img {
+        left: 113px;
+    }
+    .eda-laptop {
+        left: 622px;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .eda-laptop {
+        left: 478px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .eda-hero-left {
+        margin-top: 353px;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+    .eda-laptop {
+        left: 219px;
+    }
+    .eda-responsive-card:nth-child(1){
+        margin-top: 0;
+    }
+    .eda-responsive-card {
+        margin-top: 59px;
+    }
+    .eda-card-img {
+        left: 298px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .eda-laptop {
+        left: 119px;
+    }
+    .eda-card-img {
+        left: 210px;
+    }
+}
+
+@media screen and (max-width: 604px) {
+    .eda-laptop {
+        left: 63px;
+    }
+}
+
+@media screen and (max-width: 544px) {
+    .eda-laptop {
+        left: 60px;
+        width: 412px;
+    }
+    .col-lg-4.col-md-12 {
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 465px) {
+    .eda-laptop {
+        left: 28px;
+        width: 383px;
+        top: 205px;
+    }
+    .eda-card-img {
+        left: 186px;
+    }
+}
+@media screen and (max-width: 405px) {
+    .eda-laptop {
+        width: 338px;
+    }
+    .eda-headin-2 {
+        font-size: 2em;
+    }
+    h1.eda-headin-3 {
+        font-size: 25px;
+    }
+    img.grap-img {
+        width: 265px;
+    }
+}
+
+@media screen and (max-width: 376px) {
+    .eda-card-img {
+        left: 139px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .eda-laptop {
+        width: 282px;
+        top: 250px;
+    }
+}
+@media screen and (max-width: 320px) {
+    img.grap-img {
+        width: 209px;
+    }
+    .eda-card-img {
+        left: 103px;
+    }
+    .eda-laptop {
+        width: 271px;
+    }
+}
+
+
+
+/* eda details start */
+/* second card  start*/
+
+.eda-details-wrap{
+    background-color: #F2F5F0;
+}
+.eda-details-hero-bg {
+    background-size: cover;
+    background-position: center center;
+    margin-top: -9px;
+}
+.eda-details-header h1 {
+    font-size: 3rem;
+}
+.container.eda-details-header {
+    color: #fff;
+    padding-top: 92px;
+    padding-bottom: 45px;
+    /* font-size: 3rem; */
+}
+h2.mm-h2 {
+    margin-top: 88px;
+    color: #1e1e1e;
+    font-size: 2.5rem;
+}
+.mm-p {
+    font-size: 1.4rem;
+    color: #1e1e1e;
+    max-width: 1128px;
+}
+.req-h4 {
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+ul.eda-details-list li {
+    font-size: 1.4rem;
+    line-height: 1.55;
+}
+.cutom-padding {
+    padding-bottom: 86px;
+}
+/* second card  start*/
+
+/* third card */
+.mm-h3 {
+    font-size: 1.9rem;
+}
+
+/* fourth Card */
+h1.dx-1 {
+    font-weight: 600;
+    margin-top: 23px;
+    color: #1e1e1e;
+}
+.dx-p {
+    font-size: 1.4rem;
+    color: #1e1e1e;
+}
+img[alt="dx1"] {
+    width: 42%;
+    margin-top: -174px;
+    margin-left: 911px;
+}
+
+/* five card */
+
+.five-row-dx {
+    margin-top: 100px;
+}
+img[alt="dx2"] {
+    width: 30%;
+    margin-top: -245px;
+    margin-left: 169px;
+}
+.six-row {
+    background: #1F2B3B;
+    margin-bottom: 89px;
+    height: 791px;
+}
+
+h3.six-h3 {
+    font-size: 1.9rem;
+    text-align: center;
+    margin-top: 26px;
+    padding-top: 48px;
+    color: #fff;
+}
+
+p.six-p {
+    text-align: center;
+    color: #fff;
+    font-size: 1.4rem;
+    padding-top: 10px;
+    padding-bottom: 15px;
+}
+img[alt="dx3"] {
+    margin-top: -855px;
+    margin-left: 371px;
+}
+
+/* responsive start */
+@media screen and (max-width: 1600px) {
+    img[alt="dx1"] {
+   
+        margin-top: -264px;
+        margin-left: 812px;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    img[alt="dx1"] {
+        margin-top: -300px;
+        margin-left: 714px;
+    }
+    img[alt="dx3"] {
+        margin-top: -875px;
+        margin-left: 240px;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    img[alt="dx1"] {
+        margin-top: -313px;
+        margin-left: 650px;
+        width: 520px;
+    }
+    img[alt="dx2"] {
+        margin-top: -245px;
+        margin-left: 72px;
+    }
+    img[alt="dx3"] {
+        margin-top: -875px;
+        margin-left: 136px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    img[alt="dx1"] {
+        margin-top: -335px;
+        margin-left: 598px;
+        width: 478px;
+    }
+    img[alt="dx3"] {
+        margin-left: 96px;
+    }
+}
+
+
+@media screen and (max-width: 1100px) {
+    img[alt="dx1"] {
+        margin-top: -349px;
+        margin-left: 520px;
+        width: 446px;
+    }
+    img[alt="dx3"] {
+        margin-left: 158px;
+        max-width: 805px;
+        margin-top: -824px;
+    }
+    .six-row {
+        height: 684px;
+    }
+}
+@media screen and (max-width: 992px) {
+    img[alt="dx1"] {
+        margin-top: 29px;
+        margin-left: 171px;
+    }
+    img[alt="dx2"] {
+        margin-top: 18px;
+        margin-left: 192px;
+    }
+    img[alt="dx3"] {
+        margin-left: 126px;
+    }
+}
+@media screen and (max-width: 936px) {
+    img[alt="dx3"] {
+        margin-left: 131px;
+        max-width: 730px;
+    }
+}
+
+@media screen and (max-width: 860px) {
+    img[alt="dx3"] {
+        margin-left: 95px;
+        max-width: 659px;
+        margin-top: -697px;
+    }
+    .six-row {
+        height: 587px;
+    }
+}
+@media screen and (max-width: 772px) {
+    img[alt="dx3"] {
+        margin-left: 73px;
+        max-width: 535px;
+        margin-top: -752px;
+    }
+}
+
+
+@media screen and (max-width: 635px) {
+    img[alt="dx1"] {
+        margin-left: 69px;
+    }
+    img[alt="dx3"] {
+        margin-left: 65px;
+        max-width: 486px;
+        margin-top: -812px;
+    }
+    .six-row {
+        height: 504px;
+    }
+    img[alt="dx3"] {
+        margin-left: 65px;
+        max-width: 486px;
+        margin-top: -625px;
+    }
+}
+@media screen and (max-width: 560px) {
+    img[alt="dx3"] {
+        margin-left: 65px;
+        max-width: 402px;
+        margin-top: -488px;
+    }
+    img[alt="dx1"] {
+        margin-left: 36px;
+    }
+    .six-row {
+        height: 394px;
+    }
+}
+
+@media screen and (max-width: 526px) {
+    .six-row {
+        height: 446px;
+    }
+}
+@media screen and (max-width: 495px) {
+    img[alt="dx1"] {
+        margin-left: 27px;
+        max-width: 339px;
+    }
+}
+@media screen and (max-width: 476px) {
+    img[alt="dx3"] {
+        margin-left: 41px;
+        max-width: 333px;
+        margin-top: -414px;
+    }
+    .six-row {
+        height: 366px;
+    }
+}
+@media screen and (max-width: 380px) {
+    img[alt="dx1"] {
+        max-width: 268px;
+    }
+    img[alt="dx2"] {
+        margin-left: 41px;
+        width: 250px;
+    }
+    img[alt="dx3"] {
+        max-width: 310px;
+        margin-top: -375px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    img[alt="dx3"] {
+        max-width: 265px;
+        margin-top: -375px;
+    }
+}
+
+/* eda dm :start */
+h1.dm-h1 {
+    max-width: 554px;
+}
+img[alt="dm1"] {
+    display: flex;
+    margin: 65px auto;
+}
+.dm-last {
+    margin-bottom: -13px;
+    padding-bottom: 38px;
+}
+img[alt="dm2"] {
+    display: flex;
+    margin: 0 auto;
+    padding-bottom: 60px;
+    padding-top: 28px;
+}
+
+/* dm responsive  */
+@media screen and (max-width: 950px) {
+    img[alt="dm1"] {
+        max-width: 729px;
+    }
+    img[alt="dm2"] {
+        max-width: 729px;
+    }
+}
+
+@media screen and (max-width: 735px) {
+    img[alt="dm1"] {
+        max-width: 583px;
+    }
+    img[alt="dm2"] {
+        max-width: 583px;
+    }
+}
+
+
+@media screen and (max-width: 580px) {
+    img[alt="dm1"] {
+        max-width: 490px;
+        margin: 0 auto;
+    }
+    img[alt="dm2"] {
+        max-width: 490px;
+        margin: 0 auto;
+    }
+}
+@media screen and (max-width: 480px) {
+    img[alt="dm1"] {
+        max-width: 430px;
+        margin: 0 auto;
+    }
+    img[alt="dm2"] {
+        max-width: 430px;
+        margin: 0 auto;
+    }
+}
+@media screen and (max-width: 422px) {
+    img[alt="dm1"] {
+        max-width: 333px;
+        margin: 0 auto;
+    }
+    img[alt="dm2"] {
+        max-width: 333px;
+        margin: 0 auto;
+    }
+}
