@@ -1,0 +1,145 @@
+/* database start hero  */
+.database-hero {
+    background-color: #1F2B3B;
+    height: 500px;
+}
+
+/* spin end*/
+#spin-img {
+    background-size: contain;
+    z-index: 0;
+    max-width: 760px;
+    margin-top: -480px;
+    -webkit-animation: spin 80s linear infinite;
+    -moz-animation: spin 80s linear infinite;
+    animation: spin 80s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@-moz-keyframes spin {
+    0% {
+        -moz-transform: rotate(0deg);
+    }
+    100% {
+        -moz-transform: rotate(360deg);
+    }
+}
+/* spin end*/
+.database-h1 {
+    color: #fff;
+    margin-left: 131px;
+    margin-top: 100px;
+}
+.database-p {
+    max-width: 332px !important;
+    margin-left: 132px;
+    color: #fff;
+}
+/* database start hero  */
+
+.database-wrap{
+    background-color: #F2F5F0;
+}
+.database-row {
+    margin-top: -113px;
+    padding-bottom: 100px;
+}
+
+
+/* responsive start */
+@media screen and (max-width:1500px) {
+    #spin-img {
+        margin-left: -236px;
+    }
+}
+@media screen and (max-width:1080px) {
+    #spin-img {
+        margin-left: -418px;
+        z-index: 0;
+        position: relative;
+    }
+    .database-p {
+        z-index: 1000;
+        position: relative;
+    }
+    .database-h1 {
+        position: relative;
+        z-index: 1000;
+    }
+}
+@media screen and (max-width:992px) {
+    #spin-img {
+        margin-left: 12px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    #spin-img {
+        margin-left: 29px;
+        max-width: 591px;
+    }
+}
+
+@media screen and (max-width:638px) {
+    #spin-img {
+        margin-left: 29px;
+        max-width: 482px;
+    }
+}
+
+@media screen and (max-width:530px) {
+    #spin-img {
+        margin-left: 30px;
+        max-width: 412px;
+    }
+    .database-hero {
+        height: 396px;
+    }
+    .database-h1 {
+        margin-left: 95px;
+    }
+    .database-p {
+        margin-left: 71px;
+    }
+}
+
+@media screen and (max-width:448px) {
+    #spin-img {
+        max-width: 348px;
+    }
+    .database-p {
+        margin-left: 37px;
+    }
+    .database-h1 {
+        margin-left: 72px;
+    }
+}
+@media screen and (max-width:385px) {
+    #spin-img {
+        max-width: 289px;
+    }
+    .database-h1 {
+        margin-left: 58px;
+    }
+    p.jm-p {
+        max-width: 202px !important;
+        margin-left: 92px;
+    }
+}
