@@ -1,0 +1,385 @@
+/* news hero part start */
+/* .news{
+    height: 1000px;
+} */
+#content {
+    background-color: #F2F5F0;
+}
+video {
+    height: 450px;
+    float: right;
+    margin-top: -344px;
+}
+.mySlides img {
+    display: block;
+}
+.nafems-header-img {
+    max-width: 100%;
+    float: right;
+    height: 433px;
+    margin-top: -342px;
+}
+
+.blue-frames-heading {
+    font-weight: 600;
+    font-size: 2rem;
+    color: white;
+    background-color: #03335B;
+    padding: 5px 8px;
+    width: 106px;
+    margin-top: 40px;
+    margin-left: 230px;
+}
+.org-frames-heading {
+    font-weight: 600;
+    font-size: 2rem;
+    color: white;
+    background-color: #F65517;
+    padding: 5px 8px;
+    margin-top: 14px;
+    width: 376px;
+    margin-left: 230px;
+    text-align: center;
+}
+
+.blue-frames-heading-2 {
+    font-weight: 600;
+    font-size: 2rem;
+    color: white;
+    background-color: #03335B;
+    padding: 5px 8px;
+    width: 370px;
+    margin-top: 13px;
+    margin-left: 230px;
+}
+.thema-veranstaltung {
+    font-size: 1.4em;
+    color: #03335B;
+    font-weight: 600;
+    margin-top: 15px;
+    margin-left: 230px;
+}
+.blog-hero-info{
+    margin-left: 230px;
+}
+.heading-2 {
+    width: 168px;
+    margin-left: 231px;
+}
+
+/* card desing start */
+.news-card a {
+    background: #F7F7F7;
+    color: #e74c3c;
+}
+.card-title-blogs {
+    font-size: 24px;
+    font-weight: 600;
+}
+/* card desing end */
+
+/* button style prev and next start */
+.prev {
+    cursor: pointer;
+    position: absolute;
+    top: 50% !important;
+    left: 0;
+    transform: translate(0, -50%);
+    width: auto;
+    padding: 20px;
+    color: #ede8e8;
+    font-weight: bold;
+    font-size: 24px;
+    border-radius: 0 8px 8px 0;
+    background: rgba(173, 216, 230, 0.1);
+    user-select: none;
+    text-decoration: none;
+}
+.prev:hover{
+   color:  #F65517;
+   background-color:rgba(36, 181, 229, 0.1);
+}
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(0, -50%);
+    width: auto;
+    padding: 20px;
+    color: #ede1e1;
+    font-weight: bold;
+    font-size: 24px;
+    border-radius: 0 8px 8px 0;
+    background: rgba(173, 216, 230, 0.1);
+    user-select: none;
+    text-decoration: none;
+}
+
+.btn-outline-danger {
+    color: #e74c3c;
+    border-color: #e74c3c;
+}
+.btn-outline-danger:hover{
+    background-color: #E74C3C;
+}
+.next:hover{
+   color:  #F65517;
+   background-color:rgba(36, 181, 229, 0.1);
+}
+/* button style prev and next end */
+
+/* dots start */
+.dots-container {
+    margin-left: 654px;
+    margin-top: 41px;
+}
+.dots {
+    cursor: pointer;
+    height: 14px;
+    width: 14px;
+    margin: 0 4px;
+    background-color: rgba(173, 216, 230, 0.2);
+    backdrop-filter: blur(2px);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+.active, .dots:hover {
+    background-color: rgba(173, 216, 230, 0.8);
+}
+/* dots end */
+
+/* news hero part end*/
+
+
+
+/* responsive design start */
+
+/* hero start */
+
+
+
+@media screen and (min-width:1900px){
+    .prev {
+        top: 50% !important;
+    }
+    a.next {
+        top: 50% !important;;
+    }
+   
+ 
+}
+
+@media screen and (max-width:1800px){
+
+    .heading-2 {
+        margin-left: 99px;
+    }
+    .blue-frames-heading {
+        margin-left: 96px;
+    }
+    .org-frames-heading {
+        margin-left: 96px;
+    }
+    .blue-frames-heading-2 {
+        margin-left: 96px;
+    }
+    .thema-veranstaltung {
+        margin-left: 96px;
+    }
+    .blog-hero-info{
+        margin-left: 96px;
+    }
+}
+
+
+@media screen and (max-width:1200px){
+    video {
+        width: 100%;
+        height: 100%;
+        float: none;
+        margin-top: 14px;
+    }
+    .nafems-header-img {
+        width: 100%;
+        height: 100%;
+        margin-top: 14px;
+    }
+    .dots-container {
+        position: absolute;
+        top: 202px;
+        left: -148px;
+    }
+    a.next {
+        top: 117% !important;
+    }
+    a.prev {
+        top: 117% !important;
+    }
+    .dots-container {
+        top: 357px;
+       
+    }
+}
+@media screen and (max-width:1080px){
+    a.next {
+        top: 55%;
+    }
+    a.prev {
+        top: 55%;
+    }
+}
+
+@media screen and (max-width:992px){
+  
+    a.next {
+        top: 47%;
+    }
+    a.prev {
+        top: 47%;
+    }
+}
+
+
+@media screen and (max-width:820px){
+    a.next {
+        top: 55%;
+    }
+    a.prev {
+        top: 55%;
+    }
+
+}
+@media screen and (max-width:768px){
+    a.next {
+        top: 92% !important;
+    }
+    a.prev {
+        top: 92% !important;
+    }
+    .dots-container {
+        left: -368px;
+    }
+}
+
+@media screen and (max-width:600px){
+    .heading-2 {
+        margin-left: 0px;
+    }
+    .blue-frames-heading {
+        margin-left: 0px;
+    }
+    .org-frames-heading {
+        margin-left: 0px;
+    }
+    .blue-frames-heading-2 {
+        margin-left: 0px;
+    }
+    .thema-veranstaltung {
+        margin-left: 0px;
+    }
+    .blog-hero-info{
+        margin-left: 0px;
+    }
+}
+
+
+@media screen and (max-width:576px){
+    a.next {
+        top: 76%;
+    }
+    a.prev {
+        top: 76%;
+    }
+}
+@media screen and (max-width:540px){
+    a.next {
+        top: 95% !important;
+    }
+    a.prev {
+        top: 95% !important;
+    }
+}
+
+@media screen and (max-width:500px){
+    .dots-container {
+        top: 424px;
+    }
+    .dots-container {
+        top: 356px;
+    }
+
+}
+
+
+@media screen and (max-width:430px){
+    a.next {
+        top: 62%;
+    }
+    a.prev {
+        top: 62%;
+    }
+}
+
+@media screen and (max-width:400px){
+a.next {
+    top: 93%;
+}
+a.prev {
+    top: 93%;
+}
+}
+@media screen and (max-width:390px){
+a.prev {
+    top: 74%;
+}
+a.next {
+    top: 74%;
+}
+.blue-frames-heading-2 {
+    width: 100%;
+}
+}
+
+@media screen and (max-width:375px){
+    a.prev {
+        top: 86%;
+    }
+    a.next {
+        top: 86%;
+    }
+   
+}
+
+@media screen and (max-width:350px){
+    a.prev {
+        top: 54%;
+    }
+    a.next {
+        top: 54%;
+    }
+    .blue-frames-heading-2 {
+        width: 100%;
+    }
+}
+
+
+
+/* more information style */
+
+.more-info-bg{
+    background-color: #F2F5F0;
+}
+.more-info-p{
+    font-size: 1.4rem;
+    line-height: 1.55;
+}
+
+ul li{
+    width: 86%;
+}
+
+.theremce-h1 {
+    font-size: 3rem;
+}
