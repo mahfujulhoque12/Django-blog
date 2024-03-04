@@ -27,4 +27,6 @@ urlpatterns = [
 ] + i18n_patterns(
     path('', include('posts.urls')),
     path('i18n/', set_language, name='set_language'),
-) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+) 
+urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
